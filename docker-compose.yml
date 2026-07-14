@@ -1,0 +1,42 @@
+services:
+  db:
+    image: mariadb:11.4
+    container_name: gazrus-local-db
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: gazrus_wp
+      MARIADB_USER: gazrus_wp
+      MARIADB_PASSWORD: gazrus_local_password
+      MARIADB_ROOT_PASSWORD: gazrus_local_root_password
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - gazrus_local_db:/var/lib/mysql
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+
+  wordpress:
+    image: wordpress:6.8.1-php8.3-apache
+    container_name: gazrus-local-wordpress
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "8089:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: gazrus_wp
+      WORDPRESS_DB_USER: gazrus_wp
+      WORDPRESS_DB_PASSWORD: gazrus_local_password
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_HOME', 'http://localhost:8089');
+        define('WP_SITEURL', 'http://localhost:8089');
+        define('DISALLOW_FILE_EDIT', true);
+        define('WP_AUTO_UPDATE_CORE', false);
+    volumes:
+      - gazrus_local_html:/var/www/html
+      - ./wp-content/themes/gazrus:/var/www/html/wp-content/themes/gazrus
+      - ./wp-content/plugins/gazrus-core:/var/www/html/wp-content/plugins/gazrus-core
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+
+volumes:
+  gazrus_local_db:
+  gazrus_local_html:

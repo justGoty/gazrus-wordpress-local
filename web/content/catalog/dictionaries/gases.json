@@ -1,0 +1,8 @@
+[
+  { "id": "co", "formula": "CO", "name": "оксид углерода" },
+  { "id": "ch4", "formula": "CH4", "name": "метан" },
+  { "id": "o2", "formula": "O2", "name": "кислород" },
+  { "id": "h2s", "formula": "H2S", "name": "сероводород" },
+  { "id": "nh3", "formula": "NH3", "name": "аммиак" },
+  { "id": "co2", "formula": "CO2", "name": "диоксид углерода" }
+]

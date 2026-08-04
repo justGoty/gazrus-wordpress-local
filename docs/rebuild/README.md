@@ -24,16 +24,18 @@ WordPress сохраняется как работающий прототип и
 3. [OWNER_QUESTIONNAIRE.md](OWNER_QUESTIONNAIRE.md) — только оставшиеся открытые решения.
 4. [FILTER_MATRIX.md](FILTER_MATRIX.md) — рабочее предложение фильтров для трех товарных категорий.
 5. [CATALOG_CONTRACT.md](CATALOG_CONTRACT.md) — единый формат, владение и публикация товарных данных.
-6. [LEAD_DELIVERY.md](LEAD_DELIVERY.md) — надежная запись и доставка заявок на КП.
-7. [CALCULATOR_SPEC.md](CALCULATOR_SPEC.md) — независимое расчетное ядро, источники и тесты.
-8. [SITE_AUDIT.md](SITE_AUDIT.md) — состояние текущей версии и подтвержденные проблемы.
-9. [COMPETITOR_ANALYSIS.md](COMPETITOR_ANALYSIS.md) — рынок, сильные решения и свободная ниша.
-10. [DESIGN_DIRECTIONS.md](DESIGN_DIRECTIONS.md) — три дизайн-концепции и рекомендация.
-11. [SEO_ARCHITECTURE.md](SEO_ARCHITECTURE.md) — структура посадочных страниц и правила переноса.
-12. [TECH_ARCHITECTURE.md](TECH_ARCHITECTURE.md) — рекомендуемый стек и модель каталога.
-13. [ROADMAP.md](ROADMAP.md) — этапы, зависимости и критерии готовности.
-14. [AGENT_ROLES.md](AGENT_ROLES.md) — инструкции пяти профильным агентам.
-15. [ACTIVE_TASKS.md](ACTIVE_TASKS.md) — бронь задач при параллельной работе через `master`.
+6. [PRODUCT_CREATION_STANDARD.md](PRODUCT_CREATION_STANDARD.md) — обязательный порядок создания карточки через Codex.
+7. [PRODUCT_CARD_SPEC.md](PRODUCT_CARD_SPEC.md) — типовая карточка каталога и страница товара.
+8. [LEAD_DELIVERY.md](LEAD_DELIVERY.md) — надежная запись и доставка заявок на КП.
+9. [CALCULATOR_SPEC.md](CALCULATOR_SPEC.md) — независимое расчетное ядро, источники и тесты.
+10. [SITE_AUDIT.md](SITE_AUDIT.md) — состояние текущей версии и подтвержденные проблемы.
+11. [COMPETITOR_ANALYSIS.md](COMPETITOR_ANALYSIS.md) — рынок, сильные решения и свободная ниша.
+12. [DESIGN_DIRECTIONS.md](DESIGN_DIRECTIONS.md) — три дизайн-концепции и рекомендация.
+13. [SEO_ARCHITECTURE.md](SEO_ARCHITECTURE.md) — структура посадочных страниц и правила переноса.
+14. [TECH_ARCHITECTURE.md](TECH_ARCHITECTURE.md) — рекомендуемый стек и модель каталога.
+15. [ROADMAP.md](ROADMAP.md) — этапы, зависимости и критерии готовности.
+16. [AGENT_ROLES.md](AGENT_ROLES.md) — инструкции пяти профильным агентам.
+17. [ACTIVE_TASKS.md](ACTIVE_TASKS.md) — бронь задач при параллельной работе через `master`.
 
 ## Зафиксированные ограничения
 

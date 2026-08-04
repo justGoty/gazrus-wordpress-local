@@ -3,6 +3,7 @@
 import { ArrowRight, RotateCcw, Search, SlidersHorizontal } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
+import { ProductCard } from "@/components/product-card";
 import { categories, type CategoryId } from "@/data/categories";
 import type { Gas, Product } from "@/lib/catalog/schema";
 
@@ -108,15 +109,7 @@ export function CatalogBrowser({ gases, products }: CatalogBrowserProps) {
         {filteredProducts.length > 0 ? (
           <div className="product-grid">
             {filteredProducts.map((product) => (
-              <article className="product-card" key={product.id}>
-                <span>{categories.find((item) => item.id === product.category)?.label}</span>
-                <h2>{product.title}</h2>
-                <p>{product.summary}</p>
-                <a href={`mailto:info@prscom.ru?subject=${encodeURIComponent(`Запрос КП: ${product.title}`)}`}>
-                  Запросить КП
-                  <ArrowRight aria-hidden="true" size={17} />
-                </a>
-              </article>
+              <ProductCard key={product.id} product={product} gases={gases} />
             ))}
           </div>
         ) : (

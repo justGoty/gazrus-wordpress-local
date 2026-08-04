@@ -43,3 +43,8 @@ export async function loadProducts(): Promise<Product[]> {
 
   return products.filter((product) => product.status === "published");
 }
+
+export async function loadProductBySlug(category: string, slug: string): Promise<Product | undefined> {
+  const products = await loadProducts();
+  return products.find((product) => product.category === category && product.slug === slug);
+}

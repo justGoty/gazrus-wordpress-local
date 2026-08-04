@@ -33,12 +33,14 @@ web/content/catalog/
 - `slug`: уникальный человекочитаемый URL в нижнем регистре.
 - `status`: `draft`, `published` или `archived`.
 - `category`: `stationary`, `portable` или `sensors`.
-- `brandId`, `model`, `title`.
+- `brandId`, `model`, `title`, `summary`.
 - `commercialMode`: только `request_quote`.
 - `gases`: ссылки на справочник газов.
 - `ranges`: массив диапазонов измерений.
+- `highlights`: до шести ключевых пар «параметр — значение» для карточки каталога.
+- `specifications`, `applications`, `modifications`: подробные данные страницы товара; пустые массивы допустимы.
 - `documents`, `media`, `seo`, `sources`.
-- `updatedAt` и `verifiedAt` в ISO 8601.
+- `updatedAt` в ISO 8601; `verifiedAt` обязателен для `published` и отсутствует у непроверенного черновика.
 
 Диапазон хранится атомарно:
 
@@ -70,6 +72,8 @@ web/content/catalog/
 Запись с непроверенной характеристикой остается `draft`. Пропуски не заполняются догадками.
 
 ## Порядок добавления через Codex
+
+Полный рабочий регламент: [PRODUCT_CREATION_STANDARD.md](PRODUCT_CREATION_STANDARD.md).
 
 1. Приложить паспорт, руководство или официальный источник производителя.
 2. Создать или обновить одну товарную запись и указать источник каждого спорного значения.

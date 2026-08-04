@@ -3,9 +3,9 @@ import { z } from "zod";
 export const CategoryIdSchema = z.enum(["stationary", "portable", "sensors"]);
 
 export const GasSchema = z.object({
-  id: z.string().regex(/^[a-z0-9-]+$/),
-  formula: z.string().min(1),
-  name: z.string().min(1),
+  id: z.string().regex(/^[a-z0-9-]+$/, "Некорректный ID газа"),
+  formula: z.string().min(1, "Укажите формулу газа"),
+  name: z.string().min(1, "Укажите название газа"),
 });
 
 const MeasurementRangeSchema = z
@@ -34,35 +34,79 @@ const DocumentSchema = z.object({
 });
 
 const SourceSchema = z.object({
-  title: z.string().min(1),
-  url: z.string().url().optional(),
+  title: z.string().min(1, "Укажите название источника"),
+  url: z.string().url("Укажите корректную ссылку на источник").optional(),
   document: z.string().min(1).optional(),
   checkedAt: z.string().datetime(),
 });
 
-export const ProductSchema = z.object({
-  schemaVersion: z.literal(1),
-  id: z.string().uuid(),
-  slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
-  status: z.enum(["draft", "published", "archived"]),
-  category: CategoryIdSchema,
-  brandId: z.string().min(1),
-  model: z.string().min(1),
-  title: z.string().min(1),
-  summary: z.string().min(1),
-  commercialMode: z.literal("request_quote"),
-  gases: z.array(z.string().min(1)),
-  ranges: z.array(MeasurementRangeSchema),
-  media: z.array(MediaSchema),
-  documents: z.array(DocumentSchema),
-  seo: z.object({
-    title: z.string().min(1),
-    description: z.string().min(1),
-  }),
-  sources: z.array(SourceSchema).min(1),
-  verifiedAt: z.string().datetime(),
-  updatedAt: z.string().datetime(),
+const HighlightSchema = z.object({
+  label: z.string().min(1),
+  value: z.string().min(1),
 });
+
+const SpecificationSchema = z.object({
+  group: z.string().min(1).optional(),
+  label: z.string().min(1),
+  value: z.string().min(1),
+});
+
+const ModificationSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  summary: z.string().min(1).optional(),
+  gases: z.array(z.string().min(1)).default([]),
+});
+
+export const ProductSchema = z
+  .object({
+    schemaVersion: z.literal(1),
+    id: z.string().uuid("Некорректный идентификатор товара"),
+    slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Используйте латиницу, цифры и дефисы"),
+    status: z.enum(["draft", "published", "archived"]),
+    category: CategoryIdSchema,
+    brandId: z.string().min(1, "Укажите производителя"),
+    model: z.string().min(1, "Укажите модель"),
+    title: z.string().min(1, "Укажите название товара"),
+    summary: z.string().min(1, "Добавьте краткое описание"),
+    commercialMode: z.literal("request_quote"),
+    gases: z.array(z.string().min(1)).min(1, "Выберите хотя бы один газ").default([]),
+    ranges: z.array(MeasurementRangeSchema).default([]),
+    media: z.array(MediaSchema).default([]),
+    highlights: z.array(HighlightSchema).max(6).default([]),
+    specifications: z.array(SpecificationSchema).default([]),
+    applications: z.array(z.string().min(1)).default([]),
+    modifications: z.array(ModificationSchema).default([]),
+    documents: z.array(DocumentSchema).default([]),
+    seo: z.object({
+      title: z.string().min(1, "Добавьте SEO-заголовок"),
+      description: z.string().min(1, "Добавьте SEO-описание"),
+    }),
+    sources: z.array(SourceSchema).min(1, "Добавьте проверенный источник"),
+    verifiedAt: z.string().datetime().optional(),
+    updatedAt: z.string().datetime(),
+  })
+  .superRefine((product, context) => {
+    if (product.status !== "published") {
+      return;
+    }
+
+    if (!product.verifiedAt) {
+      context.addIssue({
+        code: "custom",
+        path: ["verifiedAt"],
+        message: "Для публикации нужна дата проверки",
+      });
+    }
+
+    if (!product.media.some((item) => item.type === "image")) {
+      context.addIssue({
+        code: "custom",
+        path: ["media"],
+        message: "Для публикации нужно проверенное изображение товара",
+      });
+    }
+  });
 
 export type Gas = z.infer<typeof GasSchema>;
 export type Product = z.infer<typeof ProductSchema>;

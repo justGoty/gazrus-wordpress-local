@@ -5,18 +5,19 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { ProductCard } from "@/components/product-card";
 import { categories, type CategoryId } from "@/data/categories";
-import type { Gas, Product } from "@/lib/catalog/schema";
+import type { Brand, Gas, Product } from "@/lib/catalog/schema";
 
 type CatalogBrowserProps = {
   gases: Gas[];
   products: Product[];
+  brands: Brand[];
 };
 
 function isCategory(value: string | null): value is CategoryId {
   return categories.some((category) => category.id === value);
 }
 
-export function CatalogBrowser({ gases, products }: CatalogBrowserProps) {
+export function CatalogBrowser({ gases, products, brands }: CatalogBrowserProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const requestedCategory = searchParams.get("category");
@@ -109,7 +110,7 @@ export function CatalogBrowser({ gases, products }: CatalogBrowserProps) {
         {filteredProducts.length > 0 ? (
           <div className="product-grid">
             {filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} gases={gases} />
+              <ProductCard key={product.id} product={product} gases={gases} brands={brands} />
             ))}
           </div>
         ) : (

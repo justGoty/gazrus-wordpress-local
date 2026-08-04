@@ -4,5 +4,13 @@
   { "id": "o2", "formula": "O2", "name": "кислород" },
   { "id": "h2s", "formula": "H2S", "name": "сероводород" },
   { "id": "nh3", "formula": "NH3", "name": "аммиак" },
-  { "id": "co2", "formula": "CO2", "name": "диоксид углерода" }
+  { "id": "co2", "formula": "CO2", "name": "диоксид углерода" },
+  { "id": "cl2", "formula": "Cl2", "name": "хлор" },
+  { "id": "hcl", "formula": "HCl", "name": "хлороводород" },
+  { "id": "so2", "formula": "SO2", "name": "диоксид серы" },
+  { "id": "o3", "formula": "O3", "name": "озон" },
+  { "id": "no", "formula": "NO", "name": "оксид азота" },
+  { "id": "no2", "formula": "NO2", "name": "диоксид азота" },
+  { "id": "hcn", "formula": "HCN", "name": "циановодород" },
+  { "id": "ph3", "formula": "PH3", "name": "фосфин" }
 ]

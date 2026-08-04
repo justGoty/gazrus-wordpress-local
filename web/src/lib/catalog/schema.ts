@@ -8,6 +8,11 @@ export const GasSchema = z.object({
   name: z.string().min(1, "Укажите название газа"),
 });
 
+export const BrandSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/, "Некорректный ID производителя"),
+  name: z.string().min(1, "Укажите название производителя"),
+});
+
 const MeasurementRangeSchema = z
   .object({
     gasId: z.string().min(1),
@@ -109,4 +114,5 @@ export const ProductSchema = z
   });
 
 export type Gas = z.infer<typeof GasSchema>;
+export type Brand = z.infer<typeof BrandSchema>;
 export type Product = z.infer<typeof ProductSchema>;

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { CatalogBrowser } from "@/components/catalog-browser";
 import { SiteHeader } from "@/components/site-header";
-import { loadGases, loadProducts } from "@/lib/catalog/load-catalog";
+import { loadBrands, loadGases, loadProducts } from "@/lib/catalog/load-catalog";
 
 export const metadata: Metadata = {
   title: "Каталог газоанализаторов и сенсоров",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function CatalogPage() {
-  const [gases, products] = await Promise.all([loadGases(), loadProducts()]);
+  const [gases, products, brands] = await Promise.all([loadGases(), loadProducts(), loadBrands()]);
 
   return (
     <>
@@ -27,7 +27,7 @@ export default async function CatalogPage() {
 
         <section className="catalog-section">
           <Suspense fallback={<div className="catalog-loading">Загрузка каталога...</div>}>
-            <CatalogBrowser gases={gases} products={products} />
+            <CatalogBrowser gases={gases} products={products} brands={brands} />
           </Suspense>
         </section>
       </main>

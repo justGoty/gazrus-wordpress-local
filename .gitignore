@@ -1,6 +1,7 @@
 backup/
 db/
 output/
+tmp/
 
 .env
 .env.*

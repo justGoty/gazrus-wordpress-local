@@ -1,6 +1,13 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { GasSchema, ProductSchema, type Gas, type Product } from "@/lib/catalog/schema";
+import {
+  BrandSchema,
+  GasSchema,
+  ProductSchema,
+  type Brand,
+  type Gas,
+  type Product,
+} from "@/lib/catalog/schema";
 
 const catalogRoot = path.join(process.cwd(), "content", "catalog");
 
@@ -11,6 +18,11 @@ async function readJson(filePath: string): Promise<unknown> {
 export async function loadGases(): Promise<Gas[]> {
   const value = await readJson(path.join(catalogRoot, "dictionaries", "gases.json"));
   return GasSchema.array().parse(value);
+}
+
+export async function loadBrands(): Promise<Brand[]> {
+  const value = await readJson(path.join(catalogRoot, "dictionaries", "brands.json"));
+  return BrandSchema.array().parse(value);
 }
 
 export async function loadProducts(): Promise<Product[]> {

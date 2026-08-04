@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ProductDetail } from "@/components/product-detail";
 import { SiteHeader } from "@/components/site-header";
 import { formatBrandId } from "@/lib/catalog/display";
-import { loadGases, loadProductBySlug } from "@/lib/catalog/load-catalog";
+import { loadBrands, loadGases, loadProductBySlug } from "@/lib/catalog/load-catalog";
 
 type ProductPageProps = {
   params: Promise<{ category: string; slug: string }>;
@@ -26,18 +26,23 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { category, slug } = await params;
-  const [product, gases] = await Promise.all([loadProductBySlug(category, slug), loadGases()]);
+  const [product, gases, brands] = await Promise.all([
+    loadProductBySlug(category, slug),
+    loadGases(),
+    loadBrands(),
+  ]);
 
   if (!product) {
     notFound();
   }
 
+  const brandName = brands.find((brand) => brand.id === product.brandId)?.name ?? formatBrandId(product.brandId);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.title,
     model: product.model,
-    brand: { "@type": "Brand", name: formatBrandId(product.brandId) },
+    brand: { "@type": "Brand", name: brandName },
     description: product.summary,
     image: product.media.filter((item) => item.type === "image").map((item) => item.url),
   };
@@ -46,7 +51,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     <>
       <SiteHeader />
       <main>
-        <ProductDetail product={product} gases={gases} />
+        <ProductDetail product={product} gases={gases} brands={brands} />
       </main>
       <script
         type="application/ld+json"

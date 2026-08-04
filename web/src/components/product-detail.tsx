@@ -1,18 +1,27 @@
-import { ArrowLeft, Download, ImageIcon, Mail, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Download, Mail, ShieldCheck } from "lucide-react";
 import Link from "next/link";
+import { ProductGallery } from "@/components/product-gallery";
 import { categoryById } from "@/data/categories";
 import { formatBrandId } from "@/lib/catalog/display";
-import type { Gas, Product } from "@/lib/catalog/schema";
+import type { Brand, Gas, Product } from "@/lib/catalog/schema";
 
 type ProductDetailProps = {
   product: Product;
   gases: Gas[];
+  brands: Brand[];
 };
 
-export function ProductDetail({ product, gases }: ProductDetailProps) {
+export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
   const category = categoryById[product.category];
-  const image = product.media.find((item) => item.type === "image");
+  const brandName = brands.find((brand) => brand.id === product.brandId)?.name ?? formatBrandId(product.brandId);
   const gasById = new Map(gases.map((gas) => [gas.id, gas]));
+  const specificationGroups = new Map<string, typeof product.specifications>();
+
+  for (const specification of product.specifications) {
+    const group = specification.group ?? "Основные параметры";
+    specificationGroups.set(group, [...(specificationGroups.get(group) ?? []), specification]);
+  }
+
   const quoteHref = `mailto:info@prscom.ru?subject=${encodeURIComponent(`Запрос КП: ${product.title}`)}`;
 
   return (
@@ -26,26 +35,24 @@ export function ProductDetail({ product, gases }: ProductDetailProps) {
       </div>
 
       <section className="product-hero">
-        <div className="product-detail-media">
-          {image ? (
-            <div
-              className="product-detail-image"
-              role="img"
-              aria-label={image.alt}
-              style={{ backgroundImage: `url(${JSON.stringify(image.url)})` }}
-            />
-          ) : (
-            <div className="product-detail-placeholder" aria-label="Изображение товара отсутствует">
-              <ImageIcon aria-hidden="true" size={42} />
-            </div>
-          )}
-        </div>
+        <ProductGallery media={product.media} />
 
         <div className="product-detail-copy">
           <p className="section-kicker">{category.cardTitle}</p>
-          <p className="product-model">{formatBrandId(product.brandId)} · {product.model}</p>
+          <p className="product-model">{brandName} · {product.model}</p>
           <h1>{product.title}</h1>
           <p className="product-lead">{product.summary}</p>
+
+          <div className="product-detail-commercial">
+            <div>
+              <span>Стоимость и срок поставки</span>
+              <strong>По запросу</strong>
+            </div>
+            <a className="button button-primary" href={quoteHref}>
+              <Mail aria-hidden="true" size={18} />
+              Запросить КП
+            </a>
+          </div>
 
           {product.highlights.length > 0 || product.gases.length > 0 ? (
             <dl className="product-key-facts">
@@ -67,17 +74,6 @@ export function ProductDetail({ product, gases }: ProductDetailProps) {
               ))}
             </dl>
           ) : null}
-
-          <div className="product-detail-commercial">
-            <div>
-              <span>Стоимость и срок поставки</span>
-              <strong>По запросу</strong>
-            </div>
-            <a className="button button-primary" href={quoteHref}>
-              <Mail aria-hidden="true" size={18} />
-              Запросить КП
-            </a>
-          </div>
         </div>
       </section>
 
@@ -101,22 +97,36 @@ export function ProductDetail({ product, gases }: ProductDetailProps) {
             <p className="section-kicker">Характеристики</p>
             <h2>Параметры модели</h2>
           </div>
-          <dl className="product-specification-list">
-            {product.ranges.map((range) => (
-              <div key={`${range.gasId}-${range.min}-${range.max}-${range.unit}`}>
-                <dt>Диапазон {gasById.get(range.gasId)?.formula ?? range.gasId}</dt>
-                <dd>
-                  {range.min}–{range.max} {range.unit}
-                </dd>
-              </div>
+          <div className="product-specification-groups">
+            {product.ranges.length > 0 ? (
+              <section className="product-specification-group">
+                <h3>Диапазоны измерений</h3>
+                <dl className="product-specification-list">
+                  {product.ranges.map((range) => (
+                    <div key={`${range.gasId}-${range.min}-${range.max}-${range.unit}`}>
+                      <dt>{gasById.get(range.gasId)?.formula ?? range.gasId}</dt>
+                      <dd>
+                        {range.min}–{range.max} {range.unit}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+            ) : null}
+            {[...specificationGroups.entries()].map(([group, specifications]) => (
+              <section className="product-specification-group" key={group}>
+                <h3>{group}</h3>
+                <dl className="product-specification-list">
+                  {specifications.map((item) => (
+                    <div key={`${item.label}-${item.value}`}>
+                      <dt>{item.label}</dt>
+                      <dd>{item.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
             ))}
-            {product.specifications.map((item) => (
-              <div key={`${item.group ?? "main"}-${item.label}-${item.value}`}>
-                <dt>{item.label}</dt>
-                <dd>{item.value}</dd>
-              </div>
-            ))}
-          </dl>
+          </div>
         </section>
       ) : null}
 
@@ -150,7 +160,7 @@ export function ProductDetail({ product, gases }: ProductDetailProps) {
           </div>
           <div className="product-document-list">
             {product.documents.map((document) => (
-              <a href={document.url} key={`${document.type}-${document.title}`}>
+              <a href={document.url} target="_blank" rel="noreferrer" key={`${document.type}-${document.title}`}>
                 <Download aria-hidden="true" size={18} />
                 {document.title}
               </a>

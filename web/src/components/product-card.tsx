@@ -2,19 +2,22 @@ import { ArrowRight, ImageIcon, Mail } from "lucide-react";
 import Link from "next/link";
 import { categoryById } from "@/data/categories";
 import { formatBrandId } from "@/lib/catalog/display";
-import type { Gas, Product } from "@/lib/catalog/schema";
+import type { Brand, Gas, Product } from "@/lib/catalog/schema";
 
 type ProductCardProps = {
   product: Product;
   gases: Gas[];
+  brands: Brand[];
 };
 
-export function ProductCard({ product, gases }: ProductCardProps) {
+export function ProductCard({ product, gases, brands }: ProductCardProps) {
   const category = categoryById[product.category];
   const image = product.media.find((item) => item.type === "image");
+  const brandName = brands.find((brand) => brand.id === product.brandId)?.name ?? formatBrandId(product.brandId);
   const gasLabels = product.gases
     .map((gasId) => gases.find((gas) => gas.id === gasId)?.formula)
     .filter((formula): formula is string => Boolean(formula));
+  const gasSummary = gasLabels.length > 6 ? `${gasLabels.slice(0, 6).join(", ")} и другие` : gasLabels.join(", ");
   const detailsHref = `/catalog/${product.category}/${product.slug}`;
   const quoteHref = `mailto:info@prscom.ru?subject=${encodeURIComponent(`Запрос КП: ${product.title}`)}`;
 
@@ -37,7 +40,7 @@ export function ProductCard({ product, gases }: ProductCardProps) {
 
       <div className="product-card-body">
         <p className="product-card-overline">
-          {formatBrandId(product.brandId)} · {product.model}
+          {brandName} · {product.model}
         </p>
         <h2>{product.title}</h2>
         <p className="product-card-summary">{product.summary}</p>
@@ -46,7 +49,7 @@ export function ProductCard({ product, gases }: ProductCardProps) {
           {gasLabels.length > 0 ? (
             <div>
               <dt>Контролируемые газы</dt>
-              <dd>{gasLabels.join(", ")}</dd>
+              <dd>{gasSummary}</dd>
             </div>
           ) : null}
           {product.highlights.slice(0, 3).map((item) => (

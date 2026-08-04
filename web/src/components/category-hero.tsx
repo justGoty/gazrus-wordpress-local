@@ -78,7 +78,6 @@ export function CategoryHero() {
                 key={category.id}
                 onClick={() => setActiveIndex(index)}
               >
-                <span>{category.number}</span>
                 {category.label}
               </button>
             ))}

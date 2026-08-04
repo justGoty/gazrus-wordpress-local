@@ -34,24 +34,18 @@ export default function Home() {
             <header className="section-heading">
               <div>
                 <p className="section-kicker">Каталог</p>
-                <h2>Три направления без лишних уровней</h2>
+                <h2>Газоанализаторы и сенсоры по типу оборудования</h2>
               </div>
               <p>
-                Категории разделены по способу применения. Внутри доступны собственные технические фильтры и единый запрос КП.
+                Выберите стационарный или портативный газоанализатор либо сенсор. Для каждой категории предусмотрены технический подбор и запрос коммерческого предложения.
               </p>
             </header>
 
             <div className="category-grid">
               {categories.map((category) => (
                 <article className={`category-card category-card-${category.accent}`} key={category.id}>
-                  <span className="category-number">{category.number}</span>
                   <h3>{category.cardTitle}</h3>
                   <p>{category.cardDescription}</p>
-                  <ul className="filter-tags" aria-label={`Основные фильтры: ${category.label}`}>
-                    {category.filters.map((filter) => (
-                      <li key={filter}>{filter}</li>
-                    ))}
-                  </ul>
                   <Link className="category-link" href={`/catalog?category=${category.id}`}>
                     Открыть категорию
                     <ArrowRight aria-hidden="true" size={17} />

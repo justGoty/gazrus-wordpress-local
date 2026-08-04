@@ -11,17 +11,18 @@ type CatalogBrowserProps = {
   gases: Gas[];
   products: Product[];
   brands: Brand[];
+  initialCategory?: CategoryId;
 };
 
 function isCategory(value: string | null): value is CategoryId {
   return categories.some((category) => category.id === value);
 }
 
-export function CatalogBrowser({ gases, products, brands }: CatalogBrowserProps) {
+export function CatalogBrowser({ gases, products, brands, initialCategory }: CatalogBrowserProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const requestedCategory = searchParams.get("category");
-  const category: CategoryId | "all" = isCategory(requestedCategory) ? requestedCategory : "all";
+  const category: CategoryId | "all" = initialCategory ?? (isCategory(requestedCategory) ? requestedCategory : "all");
   const [query, setQuery] = useState("");
   const [gas, setGas] = useState("all");
 
@@ -40,7 +41,7 @@ export function CatalogBrowser({ gases, products, brands }: CatalogBrowserProps)
   }, [category, gas, products, query]);
 
   const selectCategory = (nextCategory: CategoryId | "all") => {
-    router.replace(nextCategory === "all" ? "/catalog" : `/catalog?category=${nextCategory}`, {
+    router.replace(nextCategory === "all" ? "/catalog" : `/catalog/${nextCategory}`, {
       scroll: false,
     });
   };
@@ -48,7 +49,7 @@ export function CatalogBrowser({ gases, products, brands }: CatalogBrowserProps)
   const resetFilters = () => {
     setQuery("");
     setGas("all");
-    router.replace("/catalog", { scroll: false });
+    router.replace(initialCategory ? `/catalog/${initialCategory}` : "/catalog", { scroll: false });
   };
 
   return (

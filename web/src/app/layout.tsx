@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Golos_Text, Manrope } from "next/font/google";
+import { seoSite } from "@/lib/seo/content";
 import "./globals.css";
 
 const headingFont = Manrope({
@@ -15,13 +16,12 @@ const textFont = Golos_Text({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://xn--80aaaalzch0asjh0a0a.xn--p1acf"),
+  metadataBase: new URL(seoSite.origin),
   title: {
-    default: "Газоанализатор.рус — подбор промышленных газоанализаторов",
-    template: "%s | Газоанализатор.рус",
+    default: seoSite.defaultTitle,
+    template: seoSite.titleTemplate,
   },
-  description:
-    "Стационарные и портативные газоанализаторы, сенсоры и инженерный подбор оборудования с запросом коммерческого предложения.",
+  description: seoSite.defaultDescription,
 };
 
 export default function RootLayout({

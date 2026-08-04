@@ -4,12 +4,38 @@ import { CategoryHero } from "@/components/category-hero";
 import { QuickSelection } from "@/components/quick-selection";
 import { SiteHeader } from "@/components/site-header";
 import { categories } from "@/data/categories";
+import { absoluteUrl, getSeoPageById, seoSite } from "@/lib/seo/content";
+import { buildPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata = buildPageMetadata("home");
+
+const homeSeo = getSeoPageById("home");
+const homeStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${seoSite.origin}/#organization`,
+      name: seoSite.siteName,
+      url: absoluteUrl("/"),
+      email: seoSite.contactEmail,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${seoSite.origin}/#website`,
+      name: seoSite.siteName,
+      url: absoluteUrl("/"),
+      inLanguage: "ru-RU",
+      publisher: { "@id": `${seoSite.origin}/#organization` },
+    },
+  ],
+};
 
 export default function Home() {
   return (
     <>
       <SiteHeader />
-      <CategoryHero />
+      <CategoryHero pageHeading={homeSeo.h1} />
 
       <main>
         <section className="trust-strip" aria-label="Принципы работы">
@@ -46,7 +72,7 @@ export default function Home() {
                 <article className={`category-card category-card-${category.accent}`} key={category.id}>
                   <h3>{category.cardTitle}</h3>
                   <p>{category.cardDescription}</p>
-                  <Link className="category-link" href={`/catalog?category=${category.id}`}>
+                  <Link className="category-link" href={`/catalog/${category.id}`}>
                     Открыть категорию
                     <ArrowRight aria-hidden="true" size={17} />
                   </Link>
@@ -107,6 +133,11 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeStructuredData).replace(/</g, "\\u003c") }}
+      />
 
       <footer className="site-footer">
         <div className="footer-inner">

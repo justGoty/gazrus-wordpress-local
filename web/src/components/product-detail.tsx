@@ -31,7 +31,7 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
           <ArrowLeft aria-hidden="true" size={16} />
           Каталог
         </Link>
-        <span>{category.label}</span>
+        <Link href={`/catalog/${product.category}`}>{category.label}</Link>
       </div>
 
       <section className="product-hero">

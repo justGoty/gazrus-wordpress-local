@@ -13,6 +13,10 @@ $requiredDocs = @(
     'docs/rebuild/FILTER_MATRIX.md',
     'docs/rebuild/CATALOG_CONTRACT.md',
     'docs/rebuild/LEAD_DELIVERY.md',
+    'docs/rebuild/SEO_PAGE_MAP.md',
+    'docs/rebuild/SEO_SEMANTIC_CORE.md',
+    'docs/rebuild/SEO_CONTENT_STANDARD.md',
+    'docs/rebuild/SEO_IMPLEMENTATION.md',
     'docs/rebuild/TECH_ARCHITECTURE.md'
 )
 
@@ -85,7 +89,7 @@ try {
     }
 
     Write-Host '[3/4] Checking the new application structure'
-    foreach ($path in @('web/package.json', 'web/pnpm-lock.yaml', 'web/content/catalog', 'web/src/app')) {
+    foreach ($path in @('web/package.json', 'web/pnpm-lock.yaml', 'web/content/catalog', 'web/content/seo', 'web/public/robots.txt', 'web/src/app')) {
         if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $path))) {
             throw "Required path is missing: $path"
         }

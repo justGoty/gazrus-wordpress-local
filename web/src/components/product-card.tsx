@@ -1,4 +1,5 @@
 import { ArrowRight, ImageIcon, Mail } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { categoryById } from "@/data/categories";
 import { formatBrandId } from "@/lib/catalog/display";
@@ -25,12 +26,14 @@ export function ProductCard({ product, gases, brands }: ProductCardProps) {
     <article className="product-card">
       <div className="product-card-media">
         {image ? (
-          <div
-            className="product-card-image"
-            role="img"
-            aria-label={image.alt}
-            style={{ backgroundImage: `url(${JSON.stringify(image.url)})` }}
-          />
+          <div className="product-card-image">
+            <Image
+              alt={image.alt}
+              fill
+              sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1180px) 50vw, 390px"
+              src={image.url}
+            />
+          </div>
         ) : (
           <div className="product-card-placeholder" aria-label="Изображение товара не добавлено">
             <ImageIcon aria-hidden="true" size={30} />

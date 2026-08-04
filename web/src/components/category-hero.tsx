@@ -6,7 +6,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { categories } from "@/data/categories";
 
-export function CategoryHero() {
+type CategoryHeroProps = {
+  pageHeading: string;
+};
+
+export function CategoryHero({ pageHeading }: CategoryHeroProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const selectPrevious = () => {
@@ -39,6 +43,7 @@ export function CategoryHero() {
       </div>
 
       <div className="hero-inner">
+        <h1 className="sr-only">{pageHeading}</h1>
         <div className="hero-slides" aria-live="polite">
           {categories.map((category, index) => (
             <article
@@ -50,7 +55,7 @@ export function CategoryHero() {
               <p className={`eyebrow eyebrow-${category.accent}`}>
                 Каталог промышленного газового контроля
               </p>
-              <h1>{category.title}</h1>
+              <h2>{category.title}</h2>
               <p className="hero-description">{category.description}</p>
               <p className="hero-focus">{category.focus}</p>
               <div className="hero-actions">
@@ -58,7 +63,7 @@ export function CategoryHero() {
                   Начать подбор
                   <ArrowRight aria-hidden="true" size={18} />
                 </a>
-                <Link className="button button-ghost" href={`/catalog?category=${category.id}`}>
+                <Link className="button button-ghost" href={`/catalog/${category.id}`}>
                   Смотреть каталог
                 </Link>
               </div>

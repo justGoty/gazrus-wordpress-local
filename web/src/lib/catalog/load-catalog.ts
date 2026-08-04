@@ -41,6 +41,8 @@ export async function loadProducts(): Promise<Product[]> {
 
   const ids = new Set<string>();
   const slugs = new Set<string>();
+  const seoTitles = new Set<string>();
+  const seoDescriptions = new Set<string>();
 
   for (const product of products) {
     if (ids.has(product.id)) {
@@ -49,8 +51,16 @@ export async function loadProducts(): Promise<Product[]> {
     if (slugs.has(product.slug)) {
       throw new Error(`Повторяющийся product slug: ${product.slug}`);
     }
+    if (seoTitles.has(product.seo.title)) {
+      throw new Error(`Повторяющийся product SEO title: ${product.seo.title}`);
+    }
+    if (seoDescriptions.has(product.seo.description)) {
+      throw new Error(`Повторяющийся product SEO description: ${product.seo.description}`);
+    }
     ids.add(product.id);
     slugs.add(product.slug);
+    seoTitles.add(product.seo.title);
+    seoDescriptions.add(product.seo.description);
   }
 
   return products.filter((product) => product.status === "published");

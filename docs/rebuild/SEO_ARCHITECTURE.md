@@ -6,21 +6,27 @@ WordPress не обязателен. Нужны серверный HTML, ста�
 
 ## Структура
 
-- /catalog/
-  - /catalog/stationary/
-  - /catalog/portable/
-  - /catalog/sensors/
-- /product/{model}/
-- /gases/{gas}/
-- /solutions/{task}/
-- /industries/{industry}/
-- /brands/{brand}/
-- /services/supply/
-- /services/verification/
-- /services/calibration/
-- /services/repair/
-- /knowledge/
-- /calculators/gas-converter/
+- /catalog
+  - /catalog/stationary
+  - /catalog/portable
+  - /catalog/sensors
+- /catalog/{category}/{slug}
+- /gases
+  - /gases/{gas}
+- /solutions
+  - /solutions/{task}
+- /industries
+  - /industries/{industry}
+- /brands
+  - /brands/{brand}
+- /services
+  - /services/supply
+  - /services/verification
+  - /services/calibration
+  - /services/repair
+- /knowledge
+- /calculators
+  - /calculators/gas-converter
 
 Диапазон, канальность, IP/Ex, интерфейсы и температура по умолчанию являются фильтрами. Отдельная посадочная появляется только при подтвержденном спросе, устойчивом ассортименте и уникальном содержании.
 
@@ -52,6 +58,8 @@ WordPress не обязателен. Нужны серверный HTML, ста�
 
 ## Страницы и метаданные
 
+- Каноническая постраничная карта хранится в `web/content/seo/pages.json` и описана в [SEO_PAGE_MAP.md](SEO_PAGE_MAP.md).
+- Динамические типы страниц хранятся в `web/content/seo/templates.json`.
 - Один понятный H1.
 - Уникальный title и description по реальному содержанию.
 - Короткое введение перед каталогом.
@@ -94,16 +102,20 @@ Product без `Offer`, `review` или `aggregateRating` используетс
 
 ## Sitemap и robots
 
-- Отдельные sitemap для товаров, категорий, услуг, материалов и изображений.
+- Рабочий файл размещен в `web/public/robots.txt`; в нем нет кириллицы, CSS/JS не блокируются.
+- Фасетные, поисковые, preview, draft и thank-you URL закрыты от обхода; разрешенные чистые страницы остаются доступны.
+- Для Яндекса `Clean-param` применяется только к параметрам аналитики и переходным меткам, не меняющим содержание.
+- Для текущего объема используется единый sitemap; разделение по товарам, категориям, услугам и материалам выполняется в P1 при росте числа URL.
 - В sitemap только canonical URL с ответом 200.
+- Текущий `web/src/app/sitemap.ts` включает только реализованные записи `ready/index` и опубликованные товары; planned/draft не попадают автоматически.
 - Закрыть admin, внутренний поиск и технические параметры.
 - Не блокировать CSS и JavaScript.
-- Для Яндекса использовать Clean-param для UTM, сортировки и режима отображения.
+- Для Яндекса использовать `Clean-param` только для UTM и других меток, не меняющих содержание. Сортировка, режим отображения и фасеты обрабатываются правилами robots/noindex согласно [SEO_IMPLEMENTATION.md](SEO_IMPLEMENTATION.md).
 
 ## Перенос
 
 1. Выгрузить URL из Яндекс Вебмастера, Search Console, Метрики, sitemap, логов и WordPress.
-2. По возможности сохранить существующий формат /product/{slug}/.
+2. Сопоставить существующие `/product/{slug}/` с каноническими `/catalog/{category}/{slug}` и сохранить старый URL прямым 301 после инвентаризации.
 3. Создать таблицу старый URL → новый URL → причина → статус.
 4. Использовать прямые 301 без цепочек.
 5. Удаленный товар вести на подтвержденную замену или близкую категорию; без аналога отдавать 404/410.

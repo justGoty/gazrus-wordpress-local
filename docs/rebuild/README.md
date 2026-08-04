@@ -32,10 +32,14 @@ WordPress сохраняется как работающий прототип и
 11. [COMPETITOR_ANALYSIS.md](COMPETITOR_ANALYSIS.md) — рынок, сильные решения и свободная ниша.
 12. [DESIGN_DIRECTIONS.md](DESIGN_DIRECTIONS.md) — три дизайн-концепции и рекомендация.
 13. [SEO_ARCHITECTURE.md](SEO_ARCHITECTURE.md) — структура посадочных страниц и правила переноса.
-14. [TECH_ARCHITECTURE.md](TECH_ARCHITECTURE.md) — рекомендуемый стек и модель каталога.
-15. [ROADMAP.md](ROADMAP.md) — этапы, зависимости и критерии готовности.
-16. [AGENT_ROLES.md](AGENT_ROLES.md) — инструкции пяти профильным агентам.
-17. [ACTIVE_TASKS.md](ACTIVE_TASKS.md) — бронь задач при параллельной работе через `master`.
+14. [SEO_PAGE_MAP.md](SEO_PAGE_MAP.md) — metadata, H1 и статус индексации каждой фиксированной и динамической страницы.
+15. [SEO_SEMANTIC_CORE.md](SEO_SEMANTIC_CORE.md) — предварительные поисковые кластеры без выдуманной частотности.
+16. [SEO_CONTENT_STANDARD.md](SEO_CONTENT_STANDARD.md) — обязательный порядок создания и проверки новых SEO-страниц.
+17. [SEO_IMPLEMENTATION.md](SEO_IMPLEMENTATION.md) — техническая реализация metadata, JSON-LD, robots, sitemap и проверок Next.js.
+18. [TECH_ARCHITECTURE.md](TECH_ARCHITECTURE.md) — рекомендуемый стек и модель каталога.
+19. [ROADMAP.md](ROADMAP.md) — этапы, зависимости и критерии готовности.
+20. [AGENT_ROLES.md](AGENT_ROLES.md) — инструкции пяти профильным агентам.
+21. [ACTIVE_TASKS.md](ACTIVE_TASKS.md) — бронь задач при параллельной работе через `master`.
 
 ## Зафиксированные ограничения
 

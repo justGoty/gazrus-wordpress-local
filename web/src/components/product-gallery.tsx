@@ -1,6 +1,7 @@
 "use client";
 
 import { ImageIcon } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import type { Product } from "@/lib/catalog/schema";
 
@@ -17,13 +18,15 @@ export function ProductGallery({ media }: ProductGalleryProps) {
     <div className="product-gallery">
       <div className="product-gallery-main">
         {activeImage ? (
-          <div
-            key={activeImage.url}
-            className="product-gallery-image"
-            role="img"
-            aria-label={activeImage.alt}
-            style={{ backgroundImage: `url(${JSON.stringify(activeImage.url)})` }}
-          />
+          <div key={activeImage.url} className="product-gallery-image">
+            <Image
+              alt={activeImage.alt}
+              fill
+              loading="eager"
+              sizes="(max-width: 760px) calc(100vw - 72px), 42vw"
+              src={activeImage.url}
+            />
+          </div>
         ) : (
           <div className="product-detail-placeholder" aria-label="Изображение товара отсутствует">
             <ImageIcon aria-hidden="true" size={42} />
@@ -42,11 +45,9 @@ export function ProductGallery({ media }: ProductGalleryProps) {
               aria-pressed={activeIndex === index}
               key={image.url}
             >
-              <span
-                role="img"
-                aria-label={image.alt}
-                style={{ backgroundImage: `url(${JSON.stringify(image.url)})` }}
-              />
+              <span className="product-gallery-thumbnail-image">
+                <Image alt="" fill sizes="96px" src={image.url} />
+              </span>
             </button>
           ))}
         </div>

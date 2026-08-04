@@ -924,7 +924,7 @@ img {
 .product-card-media {
   aspect-ratio: 16 / 10;
   padding: 18px;
-  background: #edf2f4;
+  background: #ffffff;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1101,7 +1101,7 @@ img {
 .product-gallery-main {
   aspect-ratio: 1 / 1;
   padding: 34px;
-  background: #eaf0f3;
+  background: #ffffff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
@@ -1139,7 +1139,7 @@ img {
   min-width: 0;
   padding: 7px;
   cursor: pointer;
-  background: #f5f8f9;
+  background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 4px;
 }
@@ -1382,6 +1382,10 @@ img {
   color: #144a43;
   background: #e3f2ef;
   border-left: 4px solid var(--teal);
+}
+
+.product-verification-note > svg {
+  flex: 0 0 auto;
 }
 
 .product-verification-note p {

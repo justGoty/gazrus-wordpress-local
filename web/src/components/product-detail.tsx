@@ -172,8 +172,11 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
       <section className="product-verification-note">
         <ShieldCheck aria-hidden="true" size={24} />
         <div>
-          <strong>Характеристики сверены с источниками</strong>
-          <p>Перед заказом уточняем исполнение, диапазон и комплект поставки в коммерческом предложении.</p>
+          <strong>Документация и метрология подтверждены</strong>
+          <p>
+            Для модели доступны руководство по эксплуатации, описание типа СИ и методика поверки. Исполнение и
+            диапазон указываются в коммерческом предложении.
+          </p>
         </div>
       </section>
     </div>

@@ -21,7 +21,7 @@ export const categories: Category[] = [
     title: "Непрерывный контроль газовой среды на объекте",
     description:
       "Подбор стационарных газоанализаторов и систем контроля загазованности по газу, диапазону, исполнению и способу интеграции.",
-    image: "/images/hero-stationary-v3.webp",
+    image: "/images/hero-stationary-v4.webp",
     imageAlt: "Стационарная система промышленного газового контроля на объекте",
     focus: "Точки контроля · Ex/IP · интерфейсы",
     accent: "blue",

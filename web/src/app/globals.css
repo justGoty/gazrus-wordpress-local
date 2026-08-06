@@ -1,15 +1,15 @@
 :root {
-  --blue: #1769aa;
-  --teal: #0e8d7a;
-  --amber: #e39a18;
+  --blue: #1976d2;
+  --teal: #0aa58b;
+  --amber: #f2a51c;
   --ink: #17232c;
   --ink-soft: #53636e;
-  --paper: #f4f7f8;
+  --paper: #f3f8fb;
   --surface: #ffffff;
   --line: #d7e0e6;
   --dark: #101a20;
   --dark-soft: #1c2a32;
-  --radius: 6px;
+  --radius: 8px;
   --content: 1240px;
 }
 
@@ -23,7 +23,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: linear-gradient(135deg, #f7fbfd 0%, var(--paper) 55%, #fff9ed 100%);
   color: var(--ink);
   font-family: var(--font-text), Arial, sans-serif;
 }
@@ -182,24 +182,41 @@ img {
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .button {
+  position: relative;
   min-height: 46px;
   gap: 9px;
   padding: 0 19px;
+  overflow: hidden;
   border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(23, 35, 44, 0.08);
+}
+
+.button::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.22) 50%, transparent 75%);
+  transform: translateX(-105%);
+  transition: opacity 180ms ease, transform 340ms ease;
 }
 
 .button-primary {
-  background: var(--blue);
+  background: linear-gradient(135deg, var(--blue), #197fc6 58%, var(--teal));
   color: #ffffff;
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  background: #115b95;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1268bd, #147bbf 56%, #078e78);
+  box-shadow: 0 12px 24px rgba(17, 111, 179, 0.3);
+  transform: translateY(-2px);
 }
 
 .button-ghost {
@@ -212,6 +229,14 @@ img {
 .button-ghost:focus-visible {
   border-color: #ffffff;
   background: rgba(16, 26, 32, 0.7);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.button:hover::after,
+.button:focus-visible::after {
+  opacity: 1;
+  transform: translateX(105%);
 }
 
 .icon-button {
@@ -227,6 +252,8 @@ img {
 .icon-button:focus-visible {
   color: var(--blue);
   border-color: var(--blue);
+  box-shadow: 0 8px 18px rgba(25, 118, 210, 0.16);
+  transform: translateY(-1px);
 }
 
 .menu-toggle {
@@ -276,7 +303,9 @@ img {
 }
 
 .hero-shade {
-  background: rgba(8, 17, 23, 0.68);
+  background:
+    linear-gradient(90deg, rgba(7, 18, 27, 0.9) 0%, rgba(7, 18, 27, 0.78) 43%, rgba(7, 18, 27, 0.38) 72%, rgba(7, 18, 27, 0.22) 100%),
+    linear-gradient(140deg, rgba(25, 118, 210, 0.28), transparent 48%);
 }
 
 .hero-inner {
@@ -394,6 +423,7 @@ img {
   font-weight: 700;
   text-align: left;
   cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .hero-tab::after {
@@ -422,6 +452,14 @@ img {
   background: rgba(255, 255, 255, 0.96);
   color: var(--ink);
   border-color: #ffffff;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.17);
+}
+
+.hero-tab:hover:not([data-active="true"]),
+.hero-tab:focus-visible:not([data-active="true"]) {
+  border-color: rgba(255, 255, 255, 0.74);
+  background: rgba(23, 42, 52, 0.9);
+  transform: translateY(-2px);
 }
 
 .hero-tab[data-active="true"]::after {
@@ -442,7 +480,7 @@ img {
 }
 
 .trust-strip {
-  background: var(--surface);
+  background: linear-gradient(100deg, #ffffff 0%, #eff9fb 55%, #fff8e9 100%);
   border-bottom: 1px solid var(--line);
 }
 
@@ -535,18 +573,29 @@ img {
   border-top-width: 4px;
   border-radius: var(--radius);
   background: var(--surface);
+  box-shadow: 0 4px 12px rgba(21, 43, 56, 0.05);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .category-card-blue {
   border-top-color: var(--blue);
+  background: linear-gradient(145deg, #ffffff 0%, #edf7ff 100%);
 }
 
 .category-card-amber {
   border-top-color: var(--amber);
+  background: linear-gradient(145deg, #ffffff 0%, #fff7e7 100%);
 }
 
 .category-card-teal {
   border-top-color: var(--teal);
+  background: linear-gradient(145deg, #ffffff 0%, #eafaf6 100%);
+}
+
+.category-card:hover {
+  border-color: #bed0da;
+  box-shadow: 0 16px 30px rgba(21, 43, 56, 0.13);
+  transform: translateY(-4px);
 }
 
 .category-card h3 {
@@ -575,9 +624,23 @@ img {
 }
 
 .selection-section {
-  background: #e9eff2;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(100deg, #edf8fb 0%, #f5fbfd 54%, #fff7e8 100%);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+
+.selection-section::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  opacity: 0.2;
+  background:
+    linear-gradient(90deg, rgba(237, 248, 251, 0.98) 0%, rgba(245, 251, 253, 0.9) 51%, rgba(255, 247, 232, 0.56) 100%),
+    url("/images/hero-stationary-v4.webp") center right / cover no-repeat;
 }
 
 .selection-layout {
@@ -606,8 +669,9 @@ img {
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: 0 15px 38px rgba(24, 45, 57, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 42px rgba(24, 75, 96, 0.14);
+  backdrop-filter: blur(8px);
 }
 
 .selection-form label {
@@ -627,7 +691,7 @@ img {
   min-height: 46px;
   padding: 0 34px 0 12px;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 6px;
   background: #ffffff;
   color: var(--ink);
 }
@@ -643,6 +707,9 @@ img {
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(21, 43, 56, 0.06);
 }
 
 .service-item {
@@ -666,8 +733,22 @@ img {
 }
 
 .quote-band {
-  background: var(--dark);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #10232c;
   color: #ffffff;
+}
+
+.quote-band::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  opacity: 0.36;
+  background:
+    linear-gradient(90deg, rgba(10, 26, 35, 0.98) 0%, rgba(10, 26, 35, 0.78) 48%, rgba(10, 26, 35, 0.3) 100%),
+    url("/images/hero-sensors-v3.webp") center right / cover no-repeat;
 }
 
 .quote-inner {
@@ -901,6 +982,14 @@ img {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
+  box-shadow: 0 4px 12px rgba(21, 43, 56, 0.05);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.product-card:hover {
+  border-color: #bed0da;
+  box-shadow: 0 16px 30px rgba(21, 43, 56, 0.13);
+  transform: translateY(-3px);
 }
 
 .product-card-accent {

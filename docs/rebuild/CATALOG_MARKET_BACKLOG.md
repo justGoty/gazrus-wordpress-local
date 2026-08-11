@@ -152,4 +152,3 @@
 - [MSA: стационарная линейка](https://assetlibrary.msasafety.com/m/75ad0a9659bf056f/original/Bulletin-Fixed-Gas-amp-Flame-Detection-International-Product-Range-Overview.pdf)
 - [Membrapor](https://www.membrapor.ch/en/)
 - [SGX Sensortech](https://www.sgxsensortech.com/products)
-

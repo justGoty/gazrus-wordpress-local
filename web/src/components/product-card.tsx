@@ -12,7 +12,8 @@ type ProductCardProps = {
 };
 
 function formatChannelCount(value: string) {
-  const count = Number(value);
+  const trailingCount = value.match(/(\d+)\s*$/)?.[1];
+  const count = trailingCount ? Number(trailingCount) : Number.NaN;
 
   if (!Number.isInteger(count)) {
     return `${value} каналов`;

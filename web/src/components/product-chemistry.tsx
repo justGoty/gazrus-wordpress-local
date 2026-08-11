@@ -2,6 +2,7 @@
 
 import { FlaskConical } from "lucide-react";
 import { useState } from "react";
+import type { Product } from "@/lib/catalog/schema";
 
 type GasOption = {
   id: string;
@@ -12,9 +13,10 @@ type GasOption = {
 type ProductChemistryProps = {
   gases: GasOption[];
   model: string;
+  category: Product["category"];
 };
 
-export function ProductChemistry({ gases, model }: ProductChemistryProps) {
+export function ProductChemistry({ gases, model, category }: ProductChemistryProps) {
   const [activeId, setActiveId] = useState(gases[0]?.id ?? "");
   const activeGas = gases.find((gas) => gas.id === activeId) ?? gases[0];
 
@@ -51,10 +53,17 @@ export function ProductChemistry({ gases, model }: ProductChemistryProps) {
 
       <div className="product-gas-description" id="product-gas-description" role="tabpanel">
         <strong>{gasName}</strong>
-        <p>
-          Для контроля компонента {activeGas.formula} прибор {model} комплектуется подходящим сенсором.
-          Диапазон измерения и технологию сенсора фиксируем в коммерческом предложении.
-        </p>
+        {category === "sensors" ? (
+          <p>
+            Сенсор {model} предназначен для контроля компонента {activeGas.formula}. Точный диапазон и условия
+            интеграции сверяются с документацией производителя и схемой прибора.
+          </p>
+        ) : (
+          <p>
+            Для контроля компонента {activeGas.formula} прибор {model} комплектуется подходящим сенсором.
+            Диапазон измерения и технологию сенсора фиксируем в коммерческом предложении.
+          </p>
+        )}
       </div>
     </section>
   );

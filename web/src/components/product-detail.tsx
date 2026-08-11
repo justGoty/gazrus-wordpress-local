@@ -28,6 +28,9 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
   }
 
   const quoteHref = `mailto:info@prscom.ru?subject=${encodeURIComponent(`Запрос КП: ${product.title}`)}`;
+  const hasMetrologyDocuments = product.documents.some(
+    (document) => document.type === "certificate" || document.type === "verification",
+  );
 
   return (
     <div className="product-page">
@@ -103,11 +106,13 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
         <section className="product-content-section product-operation-section">
           <div className="product-section-heading">
             <p className="section-kicker">Принцип работы</p>
-            <h2>Как прибор измеряет газ</h2>
+            <h2>{product.category === "sensors" ? "Как сенсор формирует сигнал" : "Как прибор измеряет газ"}</h2>
             <p>{product.workingPrinciple.summary}</p>
           </div>
           <div className="product-operation-content">
-            {productGases.length > 0 ? <ProductChemistry gases={productGases} model={product.model} /> : null}
+            {productGases.length > 0 ? (
+              <ProductChemistry gases={productGases} model={product.model} category={product.category} />
+            ) : null}
             <div className="product-operation-flow">
               {product.workingPrinciple.stages.map((stage, index) => {
                 const Icon = [Wind, Activity, Cpu, RadioTower][index] ?? Activity;
@@ -205,16 +210,21 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
         </section>
       ) : null}
 
-      <section className="product-verification-note">
-        <ShieldCheck aria-hidden="true" size={24} />
-        <div>
-          <strong>Документация и метрология подтверждены</strong>
-          <p>
-            Для модели доступны руководство по эксплуатации, описание типа СИ и методика поверки. Исполнение и
-            диапазон указываются в коммерческом предложении.
-          </p>
-        </div>
-      </section>
+      {product.documents.length > 0 ? (
+        <section className="product-verification-note">
+          <ShieldCheck aria-hidden="true" size={24} />
+          <div>
+            <strong>
+              {hasMetrologyDocuments ? "Документация и метрология подтверждены" : "Документация производителя доступна"}
+            </strong>
+            <p>
+              {hasMetrologyDocuments
+                ? "На странице собраны эксплуатационные и метрологические документы. Исполнение, диапазон и комплект поставки фиксируются в коммерческом предложении."
+                : "Технические материалы по модели доступны для изучения. Перед заказом мы уточняем конфигурацию, совместимость и комплект поставки."}
+            </p>
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 }

@@ -1,3 +1,5 @@
 [
-  { "id": "sta", "name": "СТА" }
+  { "id": "sta", "name": "СТА" },
+  { "id": "rki-instruments", "name": "RKI Instruments" },
+  { "id": "alphasense", "name": "Alphasense" }
 ]

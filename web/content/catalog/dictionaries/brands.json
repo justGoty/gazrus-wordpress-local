@@ -4,5 +4,7 @@
   { "id": "msa", "name": "MSA" },
   { "id": "draeger", "name": "Dräger" },
   { "id": "rki-instruments", "name": "RKI Instruments" },
-  { "id": "alphasense", "name": "Alphasense" }
+  { "id": "alphasense", "name": "Alphasense" },
+  { "id": "eris", "name": "ЭРИС" },
+  { "id": "honeywell-city-technology", "name": "Honeywell City Technology" }
 ]

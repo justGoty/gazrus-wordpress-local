@@ -34,7 +34,7 @@
 |---|---|---|---|---|
 | P0 | [СТА-КД1](https://stacom.ru/product/statsionarnyj-gazoanalizator-ga-kd1/) | Один газ, непрерывный контроль, интеграция в АСУ ТП | Опорная российская модель | published |
 | P0 | [СТА-КД3](https://stacom.ru/) | Многоканальный контроль объекта | Закрывает системы с несколькими точками и газами | published |
-| P0 | [ДГС ЭРИС-210](https://eriskip.com/ru/product/dgs-210) | Горючие, токсичные газы и O2, взрывоопасные зоны | Актуальная российская промышленная серия, подробная документация | queued |
+| P0 | [ДГС ЭРИС-210](https://eriskip.com/ru/product/dgs-210) | Горючие, токсичные газы и O2, взрывоопасные зоны | Актуальная российская промышленная серия, подробная документация | published |
 | P0 | [Аналитприбор ДАК](https://www.analitpribor-smolensk.ru/products/gazoanalizators/stacionarnye/vzryvozawiwennoe-oborudovanie/dak_datchik/) | CH4, CO2, углеводороды и пары нефтепродуктов, ИК | Важная отечественная позиция для нефтегаза | queued |
 | P0 | [ЭКСИС МАГ-6 С-П](https://www.eksis.ru/catalog/statsionarnye-odnokomponentnye-gazoanalizatory/) | H2S, CH4, O2, CO2, CO, NH3, SO2, NO2 | Широкая линейка для помещений и технологических задач | queued |
 | P0 | [Dräger Polytron 8100 EC](https://www.draeger.com/en-us_us/Products/Draeger-Polytron-8100) | Токсичные газы и O2, электрохимические сенсоры | Международный отраслевой ориентир, более 100 газовых исполнений | availability check |
@@ -66,7 +66,7 @@
 
 | Приоритет | Производитель и модель | Канальность и сценарий | Основание для каталога | Статус |
 |---|---|---|---|---|
-| P0 | [КИП-МГ4](https://kipkonsalt.com/product/portativnye-gazoanalizatory/portativnye-gazoanalizatory-kip-mg/portativnyy-mnogokanalnyy-gazoanalizator-kip-mg4-/) | До 5 компонентов, диффузионный контроль | Логичное дополнение насосного КИП-МГ5 | queued |
+| P0 | [КИП-МГ4](https://kipkonsalt.com/product/portativnye-gazoanalizatory/portativnye-gazoanalizatory-kip-mg/portativnyy-mnogokanalnyy-gazoanalizator-kip-mg4-/) | До 5 компонентов, диффузионный контроль | Логичное дополнение насосного КИП-МГ5 | published |
 | P0 | [АНКАТ-64М3](https://www.analitpribor-smolensk.ru/products/gazoanalizators/perenosnii/bezopasnost-i-ohrana-truda/ankat_64_m3/) | До 5 газов, включая PID/VOC по исполнению | Современная российская многоканальная линейка | queued |
 | P0 | [КИП-МГ1](https://kipkonsalt.com/product/portativnye-gazoanalizatory/portativnye-gazoanalizatory-kip-mg/portativnyy-odnokanalnyy-gazoanalizator-kip-mg1-/) | Один выбранный газ | Базовый отечественный персональный прибор | queued |
 | P0 | [АНКАТ-7631Микро](https://www.analitpribor-smolensk.ru/products/gazoanalizators/perenosnii/bezopasnost-i-ohrana-truda/ankat7631micro/) | Один газ: CO, HCl, H2S, NH3, Cl2, SO2, NO2 или O2 | Закрывает российские одноканальные исполнения | queued |
@@ -94,7 +94,7 @@
 | Приоритет | Производитель и модель | Газ и технология | Позиция в каталоге | Статус |
 |---|---|---|---|---|
 | P0 | [Alphasense CO-B4](https://www.alphasense.com/products/view-by-target-gas/co-b4) | CO, электрохимический | Опорная карточка сенсора | published |
-| P0 | [Honeywell City Technology 4CF+](https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor) | CO, электрохимический 4-Series | Базовый промышленный CO-сенсор | queued |
+| P0 | [Honeywell City Technology 4CF+](https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor) | CO, электрохимический 4-Series | Базовый промышленный CO-сенсор | published |
 | P0 | [Honeywell City Technology 4HS+](https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor) | H2S, электрохимический 4-Series | Базовый H2S-сенсор | queued |
 | P0 | [Honeywell City Technology 4OXV](https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor) | O2, электрохимический 4-Series | Базовый кислородный сенсор | queued |
 | P0 | [Alphasense CO-AF](https://www.alphasense.com/products/view-by-target-gas/co-af) | CO, электрохимический A-Series | Расширяет Alphasense по другому форм-фактору и диапазону | queued |

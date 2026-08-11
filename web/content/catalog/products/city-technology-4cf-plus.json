@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "4e060352-e7b1-4c8b-9d52-dfab2e06d2e0",
+  "slug": "city-technology-4cf-plus",
+  "status": "published",
+  "category": "sensors",
+  "brandId": "honeywell-city-technology",
+  "model": "4CF+",
+  "title": "Электрохимический сенсор CO Honeywell City Technology 4CF+",
+  "summary": "Трехэлектродный сенсор CiTiceL серии 4 для измерения угарного газа в портативных приборах безопасности. Компактный OEM-компонент с диапазоном 0–500 ppm, быстрым откликом и встроенным фильтром мешающих газов.",
+  "commercialMode": "request_quote",
+  "gases": ["co"],
+  "ranges": [
+    { "gasId": "co", "min": 0, "max": 500, "unit": "ppm" }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/city-technology-4cf-plus/city-technology-4cf-plus-cutout-v3.webp",
+      "alt": "Электрохимический сенсор угарного газа Honeywell City Technology CiTiceL 4CF+"
+    }
+  ],
+  "highlights": [
+    { "label": "Определяемый газ", "value": "CO" },
+    { "label": "Технология", "value": "Электрохимическая" },
+    { "label": "Конструкция", "value": "3 электрода" },
+    { "label": "Диапазон", "value": "0–500 ppm" },
+    { "label": "Время отклика", "value": "T90 < 20 с" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Определяемый компонент", "value": "Оксид углерода CO" },
+    { "group": "Измерение", "label": "Принцип измерения", "value": "Трехэлектродный электрохимический" },
+    { "group": "Измерение", "label": "Диапазон", "value": "0–500 ppm CO" },
+    { "group": "Измерение", "label": "Максимальная перегрузка", "value": "2000 ppm CO" },
+    { "group": "Измерение", "label": "Чувствительность", "value": "0,07 ± 0,015 мкА/ppm" },
+    { "group": "Измерение", "label": "Время отклика", "value": "T90 < 20 с" },
+    { "group": "Измерение", "label": "Повторяемость", "value": "< ±3 % сигнала" },
+    { "group": "Измерение", "label": "Линейность", "value": "В пределах ±5 %" },
+    { "group": "Фильтр", "label": "Назначение фильтра", "value": "Снижение влияния кислых газов и углеводородов" },
+    { "group": "Электрические параметры", "label": "Рекомендуемая нагрузка", "value": "5 Ом" },
+    { "group": "Электрические параметры", "label": "Напряжение смещения", "value": "Не требуется" },
+    { "group": "Исполнение", "label": "Артикул базового исполнения", "value": "2112B2005" },
+    { "group": "Исполнение", "label": "Размеры", "value": "Диаметр 20,2 мм, высота 16,6 мм" },
+    { "group": "Исполнение", "label": "Масса", "value": "Около 5 г" },
+    { "group": "Условия эксплуатации", "label": "Непрерывная температура", "value": "От −20 до +40 °C" },
+    { "group": "Условия эксплуатации", "label": "Кратковременная температура", "value": "От −40 до +55 °C" },
+    { "group": "Условия эксплуатации", "label": "Относительная влажность", "value": "15–90 % RH, без конденсации" },
+    { "group": "Ресурс", "label": "Ожидаемый срок службы", "value": "2 года в воздухе" },
+    { "group": "Ресурс", "label": "Долговременный дрейф", "value": "< 5 % в год" }
+  ],
+  "applications": [
+    "Разработка и производство портативных газоанализаторов угарного газа",
+    "Персональные приборы промышленной безопасности и контроля рабочей зоны",
+    "Замена сенсора после подтверждения артикула, распиновки и параметров схемы",
+    "Стендовые и OEM-проекты с диапазоном измерения CO до 500 ppm"
+  ],
+  "workingPrinciple": {
+    "summary": "Молекулы CO диффундируют через вход сенсора и участвуют в электрохимической реакции на рабочем электроде. Возникающий ток пропорционален концентрации газа и должен быть обработан измерительной схемой прибора.",
+    "stages": [
+      {
+        "title": "CO поступает к рабочему электроду",
+        "description": "Газ проходит через диффузионный барьер и встроенный фильтр, который снижает часть перекрестных влияний."
+      },
+      {
+        "title": "Возникает электрохимический ток",
+        "description": "Реакция на электродах формирует ток, связанный с концентрацией угарного газа в пробе."
+      },
+      {
+        "title": "Схема прибора рассчитывает концентрацию",
+        "description": "OEM-электроника усиливает и компенсирует сигнал, применяет калибровочные коэффициенты и выводит результат."
+      }
+    ],
+    "note": "4CF+ — OEM-компонент для проектирования. Совместимость с конкретным газоанализатором подтверждается только по точному артикулу, распиновке, нагрузке, калибровке и документации изготовителя прибора."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "other",
+      "title": "Официальный datasheet City Technology 4CF+",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/gas-sensors/4-series/documents/sps-siot-citytech-4cf-plus-sensor-datasheet.pdf"
+    },
+    {
+      "type": "manual",
+      "title": "Принципы работы трехэлектродных электрохимических сенсоров OP08",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/gas-sensors/common/documents/hon-ia-hss-op08-electrochemical-3-electrode-un-biased-toxic.pdf"
+    },
+    {
+      "type": "other",
+      "title": "Паспорт безопасности продукции PSDS 12.1",
+      "url": "https://automation.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/citytech-materials-safety/psds/sps-ast-citytech-psds-12-1.pdf"
+    }
+  ],
+  "seo": {
+    "title": "Honeywell City Technology 4CF+ — сенсор CO 0–500 ppm",
+    "description": "Поставка электрохимического сенсора CO City Technology 4CF+: 0–500 ppm, T90 < 20 с, 3 электрода, артикул 2112B2005. Запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальный каталог газовых сенсоров Honeywell City Technology серии 4",
+      "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor",
+      "checkedAt": "2026-08-11T12:33:33.561Z"
+    },
+    {
+      "title": "Официальный datasheet City Technology 4CF+",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/gas-sensors/4-series/documents/sps-siot-citytech-4cf-plus-sensor-datasheet.pdf",
+      "checkedAt": "2026-08-11T12:33:33.561Z"
+    },
+    {
+      "title": "Архивное товарное изображение City Technology USA с маркировкой 4CF+",
+      "url": "https://www.parkfield.co.uk/city-us/",
+      "checkedAt": "2026-08-11T12:33:33.561Z"
+    }
+  ],
+  "verifiedAt": "2026-08-11T12:33:33.561Z",
+  "updatedAt": "2026-08-11T12:33:33.561Z"
+}

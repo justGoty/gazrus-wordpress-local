@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight, FileCheck2, Gauge, Wrench } from "lucide-react";
 import Link from "next/link";
 import { CategoryHero } from "@/components/category-hero";
@@ -70,12 +71,17 @@ export default function Home() {
             <div className="category-grid">
               {categories.map((category) => (
                 <article className={`category-card category-card-${category.accent}`} key={category.id}>
-                  <h3>{category.cardTitle}</h3>
-                  <p>{category.cardDescription}</p>
-                  <Link className="category-link" href={`/catalog/${category.id}`}>
-                    Открыть категорию
-                    <ArrowRight aria-hidden="true" size={17} />
-                  </Link>
+                  <div className="category-card-media">
+                    <Image alt={category.imageAlt} fill sizes="(max-width: 760px) 100vw, 33vw" src={category.imageDesktop} />
+                  </div>
+                  <div className="category-card-body">
+                    <h3>{category.cardTitle}</h3>
+                    <p>{category.cardDescription}</p>
+                    <Link className="category-link" href={`/catalog/${category.id}`}>
+                      Открыть категорию
+                      <ArrowRight aria-hidden="true" size={17} />
+                    </Link>
+                  </div>
                 </article>
               ))}
             </div>

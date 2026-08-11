@@ -6,7 +6,8 @@ export type Category = {
   cardTitle: string;
   title: string;
   description: string;
-  image: string;
+  imageDesktop: string;
+  imageMobile: string;
   imageAlt: string;
   focus: string;
   accent: "blue" | "amber" | "teal";
@@ -21,7 +22,8 @@ export const categories: Category[] = [
     title: "Непрерывный контроль газовой среды на объекте",
     description:
       "Подбор стационарных газоанализаторов и систем контроля загазованности по газу, диапазону, исполнению и способу интеграции.",
-    image: "/images/hero-stationary-v4.webp",
+    imageDesktop: "/images/hero-stationary-hd.webp",
+    imageMobile: "/images/hero-stationary-mobile.webp",
     imageAlt: "Стационарная система промышленного газового контроля на объекте",
     focus: "Точки контроля · Ex/IP · интерфейсы",
     accent: "blue",
@@ -35,7 +37,8 @@ export const categories: Category[] = [
     title: "Газовый контроль для обходов и допуска к работам",
     description:
       "Выбор переносных приборов по контролируемым газам, числу каналов, способу отбора пробы и условиям эксплуатации.",
-    image: "/images/hero-portable-v2.webp",
+    imageDesktop: "/images/hero-portable-hd.webp",
+    imageMobile: "/images/hero-portable-mobile.webp",
     imageAlt: "Портативный газоанализатор с пробоотборными принадлежностями",
     focus: "Каналы · отбор пробы · автономность",
     accent: "amber",
@@ -49,7 +52,8 @@ export const categories: Category[] = [
     title: "Сенсоры для замены, обслуживания и интеграции",
     description:
       "Поиск сенсора по целевому газу, диапазону, принципу измерения, форм-фактору и совместимости с прибором.",
-    image: "/images/hero-sensors-v3.webp",
+    imageDesktop: "/images/hero-sensors-hd.webp",
+    imageMobile: "/images/hero-sensors-mobile.webp",
     imageAlt: "Сменные электрохимические, инфракрасные и каталитические сенсоры для газоанализаторов",
     focus: "Совместимость · диапазон · технология",
     accent: "teal",

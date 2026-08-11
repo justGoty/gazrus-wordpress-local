@@ -55,7 +55,7 @@ export default async function CatalogPage() {
           <div className="catalog-title-inner">
             <p className="eyebrow eyebrow-blue">Инженерный каталог</p>
             <h1>{catalogSeo.h1}</h1>
-            <p>Три товарных направления, технические параметры и запрос КП без условных цен.</p>
+            <p>Подберите оборудование по газу, диапазону, исполнению и интерфейсам. Стоимость и срок поставки подтвердим в коммерческом предложении.</p>
           </div>
         </section>
 

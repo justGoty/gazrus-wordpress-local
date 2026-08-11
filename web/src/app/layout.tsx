@@ -22,6 +22,18 @@ export const metadata: Metadata = {
     template: seoSite.titleTemplate,
   },
   description: seoSite.defaultDescription,
+  verification: {
+    yandex: "d1813774cff4888e",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({

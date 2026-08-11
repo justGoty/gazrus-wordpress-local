@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { type KeyboardEvent, useRef, useState } from "react";
 import { categories } from "@/data/categories";
 
 type CategoryHeroProps = {
@@ -12,6 +11,7 @@ type CategoryHeroProps = {
 
 export function CategoryHero({ pageHeading }: CategoryHeroProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const selectPrevious = () => {
     setActiveIndex((current) => (current - 1 + categories.length) % categories.length);
@@ -21,80 +21,97 @@ export function CategoryHero({ pageHeading }: CategoryHeroProps) {
     setActiveIndex((current) => (current + 1) % categories.length);
   };
 
+  const handleTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const direction = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
+    if (!direction) return;
+
+    event.preventDefault();
+    const nextIndex = (index + direction + categories.length) % categories.length;
+    setActiveIndex(nextIndex);
+    tabRefs.current[nextIndex]?.focus();
+  };
+
   return (
     <section className="hero" id="top" aria-label="Основные направления каталога">
       <div className="hero-media" aria-hidden="true">
         {categories.map((category, index) => (
           <div
             className="hero-image"
+            data-active={index === activeIndex}
             data-slide={category.id}
             key={category.id}
           >
-            <Image
-              alt=""
-              fill
-              priority={index === 0}
-              sizes="100vw"
-              src={category.image}
-            />
+            <picture>
+              <source media="(max-width: 760px)" srcSet={category.imageMobile} />
+              <img alt="" decoding="async" fetchPriority={index === 0 ? "high" : "auto"} src={category.imageDesktop} />
+            </picture>
           </div>
         ))}
         <div className="hero-shade" />
+        <div className="hero-grid" />
+        {categories.map((category, index) => (
+          <div
+            className={`hero-product-motion hero-product-motion-${category.id}`}
+            data-active={index === activeIndex}
+            key={`motion-${category.id}`}
+          >
+            <span className="hero-scan" />
+            <span className="hero-signal" />
+          </div>
+        ))}
       </div>
 
       <div className="hero-inner">
-        <h1 className="sr-only">{pageHeading}</h1>
-        <div className="hero-slides" aria-live="polite">
-          {categories.map((category, index) => (
-            <article
-              className="hero-copy"
-              data-slide={category.id}
-              aria-hidden={index !== activeIndex}
-              key={category.id}
-            >
-              <p className={`eyebrow eyebrow-${category.accent}`}>
-                Каталог промышленного газового контроля
-              </p>
-              <h2>{category.title}</h2>
-              <p className="hero-description">{category.description}</p>
-              <p className="hero-focus">{category.focus}</p>
-              <div className="hero-actions">
-                <a className="button button-primary" href="#selection">
-                  Начать подбор
-                  <ArrowRight aria-hidden="true" size={18} />
-                </a>
-                <Link className="button button-ghost" href={`/catalog/${category.id}`}>
-                  Смотреть каталог
-                </Link>
-              </div>
-            </article>
-          ))}
+        <div className="hero-content">
+          <h1>{pageHeading}</h1>
+          <div className="hero-slides" aria-live="polite">
+            {categories.map((category, index) => (
+              <article
+                className="hero-copy"
+                data-active={index === activeIndex}
+                data-slide={category.id}
+                aria-hidden={index !== activeIndex}
+                aria-labelledby={`hero-tab-${category.id}`}
+                id={`hero-panel-${category.id}`}
+                role="tabpanel"
+                key={category.id}
+              >
+                <h2>{category.title}</h2>
+                <p className="hero-description">{category.description}</p>
+                <p className="hero-focus">{category.focus}</p>
+                <div className="hero-actions">
+                  <a className="button button-primary" href="#selection">
+                    Начать подбор
+                    <ArrowRight aria-hidden="true" size={18} />
+                  </a>
+                  <Link className="button button-ghost" href={`/catalog/${category.id}`}>
+                    Смотреть каталог
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
 
         <div className="hero-navigation">
           <div className="hero-tabs" role="tablist" aria-label="Выбор направления">
             {categories.map((category, index) => (
-              <input
-                className="hero-radio"
-                type="radio"
-                name="hero-category"
-                id={`hero-category-${category.id}`}
-                checked={index === activeIndex}
-                onChange={() => setActiveIndex(index)}
-                key={`control-${category.id}`}
-              />
-            ))}
-            {categories.map((category, index) => (
-              <label
+              <button
                 role="tab"
+                type="button"
                 aria-selected={index === activeIndex}
+                aria-controls={`hero-panel-${category.id}`}
                 className={`hero-tab hero-tab-${category.accent}`}
                 data-active={index === activeIndex}
-                htmlFor={`hero-category-${category.id}`}
+                id={`hero-tab-${category.id}`}
+                onClick={() => setActiveIndex(index)}
+                onKeyDown={(event) => handleTabKeyDown(event, index)}
+                ref={(element) => { tabRefs.current[index] = element; }}
+                tabIndex={index === activeIndex ? 0 : -1}
                 key={category.id}
               >
                 {category.label}
-              </label>
+              </button>
             ))}
           </div>
 

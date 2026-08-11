@@ -41,6 +41,8 @@ pnpm dev -p 8090
 
 Новая версия: `http://localhost:8090/`.
 
+Production-compose и порядок публикации новой версии находятся в [docs/rebuild/DEPLOYMENT.md](docs/rebuild/DEPLOYMENT.md).
+
 ## Запуск WordPress-прототипа
 
 Требования:

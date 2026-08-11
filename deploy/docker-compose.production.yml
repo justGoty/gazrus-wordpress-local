@@ -1,0 +1,27 @@
+services:
+  gazrus-next:
+    build:
+      context: ../web
+      dockerfile: Dockerfile
+    image: gazrus-next:latest
+    container_name: gazrus-next
+    restart: unless-stopped
+    networks:
+      - dokploy-network
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=dokploy-network
+      - traefik.http.routers.gazrus-next-web.entrypoints=web
+      - traefik.http.routers.gazrus-next-web.rule=Host(`xn--80aaaalzch0asjh0a0a.xn--p1acf`)
+      - traefik.http.routers.gazrus-next-web.middlewares=redirect-to-https@file
+      - traefik.http.routers.gazrus-next-web.service=gazrus-next-web
+      - traefik.http.routers.gazrus-next-websecure.entrypoints=websecure
+      - traefik.http.routers.gazrus-next-websecure.rule=Host(`xn--80aaaalzch0asjh0a0a.xn--p1acf`)
+      - traefik.http.routers.gazrus-next-websecure.service=gazrus-next-websecure
+      - traefik.http.routers.gazrus-next-websecure.tls.certresolver=letsencrypt
+      - traefik.http.services.gazrus-next-web.loadbalancer.server.port=3000
+      - traefik.http.services.gazrus-next-websecure.loadbalancer.server.port=3000
+
+networks:
+  dokploy-network:
+    external: true

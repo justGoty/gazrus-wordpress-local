@@ -11,6 +11,26 @@ type ProductCardProps = {
   brands: Brand[];
 };
 
+function formatChannelCount(value: string) {
+  const count = Number(value);
+
+  if (!Number.isInteger(count)) {
+    return `${value} каналов`;
+  }
+
+  const lastTwoDigits = count % 100;
+  const lastDigit = count % 10;
+  const label = lastTwoDigits >= 11 && lastTwoDigits <= 14
+    ? "каналов"
+    : lastDigit === 1
+      ? "канал"
+      : lastDigit >= 2 && lastDigit <= 4
+        ? "канала"
+        : "каналов";
+
+  return `${value} ${label}`;
+}
+
 export function ProductCard({ product, gases, brands }: ProductCardProps) {
   const category = categoryById[product.category];
   const image = product.media.find((item) => item.type === "image");
@@ -21,10 +41,20 @@ export function ProductCard({ product, gases, brands }: ProductCardProps) {
   const gasSummary = gasLabels.length > 6 ? `${gasLabels.slice(0, 6).join(", ")} и другие` : gasLabels.join(", ");
   const detailsHref = `/catalog/${product.category}/${product.slug}`;
   const quoteHref = `mailto:info@prscom.ru?subject=${encodeURIComponent(`Запрос КП: ${product.title}`)}`;
+  const channelCount = product.highlights.find((item) => item.label === "Измерительных каналов")?.value;
+  const protection = product.highlights.find((item) => item.label === "Защита корпуса")?.value;
+  const hasExplosionProtection = product.highlights.some((item) => item.label === "Взрывозащита");
+  const hasLocalDisplay = product.specifications.some((item) => item.label === "Местная индикация");
+  const productChips = [
+    channelCount ? formatChannelCount(channelCount) : null,
+    hasExplosionProtection ? "Ex" : null,
+    protection ?? null,
+    hasLocalDisplay ? "Локальная индикация" : null,
+  ].filter((item): item is string => Boolean(item));
 
   return (
     <article className="product-card">
-      <div className="product-card-media">
+      <Link className="product-card-media" href={detailsHref} aria-label={`Открыть карточку ${product.title}`}>
         {image ? (
           <div className="product-card-image">
             <Image
@@ -39,13 +69,22 @@ export function ProductCard({ product, gases, brands }: ProductCardProps) {
             <ImageIcon aria-hidden="true" size={30} />
           </div>
         )}
-      </div>
+      </Link>
 
       <div className="product-card-body">
         <p className="product-card-overline">
           {brandName} · {product.model}
         </p>
         <h2>{product.title}</h2>
+        {productChips.length > 0 ? (
+          <ul className="product-card-chips" aria-label="Ключевые характеристики">
+            {productChips.map((item, index) => (
+              <li className={`product-card-chip product-card-chip-${index + 1}`} key={item}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        ) : null}
         <p className="product-card-summary">{product.summary}</p>
 
         <dl className="product-card-facts">

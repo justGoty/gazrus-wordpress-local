@@ -27,7 +27,7 @@ export function CategoryHero({ pageHeading }: CategoryHeroProps) {
         {categories.map((category, index) => (
           <div
             className="hero-image"
-            data-active={index === activeIndex}
+            data-slide={category.id}
             key={category.id}
           >
             <Image
@@ -48,7 +48,7 @@ export function CategoryHero({ pageHeading }: CategoryHeroProps) {
           {categories.map((category, index) => (
             <article
               className="hero-copy"
-              data-active={index === activeIndex}
+              data-slide={category.id}
               aria-hidden={index !== activeIndex}
               key={category.id}
             >
@@ -74,17 +74,27 @@ export function CategoryHero({ pageHeading }: CategoryHeroProps) {
         <div className="hero-navigation">
           <div className="hero-tabs" role="tablist" aria-label="Выбор направления">
             {categories.map((category, index) => (
-              <button
-                type="button"
+              <input
+                className="hero-radio"
+                type="radio"
+                name="hero-category"
+                id={`hero-category-${category.id}`}
+                checked={index === activeIndex}
+                onChange={() => setActiveIndex(index)}
+                key={`control-${category.id}`}
+              />
+            ))}
+            {categories.map((category, index) => (
+              <label
                 role="tab"
                 aria-selected={index === activeIndex}
                 className={`hero-tab hero-tab-${category.accent}`}
                 data-active={index === activeIndex}
+                htmlFor={`hero-category-${category.id}`}
                 key={category.id}
-                onClick={() => setActiveIndex(index)}
               >
                 {category.label}
-              </button>
+              </label>
             ))}
           </div>
 

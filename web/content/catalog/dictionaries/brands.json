@@ -1,5 +1,8 @@
 [
   { "id": "sta", "name": "СТА" },
+  { "id": "kip-konsalt", "name": "КИП-Консалт" },
+  { "id": "msa", "name": "MSA" },
+  { "id": "draeger", "name": "Dräger" },
   { "id": "rki-instruments", "name": "RKI Instruments" },
   { "id": "alphasense", "name": "Alphasense" }
 ]

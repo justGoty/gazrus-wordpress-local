@@ -63,6 +63,20 @@ const ModificationSchema = z.object({
   gases: z.array(z.string().min(1)).default([]),
 });
 
+const WorkingPrincipleSchema = z.object({
+  summary: z.string().min(1),
+  stages: z
+    .array(
+      z.object({
+        title: z.string().min(1),
+        description: z.string().min(1),
+      }),
+    )
+    .min(2)
+    .max(4),
+  note: z.string().min(1).optional(),
+});
+
 export const ProductSchema = z
   .object({
     schemaVersion: z.literal(1),
@@ -81,6 +95,7 @@ export const ProductSchema = z
     highlights: z.array(HighlightSchema).max(6).default([]),
     specifications: z.array(SpecificationSchema).default([]),
     applications: z.array(z.string().min(1)).default([]),
+    workingPrinciple: WorkingPrincipleSchema.optional(),
     modifications: z.array(ModificationSchema).default([]),
     documents: z.array(DocumentSchema).default([]),
     seo: z.object({

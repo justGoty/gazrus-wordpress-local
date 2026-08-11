@@ -8,7 +8,6 @@ import { Brand } from "@/components/brand";
 const navigation = [
   { href: "/catalog", label: "Каталог" },
   { href: "/#selection", label: "Подбор" },
-  { href: "/#services", label: "Поверка" },
   { href: "/#documents", label: "Документы" },
 ];
 

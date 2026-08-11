@@ -1,5 +1,6 @@
-import { ArrowLeft, Download, Mail, ShieldCheck } from "lucide-react";
+import { Activity, ArrowLeft, Check, Cpu, Download, Mail, RadioTower, ShieldCheck, Wind } from "lucide-react";
 import Link from "next/link";
+import { ProductChemistry } from "@/components/product-chemistry";
 import { ProductGallery } from "@/components/product-gallery";
 import { categoryById } from "@/data/categories";
 import { formatBrandId } from "@/lib/catalog/display";
@@ -15,6 +16,10 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
   const category = categoryById[product.category];
   const brandName = brands.find((brand) => brand.id === product.brandId)?.name ?? formatBrandId(product.brandId);
   const gasById = new Map(gases.map((gas) => [gas.id, gas]));
+  const productGases = product.gases.flatMap((id) => {
+    const gas = gasById.get(id);
+    return gas ? [gas] : [];
+  });
   const specificationGroups = new Map<string, typeof product.specifications>();
 
   for (const specification of product.specifications) {
@@ -85,9 +90,40 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
           </div>
           <ul className="product-application-list">
             {product.applications.map((application) => (
-              <li key={application}>{application}</li>
+              <li key={application}>
+                <Check aria-hidden="true" size={18} />
+                <span>{application}</span>
+              </li>
             ))}
           </ul>
+        </section>
+      ) : null}
+
+      {product.workingPrinciple ? (
+        <section className="product-content-section product-operation-section">
+          <div className="product-section-heading">
+            <p className="section-kicker">Принцип работы</p>
+            <h2>Как прибор измеряет газ</h2>
+            <p>{product.workingPrinciple.summary}</p>
+          </div>
+          <div className="product-operation-content">
+            {productGases.length > 0 ? <ProductChemistry gases={productGases} model={product.model} /> : null}
+            <div className="product-operation-flow">
+              {product.workingPrinciple.stages.map((stage, index) => {
+                const Icon = [Wind, Activity, Cpu, RadioTower][index] ?? Activity;
+                return (
+                  <article key={stage.title}>
+                    <Icon aria-hidden="true" size={22} />
+                    <div>
+                      <h3>{stage.title}</h3>
+                      <p>{stage.description}</p>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+            {product.workingPrinciple.note ? <p className="product-operation-note">{product.workingPrinciple.note}</p> : null}
+          </div>
         </section>
       ) : null}
 

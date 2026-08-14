@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "e53cac71-b097-4661-869c-b2118434f408",
+  "slug": "city-technology-4oxv",
+  "status": "published",
+  "category": "sensors",
+  "brandId": "honeywell-city-technology",
+  "model": "4OXV",
+  "title": "Электрохимический сенсор кислорода Honeywell City Technology 4OXV",
+  "summary": "Кислородный сенсор CiTiceL серии 4 для портативных и стационарных приборов безопасности. Измеряет O2 в диапазоне 1–25 % об.; точное применение подтверждается по артикулу AAY80-390 и документации изготовителя прибора.",
+  "commercialMode": "request_quote",
+  "gases": ["o2"],
+  "ranges": [
+    { "gasId": "o2", "min": 1, "max": 25, "unit": "% об." }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/city-technology-4oxv/city-technology-4oxv-cutout.webp",
+      "alt": "Кислородный сенсор Honeywell City Technology CiTiceL 4OXV с маркировкой модели"
+    }
+  ],
+  "highlights": [
+    { "label": "Определяемый газ", "value": "O2" },
+    { "label": "Диапазон", "value": "1–25 % об." },
+    { "label": "Время отклика", "value": "T90 < 15 с" },
+    { "label": "Артикул", "value": "AAY80-390" },
+    { "label": "Технология", "value": "Электрохимическая" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Определяемый компонент", "value": "Кислород O2" },
+    { "group": "Измерение", "label": "Принцип измерения", "value": "Электрохимический" },
+    { "group": "Измерение", "label": "Диапазон", "value": "1–25 % об. O2" },
+    { "group": "Измерение", "label": "Максимальная перегрузка", "value": "30 % об. O2" },
+    { "group": "Измерение", "label": "Выходной сигнал", "value": "0,10 ± 0,02 мА в воздухе" },
+    { "group": "Измерение", "label": "Время отклика", "value": "T90 < 15 с" },
+    { "group": "Измерение", "label": "Нулевой ток", "value": "< 0,6 % об. O2" },
+    { "group": "Электрические параметры", "label": "Рекомендуемая нагрузка", "value": "100 Ом" },
+    { "group": "Исполнение", "label": "Артикул", "value": "AAY80-390" },
+    { "group": "Исполнение", "label": "Материал корпуса", "value": "ABS" },
+    { "group": "Исполнение", "label": "Масса", "value": "< 16 г" },
+    { "group": "Условия эксплуатации", "label": "Рабочая температура", "value": "От −20 до +50 °C" },
+    { "group": "Условия эксплуатации", "label": "Давление", "value": "Атмосферное ±20 %" },
+    { "group": "Условия эксплуатации", "label": "Относительная влажность", "value": "5–95 % RH непрерывно, без конденсации" },
+    { "group": "Ресурс", "label": "Ожидаемый срок службы", "value": "Не менее 24 месяцев в воздухе" },
+    { "group": "Ресурс", "label": "Срок хранения", "value": "6 месяцев в оригинальной упаковке" }
+  ],
+  "applications": [
+    "Портативные приборы контроля кислорода",
+    "Стационарные системы безопасности общего назначения",
+    "OEM-разработка газоаналитических приборов после проверки электрических и механических параметров",
+    "Замена сенсора только после подтверждения артикула AAY80-390 и документации прибора"
+  ],
+  "workingPrinciple": {
+    "summary": "Кислород поступает в электрохимическую ячейку через газовый вход. Реакция формирует ток, связанный с парциальным давлением O2; электроника прибора преобразует этот сигнал в показание концентрации.",
+    "stages": [
+      {
+        "title": "Кислород диффундирует в ячейку",
+        "description": "Газ поступает через вентиляционное отверстие, которое нельзя перекрывать при установке сенсора."
+      },
+      {
+        "title": "Ячейка формирует ток",
+        "description": "Электрохимическая реакция создает выходной сигнал, величина которого зависит от содержания кислорода."
+      },
+      {
+        "title": "Прибор рассчитывает концентрацию",
+        "description": "Измерительная схема использует нагрузку, калибровку и компенсации конкретного прибора для вывода результата."
+      }
+    ],
+    "note": "4OXV — OEM-сенсор. Совместимость с конкретным газоанализатором нельзя определять только по форме корпуса: необходимы точный артикул, схема включения и документация изготовителя прибора."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "other",
+      "title": "Официальный datasheet Honeywell City Technology 4OXV",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/gas-sensors/4-series/documents/sps-siot-citytech-4oxv-sensor-datasheet.pdf?download=false"
+    },
+    {
+      "type": "other",
+      "title": "Паспорт безопасности Honeywell City Technology PSDS 4",
+      "url": "https://automation.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/citytech-materials-safety/psds/sps-ast-citytech-psds-4.pdf"
+    }
+  ],
+  "seo": {
+    "title": "Honeywell City Technology 4OXV — сенсор O2 1–25 % об.",
+    "description": "Сенсор кислорода Honeywell City Technology 4OXV: 1–25 % об. O2, T90 < 15 с, артикул AAY80-390. Подбор по параметрам и запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальная страница газовых сенсоров Honeywell City Technology серии 4",
+      "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor",
+      "checkedAt": "2026-08-14T10:50:47.280Z"
+    },
+    {
+      "title": "Официальный datasheet Honeywell City Technology 4OXV",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/gas-sensors/4-series/documents/sps-siot-citytech-4oxv-sensor-datasheet.pdf?download=false",
+      "checkedAt": "2026-08-14T10:50:47.280Z"
+    }
+  ],
+  "verifiedAt": "2026-08-14T11:20:00.000Z",
+  "updatedAt": "2026-08-14T11:20:00.000Z"
+}

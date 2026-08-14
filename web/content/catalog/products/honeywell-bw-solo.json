@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "cd09c2c3-42f1-4ffa-bac5-6db2776b083c",
+  "slug": "honeywell-bw-solo",
+  "status": "published",
+  "category": "portable",
+  "brandId": "honeywell",
+  "model": "BW Solo",
+  "title": "Одноканальный газоанализатор Honeywell BW Solo",
+  "summary": "Обслуживаемый персональный газоанализатор для непрерывного контроля одного выбранного газа. Honeywell BW Solo поддерживает сменные сенсоры 1-Series и 4-Series, регистрирует события и данные измерений, а в беспроводном исполнении передает сведения по Bluetooth.",
+  "commercialMode": "request_quote",
+  "gases": ["h2s", "co", "co2", "o2", "cl2", "clo2", "c2h4o", "h2", "hcl", "hcn", "hf", "nh3", "no", "o3", "ph3", "so2"],
+  "ranges": [
+    { "gasId": "h2s", "min": 0, "max": 200, "unit": "ppm", "resolution": 0.1, "conditions": "Сенсор 1-Series" },
+    { "gasId": "co", "min": 0, "max": 2000, "unit": "ppm", "resolution": 1, "conditions": "Сенсор 1-Series" },
+    { "gasId": "co2", "min": 0, "max": 50000, "unit": "ppm", "resolution": 100, "conditions": "Сенсор 1-Series" },
+    { "gasId": "o2", "min": 0, "max": 30, "unit": "% об.", "resolution": 0.1, "conditions": "Сенсор 1-Series" },
+    { "gasId": "cl2", "min": 0, "max": 50, "unit": "ppm", "resolution": 0.1, "conditions": "Сенсор 4-Series" },
+    { "gasId": "clo2", "min": 0, "max": 1, "unit": "ppm", "resolution": 0.01, "conditions": "Сенсор 4-Series" },
+    { "gasId": "co", "min": 0, "max": 2000, "unit": "ppm", "resolution": 0.5, "conditions": "Сенсор CO-H 4-Series" },
+    { "gasId": "c2h4o", "min": 0, "max": 100, "unit": "ppm", "resolution": 0.1, "conditions": "Сенсор ETO 4-Series" },
+    { "gasId": "h2", "min": 0, "max": 1000, "unit": "ppm", "resolution": 2, "conditions": "Сенсор 4-Series" },
+    { "gasId": "hcl", "min": 0, "max": 30, "unit": "ppm", "resolution": 0.7, "conditions": "Сенсор 4-Series" },
+    { "gasId": "h2s", "min": 0, "max": 500, "unit": "ppm", "resolution": 0.1, "conditions": "Сенсор H2S Extended 4-Series" },
+    { "gasId": "hcn", "min": 0, "max": 100, "unit": "ppm", "resolution": 0.1, "conditions": "Сенсор 4-Series" },
+    { "gasId": "hf", "min": 0, "max": 10, "unit": "ppm", "resolution": 0.2, "conditions": "Сенсор 4-Series" },
+    { "gasId": "nh3", "min": 0, "max": 100, "unit": "ppm", "resolution": 1, "conditions": "Сенсор NH3 4-Series" },
+    { "gasId": "nh3", "min": 0, "max": 1000, "unit": "ppm", "resolution": 1, "conditions": "Сенсор NH3 Extended 4-Series" },
+    { "gasId": "no", "min": 0, "max": 250, "unit": "ppm", "resolution": 0.2, "conditions": "Сенсор 4-Series" },
+    { "gasId": "o3", "min": 0, "max": 1, "unit": "ppm", "resolution": 0.01, "conditions": "Сенсор 4-Series" },
+    { "gasId": "ph3", "min": 0, "max": 5, "unit": "ppm", "resolution": 0.1, "conditions": "Сенсор 4-Series" },
+    { "gasId": "so2", "min": 0, "max": 100, "unit": "ppm", "resolution": 0.1, "conditions": "Сенсор 4-Series" }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/honeywell-bw-solo/honeywell-bw-solo-front-v1.webp",
+      "alt": "Одноканальные газоанализаторы Honeywell BW Solo с сенсорами NH3 и H2S"
+    }
+  ],
+  "highlights": [
+    { "label": "Количество газов", "value": "1 выбранный газ" },
+    { "label": "Защита корпуса", "value": "IP66 / IP68" },
+    { "label": "Сигнализация", "value": "95 дБ / свет / вибрация" },
+    { "label": "Масса", "value": "103–116 г" },
+    { "label": "Связь", "value": "Bluetooth в wireless-версии" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Количество газов", "value": "Один выбранный газ и один установленный сенсор" },
+    { "group": "Сенсоры", "label": "Поддерживаемые семейства", "value": "Honeywell 1-Series и 4-Series в зависимости от исполнения" },
+    { "group": "Сигнализация", "label": "Типы тревог", "value": "Низкий и высокий порог, TWA, STEL, нарушение процедуры" },
+    { "group": "Сигнализация", "label": "Оповещение", "value": "Световое, вибрационное и звуковое 95 дБ" },
+    { "group": "Данные", "label": "Регистрация", "value": "Непрерывное протоколирование измерений и журнал 50 событий" },
+    { "group": "Данные", "label": "Языки интерфейса", "value": "11 языков" },
+    { "group": "Связь", "label": "Беспроводной интерфейс", "value": "Bluetooth Low Energy только в wireless-исполнении" },
+    { "group": "Обслуживание", "label": "Док-станция", "value": "Поддержка IntelliDoX для тестирования, настройки и выгрузки данных" },
+    { "group": "Исполнение", "label": "Степень защиты", "value": "IP66 и IP68" },
+    { "group": "Исполнение", "label": "Размеры с 1-Series", "value": "70 × 67 × 36 мм" },
+    { "group": "Исполнение", "label": "Размеры с 4-Series", "value": "70 × 67 × 41 мм" },
+    { "group": "Исполнение", "label": "Масса", "value": "103–116 г в зависимости от сенсора" },
+    { "group": "Питание", "label": "Типовой ресурс батареи", "value": "12 месяцев; зависит от сенсора, настроек и условий эксплуатации" },
+    { "group": "Условия эксплуатации", "label": "Относительная влажность", "value": "0–95 % RH, без конденсации" },
+    { "group": "Условия эксплуатации", "label": "Рабочая температура", "value": "Зависит от выбранного сенсора; см. таблицу в datasheet" }
+  ],
+  "applications": [
+    "Персональный контроль одного опасного газа в рабочей зоне",
+    "Обходы, техническое обслуживание и периодические работы на промышленных объектах",
+    "Управление парком одноканальных приборов с помощью IntelliDoX",
+    "Дистанционное получение данных от беспроводных исполнений BW Solo"
+  ],
+  "workingPrinciple": {
+    "summary": "Окружающий воздух поступает к установленному сенсору диффузионно. Сенсор преобразует воздействие выбранного газа в электрический сигнал, а электроника рассчитывает концентрацию, записывает данные и включает тревогу при достижении заданных порогов.",
+    "stages": [
+      {
+        "title": "Воздух достигает сенсора",
+        "description": "Проба из рабочей зоны поступает через газовый вход без встроенного насоса."
+      },
+      {
+        "title": "Сенсор формирует сигнал",
+        "description": "Установленный 1-Series или 4-Series реагирует на один целевой газ согласно своему диапазону."
+      },
+      {
+        "title": "Прибор оценивает концентрацию",
+        "description": "BW Solo выводит значение на экран и сохраняет измерения и события во внутреннем журнале."
+      },
+      {
+        "title": "Пользователь получает тревогу",
+        "description": "При превышении порога включаются свет, звук и вибрация; wireless-версия также может передавать данные по Bluetooth."
+      }
+    ],
+    "note": "Карточка относится к обслуживаемому Honeywell BW Solo. Параметры BW Solo Lite, включая отдельные Lite-исполнения сенсоров, в карточку не включены."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "other",
+      "title": "Официальный datasheet Honeywell BW Solo",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/portables/bw-solo/sps-his-bw-solo-datasheet-rev-c.pdf?download=false"
+    },
+    {
+      "type": "certificate",
+      "title": "Официальная декларация соответствия EU/UK Honeywell BW Solo",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/en-us/products/portables/honeywell-bw-solo/documents/hon-ia-pmc-bw-solo-2004y0142-07-eu-uk-declaration-of-conformity.pdf"
+    }
+  ],
+  "seo": {
+    "title": "Honeywell BW Solo — одноканальный переносной газоанализатор",
+    "description": "Honeywell BW Solo для контроля одного выбранного газа: сменные сенсоры 1-Series и 4-Series, IP66/IP68, журнал данных, Bluetooth опционально. Запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальная карточка Honeywell BW Solo",
+      "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/single-gas/honeywell-bw-solo-single-gas-detector",
+      "checkedAt": "2026-08-14T10:34:22.361Z"
+    },
+    {
+      "title": "Официальный datasheet Honeywell BW Solo, revision C",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/portables/bw-solo/sps-his-bw-solo-datasheet-rev-c.pdf?download=false",
+      "checkedAt": "2026-08-14T10:34:22.361Z"
+    },
+    {
+      "title": "Официальная декларация соответствия EU/UK Honeywell BW Solo",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/en-us/products/portables/honeywell-bw-solo/documents/hon-ia-pmc-bw-solo-2004y0142-07-eu-uk-declaration-of-conformity.pdf",
+      "checkedAt": "2026-08-14T10:34:22.361Z"
+    },
+    {
+      "title": "Официальное товарное изображение Honeywell BW Solo",
+      "url": "https://s7d1.scene7.com/is/image/Honeywell65/BWSoloMainSquare",
+      "checkedAt": "2026-08-14T10:34:22.361Z"
+    }
+  ],
+  "verifiedAt": "2026-08-14T10:34:22.361Z",
+  "updatedAt": "2026-08-14T10:34:22.361Z"
+}

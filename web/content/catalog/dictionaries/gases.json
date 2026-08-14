@@ -12,5 +12,10 @@
   { "id": "no", "formula": "NO", "name": "оксид азота" },
   { "id": "no2", "formula": "NO2", "name": "диоксид азота" },
   { "id": "hcn", "formula": "HCN", "name": "циановодород" },
-  { "id": "ph3", "formula": "PH3", "name": "фосфин" }
+  { "id": "ph3", "formula": "PH3", "name": "фосфин" },
+  { "id": "clo2", "formula": "ClO2", "name": "диоксид хлора" },
+  { "id": "c2h4o", "formula": "C2H4O", "name": "оксид этилена" },
+  { "id": "h2", "formula": "H2", "name": "водород" },
+  { "id": "hf", "formula": "HF", "name": "фтороводород" },
+  { "id": "voc", "formula": "ЛОС", "name": "летучие органические соединения" }
 ]

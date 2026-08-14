@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "8afa2425-7a74-42af-8a19-915d8fdcc445",
+  "slug": "city-technology-4hs-plus",
+  "status": "published",
+  "category": "sensors",
+  "brandId": "honeywell-city-technology",
+  "model": "4HS+",
+  "title": "Электрохимический сенсор H2S Honeywell City Technology 4HS+",
+  "summary": "Трехэлектродный OEM-сенсор CiTiceL серии 4 для измерения сероводорода в диапазоне 0–100 ppm. Модель 4HS+ с артикулом 2112B2025 рассчитана на встраивание в газоаналитическое оборудование и отличается временем отклика T90 до 20 секунд.",
+  "commercialMode": "request_quote",
+  "gases": ["h2s"],
+  "ranges": [
+    { "gasId": "h2s", "min": 0, "max": 100, "unit": "ppm" }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/city-technology-4hs-plus/city-technology-4hs-plus-cutout-v1.webp",
+      "alt": "Электрохимический сенсор сероводорода Honeywell City Technology CiTiceL 4HS+"
+    }
+  ],
+  "highlights": [
+    { "label": "Определяемый газ", "value": "H2S" },
+    { "label": "Диапазон", "value": "0–100 ppm" },
+    { "label": "Время отклика", "value": "T90 ≤ 20 с" },
+    { "label": "Конструкция", "value": "3 электрода" },
+    { "label": "Артикул", "value": "2112B2025" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Определяемый компонент", "value": "Сероводород H2S" },
+    { "group": "Измерение", "label": "Принцип измерения", "value": "Трехэлектродный электрохимический" },
+    { "group": "Измерение", "label": "Диапазон", "value": "0–100 ppm H2S" },
+    { "group": "Измерение", "label": "Максимальная перегрузка", "value": "500 ppm H2S" },
+    { "group": "Измерение", "label": "Чувствительность", "value": "0,7 ± 0,15 мкА/ppm" },
+    { "group": "Измерение", "label": "Время отклика", "value": "T90 ≤ 20 с" },
+    { "group": "Измерение", "label": "Повторяемость", "value": "< ±5 % сигнала" },
+    { "group": "Измерение", "label": "Линейность", "value": "В пределах ±5 %" },
+    { "group": "Конструкция", "label": "Фильтр", "value": "Не установлен" },
+    { "group": "Электрические параметры", "label": "Рекомендуемая нагрузка", "value": "5 Ом" },
+    { "group": "Электрические параметры", "label": "Напряжение смещения", "value": "0 мВ" },
+    { "group": "Исполнение", "label": "Артикул", "value": "2112B2025" },
+    { "group": "Исполнение", "label": "Размеры", "value": "Диаметр 20,2 мм, высота 16,6 мм" },
+    { "group": "Исполнение", "label": "Масса", "value": "Около 5 г" },
+    { "group": "Условия эксплуатации", "label": "Непрерывная температура", "value": "От −20 до +40 °C" },
+    { "group": "Условия эксплуатации", "label": "Кратковременная температура", "value": "От −40 до +55 °C" },
+    { "group": "Условия эксплуатации", "label": "Относительная влажность", "value": "15–90 % RH, без конденсации" },
+    { "group": "Ресурс", "label": "Ожидаемый срок службы", "value": "2 года в воздухе" },
+    { "group": "Ресурс", "label": "Долговременный дрейф", "value": "< 20 % сигнала в год" }
+  ],
+  "applications": [
+    "OEM-разработка переносных и стационарных приборов контроля сероводорода",
+    "Контроль H2S на производственных предприятиях и нефтеперерабатывающих объектах",
+    "Оборудование для канализации, очистных сооружений и пищевых производств",
+    "Приборы промышленной безопасности для горных работ"
+  ],
+  "workingPrinciple": {
+    "summary": "Сероводород диффундирует к рабочему электроду сенсора и вступает в электрохимическую реакцию. Формируемый ток пропорционален концентрации H2S, а потенциостатическая схема конечного прибора поддерживает рабочий потенциал и преобразует ток в измеряемое значение.",
+    "stages": [
+      {
+        "title": "H2S поступает к электроду",
+        "description": "Газ проходит через диффузионный барьер, который ограничивает скорость поступления молекул к чувствительной поверхности."
+      },
+      {
+        "title": "Возникает электрохимический ток",
+        "description": "Реакция на рабочем электроде создает ток, связанный с концентрацией сероводорода в пробе."
+      },
+      {
+        "title": "Электроника рассчитывает концентрацию",
+        "description": "Измерительная схема усиливает и компенсирует сигнал, используя калибровочные коэффициенты конкретного прибора."
+      }
+    ],
+    "note": "4HS+ является OEM-компонентом. Совместимость подтверждают по артикулу 2112B2025, распиновке, электрической схеме и документации изготовителя конечного прибора; выводы сенсора нельзя паять напрямую."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "other",
+      "title": "Официальный datasheet Honeywell City Technology 4HS+",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/gas-sensors/4-series/documents/sps-siot-citytech-4hs-plus-sensor-datasheet.pdf?download=false"
+    },
+    {
+      "type": "manual",
+      "title": "Принцип работы трехэлектродных электрохимических сенсоров OP08",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/gas-sensors/common/documents/hon-ia-hss-op08-electrochemical-3-electrode-un-biased-toxic.pdf"
+    }
+  ],
+  "seo": {
+    "title": "Honeywell City Technology 4HS+ — сенсор H2S 0–100 ppm",
+    "description": "Сенсор сероводорода Honeywell City Technology 4HS+: диапазон 0–100 ppm, T90 до 20 с, 3 электрода, артикул 2112B2025. Запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальная страница газовых сенсоров Honeywell City Technology серии 4",
+      "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor",
+      "checkedAt": "2026-08-14T10:34:22.361Z"
+    },
+    {
+      "title": "Официальный datasheet Honeywell City Technology 4HS+",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/gas-sensors/4-series/documents/sps-siot-citytech-4hs-plus-sensor-datasheet.pdf?download=false",
+      "checkedAt": "2026-08-14T10:34:22.361Z"
+    },
+    {
+      "title": "Официальные принципы работы Honeywell City Technology OP08",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/siot/en-us/products/sensors/gas-sensors/common/documents/hon-ia-hss-op08-electrochemical-3-electrode-un-biased-toxic.pdf",
+      "checkedAt": "2026-08-14T10:34:22.361Z"
+    }
+  ],
+  "verifiedAt": "2026-08-14T10:34:22.361Z",
+  "updatedAt": "2026-08-14T10:34:22.361Z"
+}

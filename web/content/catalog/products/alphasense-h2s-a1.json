@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "3c0f40e1-8d1a-4d3d-af79-273f1f47d7b8",
+  "slug": "alphasense-h2s-a1",
+  "status": "published",
+  "category": "sensors",
+  "brandId": "alphasense",
+  "model": "H2S-A1",
+  "title": "Электрохимический сенсор сероводорода Alphasense H2S-A1",
+  "summary": "Трехэлектродный сенсор H2S серии A для портативных и промышленных приборов безопасности. Рабочий диапазон до 100 ppm, время отклика T90 менее 35 секунд и рекомендуемая нагрузка 10–47 Ом.",
+  "commercialMode": "request_quote",
+  "gases": ["h2s"],
+  "ranges": [
+    { "gasId": "h2s", "min": 0, "max": 100, "unit": "ppm", "resolution": 0.05, "conditions": "Предел гарантируемого рабочего диапазона по datasheet" }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/alphasense-h2s-a1/alphasense-h2s-a1-cutout.webp",
+      "alt": "Электрохимический сенсор сероводорода Alphasense H2S-A1 с маркировкой модели"
+    }
+  ],
+  "highlights": [
+    { "label": "Определяемый газ", "value": "H2S" },
+    { "label": "Диапазон", "value": "0–100 ppm" },
+    { "label": "Время отклика", "value": "T90 < 35 с" },
+    { "label": "Чувствительность", "value": "550–900 нА/ppm" },
+    { "label": "Форм-фактор", "value": "A-Series" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Определяемый компонент", "value": "Сероводород H2S" },
+    { "group": "Измерение", "label": "Принцип измерения", "value": "Амперометрический электрохимический" },
+    { "group": "Измерение", "label": "Диапазон", "value": "0–100 ppm H2S" },
+    { "group": "Измерение", "label": "Чувствительность", "value": "550–900 нА/ppm при 20 ppm H2S" },
+    { "group": "Измерение", "label": "Время отклика", "value": "T90 < 35 с при переходе от нуля к 20 ppm H2S" },
+    { "group": "Измерение", "label": "Нулевой ток", "value": "< ±0,4 ppm в нулевом воздухе" },
+    { "group": "Измерение", "label": "Шум", "value": "< 0,05 ppm эквивалента, RMS" },
+    { "group": "Измерение", "label": "Перегазовка", "value": "До 500 ppm для стабильного отклика на газовый импульс" },
+    { "group": "Электрические параметры", "label": "Рекомендуемая нагрузка", "value": "10–47 Ом" },
+    { "group": "Исполнение", "label": "Форм-фактор", "value": "Alphasense A-Series" },
+    { "group": "Исполнение", "label": "Масса", "value": "< 6 г" },
+    { "group": "Условия эксплуатации", "label": "Температура", "value": "От −30 до +50 °C" },
+    { "group": "Условия эксплуатации", "label": "Давление", "value": "80–120 кПа" },
+    { "group": "Условия эксплуатации", "label": "Относительная влажность", "value": "15–90 % RH непрерывно" },
+    { "group": "Ресурс", "label": "Ожидаемый срок службы", "value": "> 24 месяцев до 80 % исходного сигнала" },
+    { "group": "Ресурс", "label": "Срок хранения", "value": "6 месяцев при 3–20 °C в герметичном контейнере" }
+  ],
+  "applications": [
+    "Портативные газоанализаторы промышленной безопасности",
+    "Персональные приборы контроля сероводорода",
+    "OEM-разработка приборов для общепромышленного контроля H2S",
+    "Замена сенсора после проверки форм-фактора, распиновки и параметров измерительной схемы"
+  ],
+  "workingPrinciple": {
+    "summary": "Сероводород диффундирует к рабочему электроду электрохимической ячейки. Амперометрическая реакция создает ток, пропорциональный концентрации H2S; для измерения требуется внешняя схема потенциостата.",
+    "stages": [
+      {
+        "title": "H2S поступает к рабочему электроду",
+        "description": "Молекулы газа проходят через диффузионный вход и достигают активной поверхности электрохимической ячейки."
+      },
+      {
+        "title": "Возникает измерительный ток",
+        "description": "Контролируемая реакция на электродах формирует ток, связанный с концентрацией сероводорода."
+      },
+      {
+        "title": "Электроника обрабатывает сигнал",
+        "description": "Потенциостат и измерительный тракт прибора усиливают сигнал, применяют калибровку и температурную компенсацию."
+      }
+    ],
+    "note": "H2S-A1 и H2S-A1-IST — разные исполнения. Эта карточка относится только к стандартному H2S-A1 с SKU 000-0H2S-A1."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "other",
+      "title": "Официальный datasheet Alphasense H2S-A1",
+      "url": "https://ametekcdn.azureedge.net/mediafiles/project/oneweb/oneweb/alphasense/products/datasheets/alphasense_h2s-a1_datasheet_en_1.pdf?revision%3A8ed44a8a-fe0c-4c8e-9d3b-f2b3f27d00db="
+    }
+  ],
+  "seo": {
+    "title": "Alphasense H2S-A1 — сенсор сероводорода 0–100 ppm",
+    "description": "Электрохимический сенсор H2S Alphasense H2S-A1: диапазон 0–100 ppm, T90 < 35 с, A-Series. Подбор по параметрам и запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальная страница Alphasense H2S-A1",
+      "url": "https://store.alphasense.com/h2s-a1/",
+      "checkedAt": "2026-08-14T10:50:47.280Z"
+    },
+    {
+      "title": "Официальный datasheet Alphasense H2S-A1",
+      "url": "https://ametekcdn.azureedge.net/mediafiles/project/oneweb/oneweb/alphasense/products/datasheets/alphasense_h2s-a1_datasheet_en_1.pdf?revision%3A8ed44a8a-fe0c-4c8e-9d3b-f2b3f27d00db=",
+      "checkedAt": "2026-08-14T10:50:47.280Z"
+    },
+    {
+      "title": "Официальный обзор сенсоров H2S Alphasense",
+      "url": "https://www.alphasense.com/products/view-by-target-gas/hydrogen-sulphide-sensors-h2s",
+      "checkedAt": "2026-08-14T10:50:47.280Z"
+    }
+  ],
+  "verifiedAt": "2026-08-14T11:20:00.000Z",
+  "updatedAt": "2026-08-14T11:20:00.000Z"
+}

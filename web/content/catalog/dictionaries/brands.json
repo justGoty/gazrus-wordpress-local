@@ -6,5 +6,9 @@
   { "id": "rki-instruments", "name": "RKI Instruments" },
   { "id": "alphasense", "name": "Alphasense" },
   { "id": "eris", "name": "ЭРИС" },
-  { "id": "honeywell-city-technology", "name": "Honeywell City Technology" }
+  { "id": "honeywell-city-technology", "name": "Honeywell City Technology" },
+  { "id": "analitpribor", "name": "Аналитприбор" },
+  { "id": "eksis", "name": "ЭКСИС" },
+  { "id": "honeywell", "name": "Honeywell" },
+  { "id": "membrapor", "name": "Membrapor" }
 ]

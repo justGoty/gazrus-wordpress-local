@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "8341035c-faa9-43fa-844d-41027de17b44",
+  "slug": "honeywell-sensepoint-xcd",
+  "status": "published",
+  "category": "stationary",
+  "brandId": "honeywell",
+  "model": "Sensepoint XCD",
+  "title": "Стационарный газоанализатор Honeywell Sensepoint XCD",
+  "summary": "Взрывозащищённый одноканальный трансмиттер для непрерывного контроля горючего или токсичного газа, кислорода либо CO2. Сенсор, диапазон, материал корпуса и кабельные вводы выбираются под конкретную точку контроля.",
+  "commercialMode": "request_quote",
+  "gases": ["ch4", "o2", "h2s", "co", "h2", "no2", "co2"],
+  "ranges": [],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/honeywell-sensepoint-xcd/honeywell-sensepoint-xcd-front-v1.webp",
+      "alt": "Стационарный газоанализатор Honeywell Sensepoint XCD в исполнении для кислорода"
+    }
+  ],
+  "highlights": [
+    { "label": "Контроль", "value": "1 выбранный газ" },
+    { "label": "Выход", "value": "4–20 мА, source или sink" },
+    { "label": "Связь", "value": "RS-485 / Modbus RTU" },
+    { "label": "Реле", "value": "3 программируемых" },
+    { "label": "Защита корпуса", "value": "IP66" },
+    { "label": "Настройка", "value": "магнитом, без вскрытия корпуса" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Тип прибора", "value": "Стационарный одноканальный газовый трансмиттер" },
+    { "group": "Измерение", "label": "Определяемый компонент", "value": "Один горючий или токсичный газ, кислород либо CO2 — по установленному сенсору" },
+    { "group": "Измерение", "label": "Сенсорные технологии", "value": "Электрохимическая, термокаталитическая или инфракрасная — по исполнению" },
+    { "group": "Индикация", "label": "Дисплей", "value": "Локальный ЖК-дисплей: концентрация, газ, состояние и диагностические данные" },
+    { "group": "Интеграция", "label": "Аналоговый выход", "value": "Трёхпроводной 4–20 мА, source или sink" },
+    { "group": "Интеграция", "label": "Цифровой интерфейс", "value": "RS-485, Modbus RTU" },
+    { "group": "Интеграция", "label": "Реле", "value": "3 программируемых реле, 5 А при 250 В AC" },
+    { "group": "Питание", "label": "Напряжение", "value": "16–32 В DC для ATEX/IECEx/AP; 12–32 В DC для UL/CSA" },
+    { "group": "Питание", "label": "Потребляемая мощность", "value": "Не более 5 Вт при 24 В DC" },
+    { "group": "Исполнение", "label": "Материал корпуса", "value": "Алюминиевый сплав с эпоксидным покрытием или нержавеющая сталь 316" },
+    { "group": "Исполнение", "label": "Масса", "value": "1,7 кг для алюминиевого корпуса; 3,7 кг для корпуса 316 SS" },
+    { "group": "Исполнение", "label": "Монтаж", "value": "На стену или стойку" },
+    { "group": "Исполнение", "label": "Кабельные вводы", "value": "2 × M20 либо 2 × 3/4 дюйма NPT — по исполнению" },
+    { "group": "Условия эксплуатации", "label": "Степень защиты", "value": "IP66" },
+    { "group": "Условия эксплуатации", "label": "Температура трансмиттера", "value": "От −40 до +75 °C; рабочий диапазон сенсора проверяется отдельно" }
+  ],
+  "applications": [
+    "Непрерывный контроль одного газового риска в производственной зоне",
+    "Передача измерения в систему газовой безопасности, ПЛК или АСУ ТП",
+    "Локальное управление сигнализацией, вентиляцией или отсечным устройством через реле",
+    "Размещение сенсора отдельно от трансмиттера в труднодоступной точке для токсичных газов и кислорода"
+  ],
+  "workingPrinciple": {
+    "summary": "Установленный сенсор реагирует на выбранный компонент, а трансмиттер преобразует его сигнал в концентрацию, отображает состояние и передаёт результат во внешнюю систему.",
+    "stages": [
+      { "title": "Газ достигает сенсора", "description": "Контролируемая среда поступает к встроенному либо выносному сенсорному узлу." },
+      { "title": "Сенсор формирует отклик", "description": "Электрохимическая, термокаталитическая или инфракрасная технология преобразует воздействие выбранного газа в измерительный сигнал." },
+      { "title": "Трансмиттер рассчитывает концентрацию", "description": "Электроника обрабатывает сигнал, показывает значение и контролирует заданные уровни тревоги." },
+      { "title": "Сигнал поступает в автоматику", "description": "Результат передаётся по 4–20 мА и Modbus RTU; программируемые реле могут управлять внешними устройствами." }
+    ],
+    "note": "Фотография показывает исполнение для O2. Газ, диапазон, сенсор, корпус, взрывозащита и вводы определяются точной конфигурацией заказа."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "manual",
+      "title": "Sensepoint XCD Technical Manual, Issue 16",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/hon-ia-pmc-sensepoint-xcd-technical-manual.pdf"
+    },
+    {
+      "type": "other",
+      "title": "Sensepoint XCD product brochure",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/ds01082_sensepoint_xcd_brochure_flr_1_30_14.pdf"
+    }
+  ],
+  "seo": {
+    "title": "Honeywell Sensepoint XCD — стационарный газоанализатор",
+    "description": "Honeywell Sensepoint XCD для одного горючего или токсичного газа, O2 либо CO2: 4–20 мА, Modbus RTU, реле и IP66. Подбор исполнения и запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальная страница Honeywell Sensepoint XCD",
+      "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/fixed-gas-and-flame-detection/fixed-gas-detectors/sensepoint-xcd-gas-detector",
+      "checkedAt": "2026-08-14T13:30:00.000Z"
+    },
+    {
+      "title": "Honeywell Sensepoint XCD Technical Manual, Issue 16",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/hon-ia-pmc-sensepoint-xcd-technical-manual.pdf",
+      "checkedAt": "2026-08-14T13:30:00.000Z"
+    },
+    {
+      "title": "Официальное изображение Honeywell Sensepoint XCD",
+      "url": "https://s7d1.scene7.com/is/image/Honeywell65/Sensepoint_XCD",
+      "checkedAt": "2026-08-14T13:30:00.000Z"
+    }
+  ],
+  "verifiedAt": "2026-08-14T13:30:00.000Z",
+  "updatedAt": "2026-08-14T13:30:00.000Z"
+}

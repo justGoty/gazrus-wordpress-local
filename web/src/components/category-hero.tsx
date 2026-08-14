@@ -34,31 +34,18 @@ export function CategoryHero({ pageHeading }: CategoryHeroProps) {
   return (
     <section className="hero" id="top" aria-label="Основные направления каталога">
       <div className="hero-media" aria-hidden="true">
-        {categories.map((category, index) => (
-          <div
-            className="hero-image"
-            data-active={index === activeIndex}
-            data-slide={category.id}
-            key={category.id}
-          >
-            <picture>
-              <source media="(max-width: 760px)" srcSet={category.imageMobile} />
-              <img alt="" decoding="async" fetchPriority={index === 0 ? "high" : "auto"} src={category.imageDesktop} />
-            </picture>
-          </div>
-        ))}
+        <div className="hero-image">
+          <picture>
+            <source media="(max-width: 760px)" srcSet="/images/hero-industrial-lab-mobile-v1.webp" />
+            <img
+              alt=""
+              decoding="async"
+              fetchPriority="high"
+              src="/images/hero-industrial-lab-v1.webp"
+            />
+          </picture>
+        </div>
         <div className="hero-shade" />
-        <div className="hero-grid" />
-        {categories.map((category, index) => (
-          <div
-            className={`hero-product-motion hero-product-motion-${category.id}`}
-            data-active={index === activeIndex}
-            key={`motion-${category.id}`}
-          >
-            <span className="hero-scan" />
-            <span className="hero-signal" />
-          </div>
-        ))}
       </div>
 
       <div className="hero-inner">

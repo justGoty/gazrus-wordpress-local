@@ -72,7 +72,7 @@ export default function Home() {
               {categories.map((category) => (
                 <article className={`category-card category-card-${category.accent}`} key={category.id}>
                   <div className="category-card-media">
-                    <Image alt={category.imageAlt} fill sizes="(max-width: 760px) 100vw, 33vw" src={category.imageDesktop} />
+                    <Image alt={category.imageAlt} fill sizes="(max-width: 760px) 100vw, 33vw" src={category.cardImage} />
                   </div>
                   <div className="category-card-body">
                     <h3>{category.cardTitle}</h3>

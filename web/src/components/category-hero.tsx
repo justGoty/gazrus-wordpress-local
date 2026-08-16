@@ -34,17 +34,21 @@ export function CategoryHero({ pageHeading }: CategoryHeroProps) {
   return (
     <section className="hero" id="top" aria-label="Основные направления каталога">
       <div className="hero-media" aria-hidden="true">
-        <div className="hero-image">
-          <picture>
-            <source media="(max-width: 760px)" srcSet="/images/hero-industrial-lab-mobile-v1.webp" />
+        {categories.map((category, index) => (
+          <picture
+            className="hero-image"
+            data-active={index === activeIndex}
+            key={category.id}
+          >
+            <source media="(max-width: 760px)" srcSet={category.heroMobileImage} />
             <img
               alt=""
               decoding="async"
-              fetchPriority="high"
-              src="/images/hero-industrial-lab-v1.webp"
+              fetchPriority={index === 0 ? "high" : "auto"}
+              src={category.heroImage}
             />
           </picture>
-        </div>
+        ))}
         <div className="hero-shade" />
       </div>
 

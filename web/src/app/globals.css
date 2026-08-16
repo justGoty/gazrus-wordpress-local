@@ -290,17 +290,18 @@ img {
 }
 
 .hero-image {
-  opacity: 1;
+  display: block;
+  opacity: 0;
+  transition: opacity 440ms ease;
 }
 
-.hero-image picture,
 .hero-image img {
   width: 100%;
   height: 100%;
 }
 
-.hero-image picture {
-  display: block;
+.hero-image[data-active="true"] {
+  opacity: 1;
 }
 
 .hero-image img {
@@ -2153,6 +2154,10 @@ img {
   .hero-copy {
     transition: none !important;
     transition-delay: 0s !important;
+  }
+
+  .hero-image {
+    transition: none !important;
   }
 
   .category-card-media img {

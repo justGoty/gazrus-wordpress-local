@@ -72,6 +72,28 @@
       "notes": ["До выполнения условий страница доступна пользователю, но не индексируется и не входит в sitemap."]
     },
     {
+      "id": "docs",
+      "path": "/docs",
+      "canonical": "/docs",
+      "pageType": "documents",
+      "implementation": "implemented",
+      "seoStatus": "ready",
+      "indexing": "index",
+      "follow": true,
+      "sitemap": true,
+      "changeFrequency": "weekly",
+      "priority": 0.7,
+      "title": "Документы на газоанализаторы: паспорта и руководства",
+      "description": "Поиск паспортов, руководств, сертификатов и технической документации по модели и названию газоанализатора или сенсора.",
+      "h1": "Документы на газоанализаторы и сенсоры",
+      "intent": "informational",
+      "clusterIds": ["knowledge-selection"],
+      "schemaTypes": ["CollectionPage", "ItemList", "BreadcrumbList"],
+      "requiredSections": ["Поиск по модели и названию", "Документы опубликованных товаров", "Связь с карточкой оборудования"],
+      "updatedAt": "2026-08-25T00:00:00.000Z",
+      "notes": ["URL с поисковым параметром q получает noindex и canonical на /docs."]
+    },
+    {
       "id": "catalog-portable",
       "path": "/catalog/portable",
       "canonical": "/catalog/portable",

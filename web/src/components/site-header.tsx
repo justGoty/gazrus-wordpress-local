@@ -8,7 +8,7 @@ import { Brand } from "@/components/brand";
 const navigation = [
   { href: "/catalog", label: "Каталог" },
   { href: "/#selection", label: "Подбор" },
-  { href: "/#documents", label: "Документы" },
+  { href: "/docs", label: "Документы" },
 ];
 
 export function SiteHeader() {

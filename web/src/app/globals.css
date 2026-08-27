@@ -401,26 +401,27 @@ img {
   cursor: pointer;
 }
 
-.callback-form {
+.lead-form {
   display: grid;
   gap: 15px;
   margin-top: 24px;
 }
 
-.callback-form > label:not(.callback-consent):not(.callback-honeypot) {
+.lead-form > label:not(.lead-consent):not(.lead-honeypot) {
   display: grid;
   gap: 7px;
 }
 
-.callback-form label > span:first-child {
+.lead-form label > span:first-child {
   color: var(--ink-soft);
   font-size: 13px;
   font-weight: 700;
 }
 
-.callback-form input[type="text"],
-.callback-form input[type="tel"],
-.callback-form textarea {
+.lead-form input[type="text"],
+.lead-form input[type="email"],
+.lead-form input[type="tel"],
+.lead-form textarea {
   width: 100%;
   border: 1px solid #b9cbd5;
   border-radius: var(--radius-control);
@@ -429,25 +430,26 @@ img {
   color: var(--ink);
 }
 
-.callback-form input[type="text"],
-.callback-form input[type="tel"] {
+.lead-form input[type="text"],
+.lead-form input[type="email"],
+.lead-form input[type="tel"] {
   min-height: 48px;
   padding: 0 13px;
 }
 
-.callback-form textarea {
+.lead-form textarea {
   min-height: 90px;
   padding: 12px 13px;
   resize: vertical;
 }
 
-.callback-form input:focus,
-.callback-form textarea:focus {
+.lead-form input:focus,
+.lead-form textarea:focus {
   border-color: var(--blue);
   box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.12);
 }
 
-.callback-consent {
+.lead-consent {
   display: grid;
   grid-template-columns: 20px minmax(0, 1fr);
   gap: 10px;
@@ -457,14 +459,14 @@ img {
   line-height: 1.4;
 }
 
-.callback-consent input {
+.lead-consent input {
   width: 18px;
   height: 18px;
   margin: 0;
   accent-color: var(--teal);
 }
 
-.callback-honeypot {
+.lead-honeypot {
   position: absolute;
   left: -10000px;
   width: 1px;
@@ -472,7 +474,7 @@ img {
   overflow: hidden;
 }
 
-.callback-error {
+.lead-error {
   margin: 0;
   padding: 11px 13px;
   border-radius: var(--radius-control);
@@ -482,28 +484,28 @@ img {
   line-height: 1.4;
 }
 
-.callback-submit {
+.lead-submit {
   width: 100%;
 }
 
-.callback-submit:disabled {
+.lead-submit:disabled {
   opacity: 0.65;
   cursor: wait;
   transform: none;
 }
 
-.callback-success {
+.lead-success {
   display: grid;
   justify-items: start;
   padding: 18px 0 6px;
 }
 
-.callback-success > svg {
+.lead-success > svg {
   margin-bottom: 17px;
   color: var(--teal);
 }
 
-.callback-success p:not(.section-kicker) {
+.lead-success p:not(.section-kicker) {
   margin: 13px 0 23px;
   color: var(--ink-soft);
 }

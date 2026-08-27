@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "id": "6a2b14af-b380-4ce2-bca9-42cb4e7f0868",
+  "slug": "honeywell-bw-ultra",
+  "status": "published",
+  "category": "portable",
+  "brandId": "honeywell",
+  "model": "BW Ultra",
+  "title": "Портативный пятигазовый газоанализатор Honeywell BW Ultra",
+  "summary": "Насосный портативный газоанализатор для предварительного отбора пробы и контроля атмосферы в замкнутых пространствах. Honeywell BW Ultra одновременно измеряет до пяти газов в выбранной сенсорной конфигурации, показывает все активные каналы на крупном дисплее и сохраняет данные проверок.",
+  "commercialMode": "request_quote",
+  "gases": ["o2", "ch4", "h2s", "co", "so2", "h2", "co2", "nh3", "voc", "cl2", "no2", "hcn", "no"],
+  "ranges": [
+    { "gasId": "o2", "min": 0, "max": 25, "unit": "% об.", "resolution": 0.1, "conditions": "Электрохимический сенсор O2; устанавливается в поддерживаемой конфигурации" },
+    { "gasId": "ch4", "min": 0, "max": 100, "unit": "% НКПР", "resolution": 1, "conditions": "Канал горючих газов LEL; точная сенсорная технология определяется артикулом" },
+    { "gasId": "ch4", "min": 0, "max": 5, "unit": "% об.", "resolution": 0.01, "conditions": "ИК-исполнение для метана; ИК-сенсор LEL не обнаруживает водород и ацетилен" },
+    { "gasId": "h2s", "min": 0, "max": 100, "unit": "ppm", "resolution": 0.1, "conditions": "Honeywell указывает разрешение 1 или 0,1 ppm в зависимости от сенсора" },
+    { "gasId": "co", "min": 0, "max": 2000, "unit": "ppm", "resolution": 1, "conditions": "Стандартный сенсор CO" },
+    { "gasId": "co", "min": 0, "max": 1000, "unit": "ppm", "resolution": 1, "conditions": "Исполнение CO-H с пониженной чувствительностью к водороду" },
+    { "gasId": "so2", "min": 0, "max": 100, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "h2", "min": 0, "max": 2000, "unit": "ppm", "resolution": 5 },
+    { "gasId": "co2", "min": 0, "max": 50000, "unit": "ppm", "resolution": 100, "conditions": "ИК-сенсор CO2 в соответствующей конфигурации" },
+    { "gasId": "nh3", "min": 0, "max": 100, "unit": "ppm", "resolution": 1 },
+    { "gasId": "voc", "min": 0, "max": 1000, "unit": "ppm", "resolution": 1, "conditions": "PID-канал; доступность необходимо подтверждать по точному артикулу" },
+    { "gasId": "cl2", "min": 0, "max": 20, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "no2", "min": 0, "max": 50, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "hcn", "min": 0, "max": 100, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "no", "min": 0, "max": 200, "unit": "ppm", "resolution": 1 }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/honeywell-bw-ultra/honeywell-bw-ultra-front-v1.webp",
+      "alt": "Портативный пятигазовый газоанализатор Honeywell BW Ultra"
+    }
+  ],
+  "highlights": [
+    { "label": "Одновременный контроль", "value": "до 5 газов" },
+    { "label": "Отбор пробы", "value": "встроенный насос, до 22,9 м" },
+    { "label": "Защита корпуса", "value": "IP66 / IP68" },
+    { "label": "Время работы", "value": "18 ч; 14 ч с PID или ИК" },
+    { "label": "Сигнализация", "value": "95 дБ / свет / вибрация" },
+    { "label": "Связь", "value": "Bluetooth Low Energy" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Количество газов", "value": "До 5 одновременно в поддерживаемой сенсорной конфигурации" },
+    { "group": "Отбор пробы", "label": "Насос", "value": "Встроенный" },
+    { "group": "Отбор пробы", "label": "Длина пробоотборной линии", "value": "До 22,9 м" },
+    { "group": "Сенсоры", "label": "Доступные компоненты", "value": "O2, горючие газы LEL, H2S, CO, SO2, H2, CO2, NH3, ЛОС, Cl2, NO2, HCN и NO — по конфигурации" },
+    { "group": "Сенсоры", "label": "Технологии", "value": "Электрохимические, термокаталитические, ИК и PID-канал — в зависимости от исполнения" },
+    { "group": "Индикация", "label": "Дисплей", "value": "Крупный матричный экран с одновременным отображением активных газовых каналов и режимом Hole Watch" },
+    { "group": "Управление", "label": "Органы управления", "value": "Одна кнопка; TouchConnect для перехода к проверке, калибровке и изменению уставок" },
+    { "group": "Сигнализация", "label": "Оповещение", "value": "Световое, вибрационное и звуковое 95 дБ" },
+    { "group": "Сигнализация", "label": "Контролируемые состояния", "value": "Низкий и высокий порог, TWA, STEL и выход за диапазон" },
+    { "group": "Диагностика", "label": "Самопроверка", "value": "Автоматическая внутренняя проверка сенсоров, аккумулятора и электроники каждые 24 часа у включенного прибора" },
+    { "group": "Данные", "label": "Журнал событий", "value": "30 тревог и 10 функциональных проверок" },
+    { "group": "Данные", "label": "Регистрация измерений", "value": "До 45 дней при работе по 8 часов и интервале записи 15 секунд" },
+    { "group": "Связь", "label": "Беспроводной интерфейс", "value": "Bluetooth Low Energy для приложения Honeywell Safety Communicator" },
+    { "group": "Обслуживание", "label": "Док-станция", "value": "Совместимость с IntelliDoX для автоматизированной функциональной проверки, калибровки и ведения записей" },
+    { "group": "Исполнение", "label": "Степень защиты", "value": "IP66 / IP68" },
+    { "group": "Исполнение", "label": "Габаритные размеры", "value": "148 × 85 × 40 мм" },
+    { "group": "Исполнение", "label": "Масса", "value": "411 г с клипсой" },
+    { "group": "Питание", "label": "Тип питания", "value": "Перезаряжаемый аккумулятор" },
+    { "group": "Питание", "label": "Типичное время работы", "value": "18 ч; 14 ч при установленном PID- или ИК-сенсоре, по данным Honeywell при −20 °C" },
+    { "group": "Условия эксплуатации", "label": "Температура", "value": "От −20 до +50 °C" },
+    { "group": "Условия эксплуатации", "label": "Относительная влажность", "value": "5–95 % без конденсации" },
+    { "group": "Интерфейс", "label": "Языки", "value": "Включая русский; точный набор зависит от версии прошивки" }
+  ],
+  "applications": [
+    "Предварительная проверка атмосферы перед входом в резервуары, колодцы и другие замкнутые пространства",
+    "Принудительный отбор пробы из удаленной точки через подключенную линию",
+    "Одновременный контроль кислорода, горючих и токсичных газов в выбранной конфигурации",
+    "Наблюдение за измерениями у входа в замкнутое пространство в режиме Hole Watch",
+    "Регистрация концентраций, тревог, функциональных проверок и калибровок"
+  ],
+  "workingPrinciple": {
+    "summary": "Встроенный насос протягивает пробу через вход и пробоотборную линию к установленным сенсорам. Сенсоры выбранной конфигурации преобразуют воздействие газов в измерительные сигналы, а электроника рассчитывает концентрации, показывает до пяти каналов и включает тревогу при достижении заданных порогов.",
+    "stages": [
+      {
+        "title": "Насос отбирает пробу",
+        "description": "Воздух поступает через вход прибора или подключенную линию длиной до 22,9 м; состояние потока контролируется прибором."
+      },
+      {
+        "title": "Сенсоры реагируют на газы",
+        "description": "Электрохимические, термокаталитические, ИК- и PID-каналы измеряют только те компоненты, которые предусмотрены заказанной конфигурацией."
+      },
+      {
+        "title": "Электроника рассчитывает концентрации",
+        "description": "Активные каналы выводятся на матричный дисплей, а значения и события сохраняются во внутреннем журнале."
+      },
+      {
+        "title": "Прибор предупреждает пользователя",
+        "description": "При превышении порога или неисправности включаются световая, звуковая и вибрационная сигнализация."
+      }
+    ],
+    "note": "Набор газов, диапазоны, технология канала горючих газов, автономность и маркировка взрывозащиты зависят от точного артикула. ИК-сенсор горючих газов Honeywell BW Ultra не обнаруживает водород и ацетилен."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "other",
+      "title": "Honeywell BW Ultra Multi-Gas Detector Data Sheet",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/bw_ultra_datasheet.pdf?download=false"
+    },
+    {
+      "type": "manual",
+      "title": "Honeywell BW Ultra User Manual, Rev. G",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/portables/bw-ultra/sps-his-50122982-265-en-revg-bwultra-um.pdf?download=false"
+    },
+    {
+      "type": "other",
+      "title": "Honeywell BW Ultra Quick Reference Guide, Rev. C1",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/portables/bw-ultra/sps-his-bw-ultra-multilingual-qrg-rev-c1-v2.pdf?download=false"
+    },
+    {
+      "type": "certificate",
+      "title": "Honeywell BW Ultra EU Declaration of Conformity 2004Y0135_06",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/en-us/products/portables/honeywell-bw-ultra/documents/hon-ia-pmc-bw-ultra-2004y0135-06-2023-en.pdf?download=false"
+    }
+  ],
+  "seo": {
+    "title": "Honeywell BW Ultra — пятигазовый насосный газоанализатор",
+    "description": "Honeywell BW Ultra для отбора проб в замкнутых пространствах: до пяти газов, встроенный насос до 22,9 м, IP66/IP68 и Bluetooth. Запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальная страница Honeywell BW Ultra",
+      "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-ultra-multi-gas-detector",
+      "checkedAt": "2026-08-27T13:21:10.6683977Z"
+    },
+    {
+      "title": "Honeywell BW Ultra Multi-Gas Detector Data Sheet",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/bw_ultra_datasheet.pdf?download=false",
+      "checkedAt": "2026-08-27T13:21:10.6683977Z"
+    },
+    {
+      "title": "Honeywell BW Ultra User Manual, Rev. G",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/portables/bw-ultra/sps-his-50122982-265-en-revg-bwultra-um.pdf?download=false",
+      "checkedAt": "2026-08-27T13:21:10.6683977Z"
+    },
+    {
+      "title": "Honeywell BW Ultra EU Declaration of Conformity 2004Y0135_06",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/en-us/products/portables/honeywell-bw-ultra/documents/hon-ia-pmc-bw-ultra-2004y0135-06-2023-en.pdf?download=false",
+      "checkedAt": "2026-08-27T13:21:10.6683977Z"
+    },
+    {
+      "title": "Официальное изображение Honeywell BW Ultra",
+      "url": "https://s7d1.scene7.com/is/image/Honeywell65/Honeywell_BW_Ultra_Yellow_Square",
+      "checkedAt": "2026-08-27T13:21:10.6683977Z"
+    }
+  ],
+  "verifiedAt": "2026-08-27T13:21:10.6683977Z",
+  "updatedAt": "2026-08-27T13:21:10.6683977Z"
+}

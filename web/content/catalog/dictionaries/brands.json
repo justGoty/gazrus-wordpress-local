@@ -4,6 +4,7 @@
   { "id": "msa", "name": "MSA" },
   { "id": "draeger", "name": "Dräger" },
   { "id": "crowcon", "name": "Crowcon" },
+  { "id": "industrial-scientific", "name": "Industrial Scientific" },
   { "id": "rki-instruments", "name": "RKI Instruments" },
   { "id": "alphasense", "name": "Alphasense" },
   { "id": "eris", "name": "ЭРИС" },

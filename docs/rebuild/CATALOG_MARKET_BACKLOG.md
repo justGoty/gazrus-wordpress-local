@@ -44,7 +44,7 @@
 | P1 | [Dräger Polytron 8700 IR](https://www.draeger.com/en-us_us/Products/Polytron-8700) | Углеводороды в ppm и % НКПР, ИК | Сильная позиция для нефтегаза и нефтехимии | published 2026-08-27 |
 | P1 | [MSA ULTIMA X5000](https://us.msasafety.com/x5000?default=1&locale=en) | Горючие, токсичные газы и O2 | Актуальная универсальная платформа MSA | published |
 | P1 | [Honeywell Sensepoint XCD](https://www.honeywellanalytics.com/en/products/Sensepoint-XCD) | Горючие, токсичные газы и O2 | Узнаваемая платформа с дисплеем и Modbus | published |
-| P1 | [Crowcon Xgard Bright](https://www.crowcon.com/us-en/products/xgard-bright/) | Горючие, токсичные газы и O2 | Современная альтернатива с MPS, Modbus и HART | availability check |
+| P1 | [Crowcon Xgard Bright](https://www.crowcon.com/us-en/products/xgard-bright/) | Горючие, токсичные газы и O2 | Современная альтернатива с MPS, Modbus и HART | published 2026-08-27 |
 | P1 | [Teledyne OLCT 100](https://www.teledynegasandflamedetection.com/en-us/olct-100-olc-100-toxic-and-combustible-gas-detector) | Горючие, токсичные газы и O2 | Широкая модульная серия для обычных и Ex-зон | availability check |
 | P2 | [Riken Keiki SD-3](https://global.rikenkeiki.co.jp/products/sd-3) | Нефтегаз, суда и промышленные площадки | Международная конфигурируемая сенсорная платформа | availability check |
 | P2 | [Sensitron SMART3G-D3](https://www.sensitron.it/en/smart-3g-d3/) | Горючие и токсичные газы, CO2, ЛОС, хладагенты | Расширяет каталог по холодильной отрасли и VOC | availability check |
@@ -77,11 +77,11 @@
 | P1 | [АНКАТ-7664Микро](https://www.analitpribor-smolensk.ru/products/gazoanalizators/perenosnii/bezopasnost-i-ohrana-truda/ankat_micro_pid/) | 1-4 канала, много отраслевых исполнений | Хорошо известная российская серия | published |
 | P1 | [Dräger Pac 6000](https://www.draeger.com/en-us_us/Products/Pac-6000) | Один газ: CO, H2S, SO2 или O2 | Базовый одноканальный прибор Dräger | published |
 | P1 | [MSA ALTAIR 2X](https://us.msasafety.com/Portable-Gas-Detection/Single-or-Two-Gas/ALTAIR%C2%AE-2X-Gas-Detector/p/000080000200001600?locale=en) | Одно- и двухгазовые исполнения | Дополняет семейство MSA между Solo и многоканальными моделями | published |
-| P1 | [Industrial Scientific Ventis Pro5](https://www.indsci.com/en/gas-detectors/multi/ventis-pro5) | До 5 газов, PID и подключенные функции | Сильная модель для промышленной безопасности и ОЗП | availability check |
+| P1 | [Industrial Scientific Ventis Pro5](https://www.indsci.com/en/gas-detectors/multi/ventis-pro5) | До 5 газов, PID и подключенные функции | Сильная модель для промышленной безопасности и ОЗП | published 2026-08-27 |
 | P1 | [Crowcon T4x](https://www.crowcon.com/products/t4x) | Четыре стандартных газа | Прямой аналог ALTAIR 4XR и X-am 2800 для сравнения | published 2026-08-27 |
-| P1 | [Honeywell BW Ultra](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-ultra-multi-gas-detector) | Пять газов, встроенный насос | Востребованный сценарий проверки замкнутых пространств | availability check |
+| P1 | [Honeywell BW Ultra](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-ultra-multi-gas-detector) | Пять газов, встроенный насос | Востребованный сценарий проверки замкнутых пространств | published 2026-08-27 |
 | P1 | [Honeywell BW MicroClip X3](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-microclip-series-multi-gas-detector) | До четырех газов | Производитель позиционирует серию как массовую четырехгазовую платформу | availability check |
-| P1 | [ПГ ЭРИС-411](https://eriskip.com/ru/product/pg-eris-411) | Один токсичный газ или O2 | Российский персональный одноканальный прибор | queued |
+| P1 | [ПГ ЭРИС-411](https://eriskip.com/ru/product/pg-eris-411) | Один токсичный газ или O2 | Российский персональный одноканальный прибор | published 2026-08-27 |
 | P1 | [ПГ ЭРИС-414](https://eriskip.com/ru/product/pg%2Beris-414) | Четыре канала | Российская альтернатива международным четырехгазовым моделям | queued |
 | P2 | [ГАНК-4](https://www.gank4.ru/product/gazoanalizatory/gank-4-ex-gazoanalizator-perenosnoy/) | Многокомпонентный принудительный отбор | Нужен для сложных и редких загрязняющих веществ | queued |
 | P2 | [ОКА-92МТ](https://gazoanalit.ru/catalog/perenosnye/gazoanalizator-oka-92mt/) | До 5 газов, выносные блоки по исполнению | Распространенная российская серия для колодцев и тоннелей | queued |

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "id": "14d6e20b-e122-4bca-a338-4cd0d572c5b0",
+  "slug": "honeywell-bw-flex",
+  "status": "published",
+  "category": "portable",
+  "brandId": "honeywell",
+  "model": "BW Flex 4",
+  "title": "Портативный многогазовый газоанализатор Honeywell BW Flex 4",
+  "summary": "Обслуживаемый персональный газоанализатор с четырьмя сенсорными позициями для одновременного контроля до пяти газовых опасностей. Конфигурация Honeywell BW Flex 4 подбирается из ИК-, термокаталитических и электрохимических сенсоров, а результаты и настройки передаются по Bluetooth в ПО Honeywell.",
+  "commercialMode": "request_quote",
+  "gases": ["ch4", "o2", "h2s", "co", "co2", "so2", "cl2", "no", "no2", "hcn"],
+  "ranges": [
+    { "gasId": "ch4", "min": 0, "max": 100, "unit": "% НКПР", "resolution": 1, "conditions": "ИК-сенсор LEL-IR или термокаталитический LEL-CB; ИК-сенсор не определяет водород и ацетилен" },
+    { "gasId": "co2", "min": 0, "max": 5, "unit": "% об.", "resolution": 0.01, "conditions": "NDIR-сенсор CO2; 5 % об. соответствует 50 000 ppm" },
+    { "gasId": "o2", "min": 0, "max": 25, "unit": "% об.", "resolution": 0.1, "conditions": "Рекомендуемый рабочий диапазон сенсора O2; максимальный диапазон сигнализации до 30 % об." },
+    { "gasId": "h2s", "min": 0, "max": 200, "unit": "ppm", "resolution": 0.1, "conditions": "Однокомпонентный сенсор H2S" },
+    { "gasId": "h2s", "min": 0, "max": 100, "unit": "ppm", "resolution": 0.1, "conditions": "Канал H2S двухкомпонентного сенсора CO/H2S" },
+    { "gasId": "co", "min": 0, "max": 1000, "unit": "ppm", "resolution": 1, "conditions": "Сенсор CO, CO-H либо канал CO двухкомпонентного сенсора CO/H2S" },
+    { "gasId": "so2", "min": 0, "max": 20, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "no", "min": 0, "max": 100, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "no2", "min": 0, "max": 20, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "hcn", "min": 0, "max": 50, "unit": "ppm", "conditions": "Разрешение указано производителем как менее 0,3 ppm" },
+    { "gasId": "cl2", "min": 0, "max": 20, "unit": "ppm", "resolution": 0.1 }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/honeywell-bw-flex/honeywell-bw-flex-front-v1.webp",
+      "alt": "Портативный многогазовый газоанализатор Honeywell BW Flex 4"
+    }
+  ],
+  "highlights": [
+    { "label": "Одновременный контроль", "value": "до 5 газовых опасностей" },
+    { "label": "Сенсорные позиции", "value": "до 4" },
+    { "label": "Защита корпуса", "value": "IP66 / IP68" },
+    { "label": "Сигнализация", "value": "95 дБ / свет / вибрация" },
+    { "label": "Связь", "value": "Bluetooth Low Energy" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Количество сенсоров", "value": "До 4 сенсорных позиций" },
+    { "group": "Измерение", "label": "Количество газовых опасностей", "value": "До 5 одновременно при использовании двухкомпонентного сенсора CO/H2S" },
+    { "group": "Сенсоры", "label": "Поддерживаемые технологии", "value": "NDIR для углеводородов и CO2, термокаталитическая для горючих газов, электрохимическая для O2 и токсичных газов" },
+    { "group": "Сенсоры", "label": "Доступные компоненты", "value": "Горючие газы (LEL), O2, H2S, CO, CO2, SO2, Cl2, NO, NO2 и HCN" },
+    { "group": "Отбор пробы", "label": "Способ поступления газа", "value": "Диффузионный" },
+    { "group": "Индикация", "label": "Интерфейс", "value": "Цветной дисплей, управление одной кнопкой, режимы показа одного или всех газов" },
+    { "group": "Сигнализация", "label": "Оповещение", "value": "Световое, вибрационное и звуковое 95 дБ" },
+    { "group": "Сигнализация", "label": "Контролируемые состояния", "value": "Низкий и высокий порог, TWA, STEL, отрицательный дрейф, выход за диапазон, разряд батареи" },
+    { "group": "Диагностика", "label": "Самопроверка", "value": "Диагностика сенсоров и электроники при включении; Reflex-тест аналоговых сенсоров каждые 10 минут" },
+    { "group": "Статус", "label": "Световая индикация", "value": "SafetyTick и IntelliFlash с зелёным, жёлтым и красным статусом" },
+    { "group": "Данные", "label": "Журнал", "value": "Базовый журнал последних 50 событий либо расширенный журнал до 1 года; интервал записи 5–120 с" },
+    { "group": "Связь", "label": "Беспроводной интерфейс", "value": "Bluetooth Low Energy для приложений Honeywell и ПО Safety Suite" },
+    { "group": "Обслуживание", "label": "Док-станция", "value": "Совместимость с IntelliDoX для автоматической проверки, калибровки и ведения записей с учётом выбранных газов" },
+    { "group": "Исполнение", "label": "Степень защиты", "value": "IP66 и IP68" },
+    { "group": "Исполнение", "label": "Размеры с клипсой", "value": "108,2 × 61,5 × 43,2 мм" },
+    { "group": "Исполнение", "label": "Размеры с креплением Klick Fast", "value": "108,2 × 61,5 × 37,8 мм" },
+    { "group": "Исполнение", "label": "Масса", "value": "170–189 г в зависимости от сенсора горючих газов и крепления" },
+    { "group": "Питание", "label": "Аккумулятор", "value": "Перезаряжаемый литий-ионный" },
+    { "group": "Питание", "label": "Время работы с ИК-сенсором CH4", "value": "До 40 дней при использовании 8 ч в день; зависит от продолжительности тревог" },
+    { "group": "Питание", "label": "Время работы с термокаталитическим LEL", "value": "До 15 ч; зависит от продолжительности тревог" },
+    { "group": "Питание", "label": "Время зарядки", "value": "Около 4,5 ч" },
+    { "group": "Условия эксплуатации", "label": "Сертифицированная температура", "value": "От −40 до +60 °C; с термокаталитическим LEL — от −20 до +60 °C; фактический предел зависит от сенсоров" },
+    { "group": "Условия эксплуатации", "label": "Относительная влажность", "value": "5–95 % RH без конденсации; рабочий предел зависит от сенсора" }
+  ],
+  "applications": [
+    "Персональный контроль атмосферы при обходах и работах на промышленном объекте",
+    "Проверка воздуха перед входом в резервуары, колодцы и другие замкнутые пространства",
+    "Одновременный контроль горючего газа, кислорода и токсичных компонентов в выбранной конфигурации",
+    "Ведение журнала измерений, событий, проверок и калибровок парка портативных приборов"
+  ],
+  "workingPrinciple": {
+    "summary": "Окружающий воздух диффузионно поступает к установленным сенсорам. Каждый сенсор преобразует воздействие своего газа в измерительный сигнал, после чего электроника BW Flex 4 рассчитывает концентрации, показывает их на дисплее, записывает события и включает тревогу по заданным порогам.",
+    "stages": [
+      {
+        "title": "Воздух поступает к сенсорам",
+        "description": "Проба из рабочей зоны достигает сенсорных входов естественной диффузией; встроенного насоса в BW Flex 4 нет."
+      },
+      {
+        "title": "Сенсоры формируют сигналы",
+        "description": "NDIR-, термокаталитические и электрохимические сенсоры реагируют на компоненты, предусмотренные заказанной конфигурацией."
+      },
+      {
+        "title": "Прибор рассчитывает концентрации",
+        "description": "Электроника обрабатывает активные каналы, выводит один газ либо общую картину на экран и сохраняет измерения и события."
+      },
+      {
+        "title": "Пользователь получает предупреждение",
+        "description": "При опасной концентрации или неисправности срабатывают свет, звук и вибрация; данные и настройки могут передаваться по Bluetooth."
+      }
+    ],
+    "note": "Набор газов, допустимые сочетания сенсоров, рабочая температура, автономность и взрывозащищённая маркировка зависят от точного артикула. ИК-сенсор LEL не определяет водород и ацетилен; для этих газов Honeywell указывает термокаталитическое исполнение."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "manual",
+      "title": "Honeywell BW Flex 4 User Manual, Rev. D",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/en-gb/products/portables/honeywell-bw-flex/documents/hon-ia-pmc-bw-flex-m05-4002-003-rev-d-user-manual-en.pdf"
+    },
+    {
+      "type": "other",
+      "title": "Honeywell BW Flex 4/5 Data Sheet, Rev. E",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/de-de/products/portables/honeywell-bw-flex/documents/hon-ia-pmc-gas-bw-flex-series-ds-rev-e-1024-en.pdf"
+    },
+    {
+      "type": "other",
+      "title": "Honeywell BW Flex 4 Quick Reference Guide, Rev. C",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/en-gb/products/portables/honeywell-bw-flex/documents/hon-ia-pmc-bw-flex-qrg-m05-4002-001-multilingual-en-es-pt-fr.pdf"
+    },
+    {
+      "type": "certificate",
+      "title": "Официальная декларация соответствия EU Honeywell BW Flex",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/bw-flex/sps-his-2004y0151-02-eu-dofc-bw-icon-icon-bw-flex.pdf?download=false"
+    }
+  ],
+  "seo": {
+    "title": "Honeywell BW Flex 4 — портативный многогазовый анализатор",
+    "description": "Honeywell BW Flex 4: до 4 сенсоров и 5 газовых опасностей, IP66/IP68, Bluetooth, IntelliDoX и выбор ИК-, каталитических и электрохимических каналов."
+  },
+  "sources": [
+    {
+      "title": "Официальная страница Honeywell BW Flex",
+      "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-flex",
+      "checkedAt": "2026-08-27T10:24:54.426Z"
+    },
+    {
+      "title": "Honeywell BW Flex 4/5 Data Sheet, Rev. E",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/de-de/products/portables/honeywell-bw-flex/documents/hon-ia-pmc-gas-bw-flex-series-ds-rev-e-1024-en.pdf",
+      "checkedAt": "2026-08-27T10:24:54.426Z"
+    },
+    {
+      "title": "Honeywell BW Flex 4 User Manual, Rev. D",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/en-gb/products/portables/honeywell-bw-flex/documents/hon-ia-pmc-bw-flex-m05-4002-003-rev-d-user-manual-en.pdf",
+      "checkedAt": "2026-08-27T10:24:54.426Z"
+    },
+    {
+      "title": "Официальное изображение Honeywell BW Flex 4",
+      "url": "https://s7d1.scene7.com/is/image/Honeywell65/sps-his-bw-flex4-render-yellow-hi-res",
+      "checkedAt": "2026-08-27T10:24:54.426Z"
+    }
+  ],
+  "verifiedAt": "2026-08-27T10:24:54.426Z",
+  "updatedAt": "2026-08-27T10:24:54.426Z"
+}

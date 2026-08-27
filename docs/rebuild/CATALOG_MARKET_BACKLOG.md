@@ -41,7 +41,7 @@
 | P1 | [ДГС ЭРИС-230](https://eriskip.com/ru/product/dgs-230) | Стационарный промышленный контроль | Расширяет российскую линейку ЭРИС и варианты исполнения | published |
 | P1 | [Аналитприбор ДАХ-М](https://www.analitpribor-smolensk.ru/products/gazoanalizators/stacionarnye/vzryvozawiwennoe-oborudovanie/dah_m/) | Токсичные газы и O2 | Закрывает редкие токсичные компоненты; статус каждого исполнения проверять отдельно | published |
 | P1 | [Аналитприбор СТГ-3](https://www.analitpribor-smolensk.ru/products/gazoanalizators/stacionarnye/nevzryvozawiwennoe-oborudovanie/stg3/) | ЖКХ, паркинги, холодильные установки, водоканалы | Полезная многоточечная система для гражданских и промышленных объектов | published |
-| P1 | [Dräger Polytron 8700 IR](https://www.draeger.com/en-us_us/Products/Polytron-8700) | Углеводороды в ppm и % НКПР, ИК | Сильная позиция для нефтегаза и нефтехимии | availability check |
+| P1 | [Dräger Polytron 8700 IR](https://www.draeger.com/en-us_us/Products/Polytron-8700) | Углеводороды в ppm и % НКПР, ИК | Сильная позиция для нефтегаза и нефтехимии | published 2026-08-27 |
 | P1 | [MSA ULTIMA X5000](https://us.msasafety.com/x5000?default=1&locale=en) | Горючие, токсичные газы и O2 | Актуальная универсальная платформа MSA | published |
 | P1 | [Honeywell Sensepoint XCD](https://www.honeywellanalytics.com/en/products/Sensepoint-XCD) | Горючие, токсичные газы и O2 | Узнаваемая платформа с дисплеем и Modbus | published |
 | P1 | [Crowcon Xgard Bright](https://www.crowcon.com/us-en/products/xgard-bright/) | Горючие, токсичные газы и O2 | Современная альтернатива с MPS, Modbus и HART | availability check |
@@ -70,7 +70,7 @@
 | P0 | [АНКАТ-64М3](https://www.analitpribor-smolensk.ru/products/gazoanalizators/perenosnii/bezopasnost-i-ohrana-truda/ankat_64_m3/) | До 5 газов, включая PID/VOC по исполнению | Современная российская многоканальная линейка | published |
 | P0 | [КИП-МГ1](https://kipkonsalt.com/product/portativnye-gazoanalizatory/portativnye-gazoanalizatory-kip-mg/portativnyy-odnokanalnyy-gazoanalizator-kip-mg1-/) | Один выбранный газ | Базовый отечественный персональный прибор | published |
 | P0 | [АНКАТ-7631Микро](https://www.analitpribor-smolensk.ru/products/gazoanalizators/perenosnii/bezopasnost-i-ohrana-truda/ankat7631micro/) | Один газ: CO, HCl, H2S, NH3, Cl2, SO2, NO2 или O2 | Закрывает российские одноканальные исполнения | published |
-| P0 | [Honeywell BW Flex](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-flex) | До 5 газов, персональный контроль и ОЗП | Современная международная многогазовая платформа | availability check |
+| P0 | [Honeywell BW Flex](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-flex) | До 5 газов, персональный контроль и ОЗП | Современная международная многогазовая платформа | published 2026-08-27 |
 | P0 | [Honeywell BW Solo](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/single-gas/honeywell-bw-solo-single-gas-detector) | Один из широкого перечня токсичных газов или O2 | Узнаваемая обслуживаемая одноканальная серия | published |
 | P0 | [Dräger X-am 5800](https://www.draeger.com/en-us_us/Products/X-am-5800) | До 5 газов | Следующая ступень линейки после X-am 2800 | published |
 | P0 | [MSA ALTAIR 5X](https://us.msasafety.com/Portable-Gas-Detection/Multi-Gas/ALTAIR%C2%AE-5X-Multigas-Detector/p/000080001600001023?locale=en) | До 6 газов, насос, PID по исполнению | Закрывает обследовательские работы и ОЗП | published |
@@ -78,7 +78,7 @@
 | P1 | [Dräger Pac 6000](https://www.draeger.com/en-us_us/Products/Pac-6000) | Один газ: CO, H2S, SO2 или O2 | Базовый одноканальный прибор Dräger | published |
 | P1 | [MSA ALTAIR 2X](https://us.msasafety.com/Portable-Gas-Detection/Single-or-Two-Gas/ALTAIR%C2%AE-2X-Gas-Detector/p/000080000200001600?locale=en) | Одно- и двухгазовые исполнения | Дополняет семейство MSA между Solo и многоканальными моделями | published |
 | P1 | [Industrial Scientific Ventis Pro5](https://www.indsci.com/en/gas-detectors/multi/ventis-pro5) | До 5 газов, PID и подключенные функции | Сильная модель для промышленной безопасности и ОЗП | availability check |
-| P1 | [Crowcon T4x](https://www.crowcon.com/products/t4x) | Четыре стандартных газа | Прямой аналог ALTAIR 4XR и X-am 2800 для сравнения | availability check |
+| P1 | [Crowcon T4x](https://www.crowcon.com/products/t4x) | Четыре стандартных газа | Прямой аналог ALTAIR 4XR и X-am 2800 для сравнения | published 2026-08-27 |
 | P1 | [Honeywell BW Ultra](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-ultra-multi-gas-detector) | Пять газов, встроенный насос | Востребованный сценарий проверки замкнутых пространств | availability check |
 | P1 | [Honeywell BW MicroClip X3](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-microclip-series-multi-gas-detector) | До четырех газов | Производитель позиционирует серию как массовую четырехгазовую платформу | availability check |
 | P1 | [ПГ ЭРИС-411](https://eriskip.com/ru/product/pg-eris-411) | Один токсичный газ или O2 | Российский персональный одноканальный прибор | queued |
@@ -104,7 +104,7 @@
 | P0 | [Membrapor O2/M-100](https://www.membrapor.ch/en/oxygen-sensors/) | O2, бессвинцовый электрохимический | Кислородный сенсор; диапазон уточнять по ревизии | published |
 | P0 | [SGX PS1-CO-1000](https://sgxsensortech.com/sensor/ps1-co-1000) | CO, твердополимерный электрохимический | Компактная современная технология | queued |
 | P0 | [SGX PS1-H2S-100](https://www.sgxsensortech.com/sensorSelector/) | H2S, твердополимерный электрохимический | Компактная H2S-позиция | queued |
-| P0 | [SGX-4OX-ROHS-FS](https://sgxsensortech.com/sensor/sgx-4ox-rohs-fs) | O2, бессвинцовый электрохимический | Альтернативный кислородный 4-Series | queued |
+| P0 | [SGX-4OX-ROHS-FS](https://sgxsensortech.com/sensor/sgx-4ox-rohs-fs) | O2, бессвинцовый электрохимический | Альтернативный кислородный 4-Series | draft: требуется фото с точной маркировкой |
 | P0 | [Winsen ME2-CO](https://www.winsen-sensor.com/d/files/me2-co/electrochemical-gas-sensor-me2-co.pdf) | CO, электрохимический | Бюджетный OEM-сегмент | queued |
 | P0 | [Winsen ME3-H2S](https://www.winsen-sensor.com/product/me3-h2s.html) | H2S, электрохимический | Бюджетный H2S OEM-сегмент | queued |
 | P0 | [Winsen MH-440D](https://www.winsen-sensor.com/product/mh-440d.html) | CH4, NDIR | Добавляет цифровой ИК-сенсор метана | queued |

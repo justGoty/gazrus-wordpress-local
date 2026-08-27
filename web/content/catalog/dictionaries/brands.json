@@ -3,6 +3,7 @@
   { "id": "kip-konsalt", "name": "КИП-Консалт" },
   { "id": "msa", "name": "MSA" },
   { "id": "draeger", "name": "Dräger" },
+  { "id": "crowcon", "name": "Crowcon" },
   { "id": "rki-instruments", "name": "RKI Instruments" },
   { "id": "alphasense", "name": "Alphasense" },
   { "id": "eris", "name": "ЭРИС" },
@@ -10,5 +11,6 @@
   { "id": "analitpribor", "name": "Аналитприбор" },
   { "id": "eksis", "name": "ЭКСИС" },
   { "id": "honeywell", "name": "Honeywell" },
-  { "id": "membrapor", "name": "Membrapor" }
+  { "id": "membrapor", "name": "Membrapor" },
+  { "id": "sgx-sensortech", "name": "SGX Sensortech" }
 ]

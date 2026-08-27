@@ -10,5 +10,6 @@
   "defaultDescription": "Каталог стационарных и портативных газоанализаторов и сенсоров. Подбор по газу, диапазону и исполнению, документация и запрос КП.",
   "commercialMode": "request_quote",
   "publicPrices": false,
-  "contactEmail": "info@prscom.ru"
+  "contactEmail": "info@prscom.ru",
+  "contactPhones": ["+7 (925) 508-62-58", "+7 (495) 748-62-58"]
 }

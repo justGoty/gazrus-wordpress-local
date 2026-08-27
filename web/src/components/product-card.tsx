@@ -1,6 +1,7 @@
 import { ArrowRight, ImageIcon, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { QuoteRequestButton } from "@/components/quote-request";
 import { categoryById } from "@/data/categories";
 import { formatBrandId } from "@/lib/catalog/display";
 import type { Brand, Gas, Product } from "@/lib/catalog/schema";
@@ -41,7 +42,6 @@ export function ProductCard({ product, gases, brands }: ProductCardProps) {
     .filter((formula): formula is string => Boolean(formula));
   const gasSummary = gasLabels.length > 6 ? `${gasLabels.slice(0, 6).join(", ")} и другие` : gasLabels.join(", ");
   const detailsHref = `/catalog/${product.category}/${product.slug}`;
-  const quoteHref = `mailto:info@prscom.ru?subject=${encodeURIComponent(`Запрос КП: ${product.title}`)}`;
   const channelCount = product.highlights.find((item) => item.label === "Измерительных каналов")?.value;
   const protection = product.highlights.find((item) => item.label === "Защита корпуса")?.value;
   const hasExplosionProtection = product.highlights.some((item) => item.label === "Взрывозащита");
@@ -113,10 +113,15 @@ export function ProductCard({ product, gases, brands }: ProductCardProps) {
             Подробнее
             <ArrowRight aria-hidden="true" size={17} />
           </Link>
-          <a className="button button-primary product-quote-button" href={quoteHref}>
+          <QuoteRequestButton
+            className="button button-primary product-quote-button"
+            subject={`Запрос КП: ${product.title}`}
+            details={`Товар: ${product.title}\nМодель: ${product.model}\nПроизводитель: ${brandName}`}
+            source="Карточка в каталоге"
+          >
             <Mail aria-hidden="true" size={17} />
             Запросить КП
-          </a>
+          </QuoteRequestButton>
         </div>
       </div>
       <span className={`product-card-accent product-card-accent-${category.accent}`} aria-hidden="true" />

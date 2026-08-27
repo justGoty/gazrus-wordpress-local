@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Golos_Text, Manrope } from "next/font/google";
+import { QuoteRequestProvider } from "@/components/quote-request";
 import { seoSite } from "@/lib/seo/content";
 import "./globals.css";
 
@@ -43,7 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${headingFont.variable} ${textFont.variable}`}>{children}</body>
+      <body className={`${headingFont.variable} ${textFont.variable}`}>
+        <QuoteRequestProvider>{children}</QuoteRequestProvider>
+      </body>
     </html>
   );
 }

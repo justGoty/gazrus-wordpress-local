@@ -4,6 +4,7 @@ import { ArrowRight, Check, RotateCcw, Search, SlidersHorizontal, X } from "luci
 import { useRouter, useSearchParams } from "next/navigation";
 import { useDeferredValue, useMemo, useState } from "react";
 import { ProductCard } from "@/components/product-card";
+import { QuoteRequestButton } from "@/components/quote-request";
 import { categories, type CategoryId } from "@/data/categories";
 import type { Brand, Gas, Product } from "@/lib/catalog/schema";
 
@@ -204,7 +205,7 @@ export function CatalogBrowser({ gases, products, brands, initialCategory }: Cat
         ) : (
           <div className="catalog-empty">
             <div><p className="section-kicker">Ничего не найдено</p><h2>Измените параметры подбора</h2><p>Уберите одно из ограничений или отправьте задачу инженеру — подберем модель вне опубликованной части каталога.</p></div>
-            <div className="catalog-empty-actions"><button className="button button-secondary" type="button" onClick={resetFilters}>Сбросить фильтры</button><a className="button button-primary" href="mailto:info@prscom.ru?subject=Запрос%20на%20подбор%20газоанализатора">Отправить запрос<ArrowRight aria-hidden="true" size={18} /></a></div>
+            <div className="catalog-empty-actions"><button className="button button-secondary" type="button" onClick={resetFilters}>Сбросить фильтры</button><QuoteRequestButton className="button button-primary" subject="Запрос на подбор газоанализатора" details={`Выбранные фильтры: ${activeFilterCount || "нет"}\nПоисковый запрос: ${query || "не указан"}`} source="Каталог — пустая выдача">Отправить запрос<ArrowRight aria-hidden="true" size={18} /></QuoteRequestButton></div>
           </div>
         )}
       </section>

@@ -4,6 +4,7 @@ import { Menu, Search, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Brand } from "@/components/brand";
+import { QuoteRequestButton } from "@/components/quote-request";
 
 const navigation = [
   { href: "/catalog", label: "Каталог" },
@@ -34,9 +35,9 @@ export function SiteHeader() {
             <Search aria-hidden="true" size={19} />
             <span className="sr-only">Поиск по каталогу</span>
           </Link>
-          <a className="button button-primary header-quote" href="mailto:info@prscom.ru?subject=Запрос%20КП%20на%20газоанализатор">
+          <QuoteRequestButton className="button button-primary header-quote" subject="Запрос КП на газоанализатор" source="Шапка сайта">
             Запросить КП
-          </a>
+          </QuoteRequestButton>
           <button
             className="icon-button menu-toggle"
             type="button"
@@ -61,9 +62,9 @@ export function SiteHeader() {
             {item.label}
           </Link>
         ))}
-        <a href="mailto:info@prscom.ru?subject=Запрос%20КП%20на%20газоанализатор">
+        <QuoteRequestButton className="mobile-nav-quote" subject="Запрос КП на газоанализатор" source="Мобильное меню">
           Запросить КП
-        </a>
+        </QuoteRequestButton>
       </nav>
     </header>
   );

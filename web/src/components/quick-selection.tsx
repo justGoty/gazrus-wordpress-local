@@ -2,6 +2,7 @@
 
 import { ArrowRight, Mail } from "lucide-react";
 import { useMemo, useState } from "react";
+import { QuoteRequestButton } from "@/components/quote-request";
 import { categories, type CategoryId } from "@/data/categories";
 
 const gases = ["Не выбран", "CO", "CH4", "O2", "H2S", "NH3", "Другой газ"];
@@ -18,19 +19,13 @@ export function QuickSelection() {
   const [gas, setGas] = useState(gases[0]);
   const [application, setApplication] = useState(applications[0]);
 
-  const mailto = useMemo(() => {
+  const requestDetails = useMemo(() => {
     const categoryLabel = categories.find((item) => item.id === category)?.label ?? category;
-    const body = [
-      "Здравствуйте! Нужен подбор газоанализатора.",
-      "",
+    return [
       `Категория: ${categoryLabel}`,
       `Газ: ${gas}`,
       `Задача: ${application}`,
-      "",
-      "Контактные данные:",
     ].join("\n");
-
-    return `mailto:info@prscom.ru?subject=${encodeURIComponent("Запрос на подбор газоанализатора")}&body=${encodeURIComponent(body)}`;
   }, [application, category, gas]);
 
   return (
@@ -74,11 +69,16 @@ export function QuickSelection() {
             ))}
           </select>
         </label>
-        <a className="button button-primary selection-submit" href={mailto}>
+        <QuoteRequestButton
+          className="button button-primary selection-submit"
+          subject="Запрос на подбор газоанализатора"
+          details={requestDetails}
+          source="Быстрый подбор"
+        >
           <Mail aria-hidden="true" size={18} />
           Подготовить запрос
           <ArrowRight aria-hidden="true" size={18} />
-        </a>
+        </QuoteRequestButton>
       </form>
     </div>
   );

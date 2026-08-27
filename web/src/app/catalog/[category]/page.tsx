@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { CatalogBrowser } from "@/components/catalog-browser";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { categories, categoryById, type CategoryId } from "@/data/categories";
 import { loadBrands, loadGases, loadProducts } from "@/lib/catalog/load-catalog";
@@ -106,12 +107,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
 
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <span>Газоанализатор.рус — промышленный газовый контроль</span>
-          <a href="mailto:info@prscom.ru">info@prscom.ru</a>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

@@ -6,6 +6,16 @@ services:
     image: gazrus-next:latest
     container_name: gazrus-next
     restart: unless-stopped
+    environment:
+      APP_REVISION: ${APP_REVISION:-local}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-465}
+      SMTP_SECURE: ${SMTP_SECURE:-true}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_FROM: ${SMTP_FROM:-}
+      LEAD_RECIPIENT_EMAIL: ${LEAD_RECIPIENT_EMAIL:-info@prscom.ru}
+      LEAD_ALLOWED_ORIGINS: ${LEAD_ALLOWED_ORIGINS:-https://xn--80aaaalzch0asjh0a0a.xn--p1acf}
     networks:
       - dokploy-network
     labels:

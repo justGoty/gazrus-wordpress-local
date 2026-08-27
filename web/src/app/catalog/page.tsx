@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { CatalogBrowser } from "@/components/catalog-browser";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { loadBrands, loadGases, loadProducts } from "@/lib/catalog/load-catalog";
 import { absoluteUrl, getSeoPageById } from "@/lib/seo/content";
@@ -71,12 +72,7 @@ export default async function CatalogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
 
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <span>Газоанализатор.рус — промышленный газовый контроль</span>
-          <a href="mailto:info@prscom.ru">info@prscom.ru</a>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

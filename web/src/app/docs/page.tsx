@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { DocumentsBrowser, type DocumentSearchItem } from "@/components/documents-browser";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { categoryById } from "@/data/categories";
 import { loadBrands, loadProducts } from "@/lib/catalog/load-catalog";
@@ -91,12 +92,7 @@ export default async function DocsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
 
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <span>Газоанализатор.рус — промышленный газовый контроль</span>
-          <a href="mailto:info@prscom.ru">info@prscom.ru</a>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

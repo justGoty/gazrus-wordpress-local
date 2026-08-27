@@ -2,6 +2,7 @@ import { Activity, ArrowLeft, Check, Cpu, Download, Mail, RadioTower, ShieldChec
 import Link from "next/link";
 import { ProductChemistry } from "@/components/product-chemistry";
 import { ProductGallery } from "@/components/product-gallery";
+import { QuoteRequestButton } from "@/components/quote-request";
 import { categoryById } from "@/data/categories";
 import { formatBrandId } from "@/lib/catalog/display";
 import type { Brand, Gas, Product } from "@/lib/catalog/schema";
@@ -27,7 +28,6 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
     specificationGroups.set(group, [...(specificationGroups.get(group) ?? []), specification]);
   }
 
-  const quoteHref = `mailto:info@prscom.ru?subject=${encodeURIComponent(`Запрос КП: ${product.title}`)}`;
   const hasMetrologyDocuments = product.documents.some(
     (document) => document.type === "certificate" || document.type === "verification",
   );
@@ -56,10 +56,15 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
               <span>Стоимость и срок поставки</span>
               <strong>По запросу</strong>
             </div>
-            <a className="button button-primary" href={quoteHref}>
+            <QuoteRequestButton
+              className="button button-primary"
+              subject={`Запрос КП: ${product.title}`}
+              details={`Товар: ${product.title}\nМодель: ${product.model}\nПроизводитель: ${brandName}`}
+              source="Страница товара"
+            >
               <Mail aria-hidden="true" size={18} />
               Запросить КП
-            </a>
+            </QuoteRequestButton>
           </div>
 
           {product.highlights.length > 0 || product.gases.length > 0 ? (

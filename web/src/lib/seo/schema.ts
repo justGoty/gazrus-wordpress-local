@@ -32,6 +32,7 @@ export const SeoSiteSchema = z.object({
   commercialMode: z.literal("request_quote"),
   publicPrices: z.literal(false),
   contactEmail: z.string().email(),
+  contactPhones: z.array(z.string().min(10).max(32)).min(1),
 });
 
 export const SeoPageSchema = z.object({

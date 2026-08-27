@@ -3,6 +3,8 @@ import { ArrowRight, FileCheck2, Gauge, Wrench } from "lucide-react";
 import Link from "next/link";
 import { CategoryHero } from "@/components/category-hero";
 import { QuickSelection } from "@/components/quick-selection";
+import { QuoteRequestButton } from "@/components/quote-request";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { categories } from "@/data/categories";
 import { absoluteUrl, getSeoPageById, seoSite } from "@/lib/seo/content";
@@ -20,6 +22,7 @@ const homeStructuredData = {
       name: seoSite.siteName,
       url: absoluteUrl("/"),
       email: seoSite.contactEmail,
+      telephone: seoSite.contactPhones,
     },
     {
       "@type": "WebSite",
@@ -132,10 +135,10 @@ export default function Home() {
                 Отправьте исходные параметры. Ответим с уточнениями по моделям, документам и составу коммерческого предложения.
               </p>
             </div>
-            <a className="button button-primary" href="mailto:info@prscom.ru?subject=Запрос%20КП%20на%20газоанализатор">
+            <QuoteRequestButton className="button button-primary" subject="Запрос КП на газоанализатор" source="Главная — коммерческий блок">
               Запросить КП
               <ArrowRight aria-hidden="true" size={18} />
-            </a>
+            </QuoteRequestButton>
           </div>
         </section>
       </main>
@@ -145,12 +148,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeStructuredData).replace(/</g, "\\u003c") }}
       />
 
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <span>Газоанализатор.рус — промышленный газовый контроль</span>
-          <a href="mailto:info@prscom.ru">info@prscom.ru</a>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

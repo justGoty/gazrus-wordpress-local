@@ -9,6 +9,16 @@
 
 ## Обновление
 
+Штатный способ — ручной workflow `Deploy production` в GitHub Actions. Доступ к серверу хранится в зашифрованных secrets:
+
+- `PRODUCTION_HOST`;
+- `PRODUCTION_USER`;
+- `PRODUCTION_PASSWORD`.
+
+Workflow обновляет ветку `master`, пересобирает `gazrus-next`, ожидает статус `healthy` и проверяет публичный `/api/health`.
+
+Резервной ручной командой на сервере остается:
+
 ```bash
 cd /opt/gazrus-next
 git fetch origin master

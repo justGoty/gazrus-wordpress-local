@@ -76,11 +76,13 @@
 | P0 | [MSA ALTAIR 5X](https://us.msasafety.com/Portable-Gas-Detection/Multi-Gas/ALTAIR%C2%AE-5X-Multigas-Detector/p/000080001600001023?locale=en) | До 6 газов, насос, PID по исполнению | Закрывает обследовательские работы и ОЗП | published |
 | P1 | [АНКАТ-7664Микро](https://www.analitpribor-smolensk.ru/products/gazoanalizators/perenosnii/bezopasnost-i-ohrana-truda/ankat_micro_pid/) | 1-4 канала, много отраслевых исполнений | Хорошо известная российская серия | published |
 | P1 | [Dräger Pac 6000](https://www.draeger.com/en-us_us/Products/Pac-6000) | Один газ: CO, H2S, SO2 или O2 | Базовый одноканальный прибор Dräger | published |
+| P1 | [Dräger Pac 8500](https://www.draeger.com/en_seeur/Products/Pac-8500) | Один или два газа: H2S/CO, O2/CO, H2S/O2 либо CO H2-CP | Компактная двухгазовая ступень линейки Pac с регистрацией данных | published 2026-08-27 |
 | P1 | [MSA ALTAIR 2X](https://us.msasafety.com/Portable-Gas-Detection/Single-or-Two-Gas/ALTAIR%C2%AE-2X-Gas-Detector/p/000080000200001600?locale=en) | Одно- и двухгазовые исполнения | Дополняет семейство MSA между Solo и многоканальными моделями | published |
 | P1 | [Industrial Scientific Ventis Pro5](https://www.indsci.com/en/gas-detectors/multi/ventis-pro5) | До 5 газов, PID и подключенные функции | Сильная модель для промышленной безопасности и ОЗП | published 2026-08-27 |
 | P1 | [Crowcon T4x](https://www.crowcon.com/products/t4x) | Четыре стандартных газа | Прямой аналог ALTAIR 4XR и X-am 2800 для сравнения | published 2026-08-27 |
+| P1 | [Crowcon Gas-Pro](https://www.crowcon.com/us-en/products/gas-pro/) | До 5 газов, диффузионный или насосный отбор | Проверка атмосферы перед входом и персональный многогазовый контроль | published 2026-08-27 |
 | P1 | [Honeywell BW Ultra](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-ultra-multi-gas-detector) | Пять газов, встроенный насос | Востребованный сценарий проверки замкнутых пространств | published 2026-08-27 |
-| P1 | [Honeywell BW MicroClip X3](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-microclip-series-multi-gas-detector) | До четырех газов | Производитель позиционирует серию как массовую четырехгазовую платформу | availability check |
+| P1 | [Honeywell BW MicroClip X3](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-microclip-series-multi-gas-detector) | До четырех газов | Производитель позиционирует серию как массовую четырехгазовую платформу | published 2026-08-27 |
 | P1 | [ПГ ЭРИС-411](https://eriskip.com/ru/product/pg-eris-411) | Один токсичный газ или O2 | Российский персональный одноканальный прибор | published 2026-08-27 |
 | P1 | [ПГ ЭРИС-414](https://eriskip.com/ru/product/pg%2Beris-414) | Четыре канала | Российская альтернатива международным четырехгазовым моделям | queued |
 | P2 | [ГАНК-4](https://www.gank4.ru/product/gazoanalizatory/gank-4-ex-gazoanalizator-perenosnoy/) | Многокомпонентный принудительный отбор | Нужен для сложных и редких загрязняющих веществ | queued |
@@ -113,7 +115,7 @@
 | P1 | [Alphasense SO2-AF](https://www.alphasense.com/products/view-by-target-gas/so2-af) | SO2, электрохимический | Энергетика и выбросы | queued |
 | P1 | [Membrapor NH3/CR-200](https://www.membrapor.ch/en/compact-gas-sensor/) | NH3, электрохимический | Альтернативный аммиачный сенсор | queued |
 | P1 | [Honeywell City Technology 4ND](https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor) | NO2, электрохимический | Контроль диоксида азота | queued |
-| P1 | [SGX-NH3-500-EL](https://sgxsensortech.com/sensor/sgx-nh3-500-el) | NH3, электрохимический Extended Life | Аммиак с повышенным ресурсом | queued |
+| P1 | [SGX-NH3-500-EL](https://sgxsensortech.com/sensor/sgx-nh3-500-el) | NH3, электрохимический Extended Life | Аммиак с повышенным ресурсом | published 2026-08-27 |
 | P1 | [Winsen ME3-NH3](https://www.winsen-sensor.com/d/files/4-series-electrochemical-toxic-gas-sensor/me3-nh3-0~100ppm/me3-nh3-0-100ppm.pdf) | NH3, электрохимический | Бюджетный аммиачный OEM-сегмент | queued |
 | P1 | [Figaro TGS5042-A00](https://www.figarosensor.com/product/entry/tgs5042-a00.html) | CO, электрохимический | Специализированный длинный цилиндрический элемент | queued |
 | P1 | [Figaro TGS2611-C00](https://www.figarosensor.com/product/entry/tgs2611-c00.html) | CH4, MOS | Сигнализаторы утечки метана | queued |

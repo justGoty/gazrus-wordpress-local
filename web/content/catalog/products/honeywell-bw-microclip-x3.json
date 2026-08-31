@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "id": "4202b295-5690-4100-bf19-fda0bfab5ab3",
+  "slug": "honeywell-bw-microclip-x3",
+  "status": "published",
+  "category": "portable",
+  "brandId": "honeywell",
+  "model": "BW MicroClip X3",
+  "title": "Портативный четырёхгазовый газоанализатор Honeywell BW MicroClip X3",
+  "summary": "Компактный диффузионный газоанализатор для персонального контроля атмосферы рабочей зоны. Honeywell BW MicroClip X3 одновременно контролирует до четырёх газовых опасностей — O₂, горючие газы, H₂S и CO — и предупреждает пользователя световым, звуковым и вибрационным сигналом.",
+  "commercialMode": "request_quote",
+  "gases": ["o2", "ch4", "h2s", "co"],
+  "ranges": [
+    { "gasId": "o2", "min": 0, "max": 30, "unit": "% об.", "resolution": 0.1 },
+    { "gasId": "ch4", "min": 0, "max": 100, "unit": "% НКПР", "resolution": 1, "conditions": "Канал горючих газов; отображение также может быть настроено в % об. метана" },
+    { "gasId": "ch4", "min": 0, "max": 5, "unit": "% об.", "resolution": 0.1, "conditions": "Режим отображения концентрации метана" },
+    { "gasId": "h2s", "min": 0, "max": 100, "unit": "ppm", "resolution": 1 },
+    { "gasId": "co", "min": 0, "max": 500, "unit": "ppm", "resolution": 1 }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/honeywell-bw-microclip-x3/honeywell-bw-microclip-x3-front-v1.webp",
+      "alt": "Портативный четырёхгазовый газоанализатор Honeywell BW MicroClip X3"
+    }
+  ],
+  "highlights": [
+    { "label": "Одновременный контроль", "value": "до 4 газов" },
+    { "label": "Газовые каналы", "value": "O₂ / LEL / H₂S / CO" },
+    { "label": "Защита корпуса", "value": "IP68" },
+    { "label": "Типичная автономность", "value": "18 ч" },
+    { "label": "Масса X3", "value": "179 г" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Количество каналов", "value": "До 4 одновременно в заказанной конфигурации" },
+    { "group": "Измерение", "label": "Контролируемые компоненты", "value": "Кислород O₂, горючие газы LEL, сероводород H₂S и оксид углерода CO" },
+    { "group": "Измерение", "label": "Отбор пробы", "value": "Диффузионный" },
+    { "group": "Сигнализация", "label": "Оповещение", "value": "Световое, вибрационное и звуковое 95 дБ" },
+    { "group": "Сигнализация", "label": "Контролируемые состояния", "value": "Низкий и высокий порог, TWA, STEL и выход за диапазон" },
+    { "group": "Диагностика", "label": "Самопроверка", "value": "Проверка сенсоров, аккумулятора, электроники и звуковой/световой сигнализации при включении; непрерывный контроль сенсоров, аккумулятора и цепей" },
+    { "group": "Индикация", "label": "Дисплей", "value": "ЖК-дисплей с одновременным отображением текущих концентраций" },
+    { "group": "Индикация", "label": "IntelliFlash", "value": "Зелёная световая индикация статуса функциональной проверки и контроля" },
+    { "group": "Управление", "label": "Органы управления", "value": "Одна кнопка" },
+    { "group": "Обслуживание", "label": "Функциональная проверка и калибровка", "value": "Ручная либо автоматизированная через совместимую станцию IntelliDoX" },
+    { "group": "Обслуживание", "label": "Ожидаемый срок службы", "value": "До 5 лет, включая сенсоры, при эксплуатации по руководству Honeywell" },
+    { "group": "Исполнение", "label": "Степень защиты", "value": "IP68: погружение до 1,2 м на 45 минут по данным Honeywell" },
+    { "group": "Исполнение", "label": "Габаритные размеры", "value": "113 × 60 × 32 мм" },
+    { "group": "Исполнение", "label": "Масса", "value": "179 г" },
+    { "group": "Питание", "label": "Аккумулятор", "value": "Перезаряжаемый литий-полимерный" },
+    { "group": "Питание", "label": "Типичное время работы", "value": "18 ч" },
+    { "group": "Питание", "label": "Время зарядки", "value": "Менее 6 ч" },
+    { "group": "Условия эксплуатации", "label": "Температура", "value": "От −20 до +50 °C" },
+    { "group": "Условия эксплуатации", "label": "Относительная влажность", "value": "0–95 % без конденсации" },
+    { "group": "Взрывозащита", "label": "Международные маркировки", "value": "ATEX II 1 G Ex ia IIC T4 Ga; IECEx Ex ia IIC T4 Ga — применимость подтверждается по точному артикулу" }
+  ],
+  "applications": [
+    "Персональный контроль кислорода, горючих и токсичных газов в рабочей зоне",
+    "Ношение сотрудником во время обходов, осмотров и технологических работ",
+    "Контроль атмосферы при работах в потенциально опасных газовых средах",
+    "Регулярная функциональная проверка и калибровка парка приборов через IntelliDoX"
+  ],
+  "workingPrinciple": {
+    "summary": "Окружающий воздух поступает к установленным сенсорам диффузионно. Каждый активный канал преобразует воздействие соответствующего газа в измерительный сигнал, электроника рассчитывает концентрацию и включает тревогу при достижении настроенного порога.",
+    "stages": [
+      {
+        "title": "Воздух поступает к сенсорам",
+        "description": "Проба из рабочей зоны проходит через диффузионные входы без встроенного насоса."
+      },
+      {
+        "title": "Сенсоры реагируют на газ",
+        "description": "Установленные каналы измеряют O₂, H₂S, CO и горючие газы в соответствии с заказанной конфигурацией."
+      },
+      {
+        "title": "Прибор показывает концентрации",
+        "description": "Электроника обрабатывает сигналы и одновременно выводит текущие значения активных каналов на ЖК-дисплей."
+      },
+      {
+        "title": "Сигнализация предупреждает пользователя",
+        "description": "При превышении порога включаются широкоугольные световые индикаторы, вибрация и звуковой сигнал 95 дБ."
+      }
+    ],
+    "note": "Количество активных каналов, цвет корпуса, артикул, региональная взрывозащита и комплект поставки подтверждаются перед подготовкой КП. BW MicroClip X3 не следует смешивать с модификацией BW MicroClip XL."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "other",
+      "title": "Honeywell BW MicroClip Series Data Sheet",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/honeywell_bw_microclip_series_datasheet.pdf?download=false"
+    },
+    {
+      "type": "manual",
+      "title": "Honeywell GasAlertMicroClip XT, XL and X3 User Manual",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/en-us/products/portables/honeywell-bw-microclip-series/hon-ia-pmc-50120681-002-h1-gasalertmicroclip-xt-xl-x3-user-manual-en.pdf?download=false"
+    },
+    {
+      "type": "manual",
+      "title": "Honeywell BW MicroClip Series Quick Reference Guide",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/gamicroclip_trg_en%281%29.pdf"
+    },
+    {
+      "type": "other",
+      "title": "Honeywell BW MicroClip Series Brochure, 2025",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/portables/microclip-series/hon-ia-pmc-bw-microclip-bro-ltr-en-0925-web-1.pdf?download=false"
+    }
+  ],
+  "seo": {
+    "title": "Honeywell BW MicroClip X3 — четырёхгазовый газоанализатор",
+    "description": "Honeywell BW MicroClip X3 для персонального контроля O₂, LEL, H₂S и CO: IP68, автономность 18 часов, масса 179 г. Запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальная страница Honeywell BW MicroClip Series",
+      "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-microclip-series-multi-gas-detector",
+      "checkedAt": "2026-08-27T13:57:23.3781514Z"
+    },
+    {
+      "title": "Официальная страница Honeywell BW MicroClip X3, четырёхгазовое исполнение",
+      "url": "https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/gasalertmicroclip-x3-4-gas-detector-black",
+      "checkedAt": "2026-08-27T13:57:23.3781514Z"
+    },
+    {
+      "title": "Honeywell BW MicroClip Series Data Sheet",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/honeywell_bw_microclip_series_datasheet.pdf?download=false",
+      "checkedAt": "2026-08-27T13:57:23.3781514Z"
+    },
+    {
+      "title": "Honeywell GasAlertMicroClip XT, XL and X3 User Manual",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/hgas/en-us/products/portables/honeywell-bw-microclip-series/hon-ia-pmc-50120681-002-h1-gasalertmicroclip-xt-xl-x3-user-manual-en.pdf?download=false",
+      "checkedAt": "2026-08-27T13:57:23.3781514Z"
+    },
+    {
+      "title": "Honeywell BW MicroClip Series Brochure, 2025",
+      "url": "https://prod-edam.honeywell.com/content/dam/honeywell-edam/sps/his/en-us/products/gas-and-flame-detection/documents/portables/microclip-series/hon-ia-pmc-bw-microclip-bro-ltr-en-0925-web-1.pdf?download=false",
+      "checkedAt": "2026-08-27T13:57:23.3781514Z"
+    },
+    {
+      "title": "Официальное изображение Honeywell BW MicroClip X3",
+      "url": "https://honeywell.scene7.com/is/image/Honeywell65/BW-MicroClip-X3-1800x1800",
+      "checkedAt": "2026-08-27T13:57:23.3781514Z"
+    }
+  ],
+  "verifiedAt": "2026-08-27T14:00:07.852Z",
+  "updatedAt": "2026-08-27T14:00:07.852Z"
+}

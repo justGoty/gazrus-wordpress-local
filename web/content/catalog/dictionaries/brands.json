@@ -13,5 +13,6 @@
   { "id": "eksis", "name": "ЭКСИС" },
   { "id": "honeywell", "name": "Honeywell" },
   { "id": "membrapor", "name": "Membrapor" },
-  { "id": "sgx-sensortech", "name": "SGX Sensortech" }
+  { "id": "sgx-sensortech", "name": "SGX Sensortech" },
+  { "id": "nord-west-engineering", "name": "Норд-Вест Инжиниринг" }
 ]

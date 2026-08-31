@@ -70,6 +70,8 @@
 | P0 | [АНКАТ-64М3](https://www.analitpribor-smolensk.ru/products/gazoanalizators/perenosnii/bezopasnost-i-ohrana-truda/ankat_64_m3/) | До 5 газов, включая PID/VOC по исполнению | Современная российская многоканальная линейка | published |
 | P0 | [КИП-МГ1](https://kipkonsalt.com/product/portativnye-gazoanalizatory/portativnye-gazoanalizatory-kip-mg/portativnyy-odnokanalnyy-gazoanalizator-kip-mg1-/) | Один выбранный газ | Базовый отечественный персональный прибор | published |
 | P0 | [АНКАТ-7631Микро](https://www.analitpribor-smolensk.ru/products/gazoanalizators/perenosnii/bezopasnost-i-ohrana-truda/ankat7631micro/) | Один газ: CO, HCl, H2S, NH3, Cl2, SO2, NO2 или O2 | Закрывает российские одноканальные исполнения | published |
+| P0 | [MONOLIT S](https://n-w-e.ru/monolit_s) | До двух каналов O2, CO2 или углеводородов; технологические газы и упаковка | Компактная российская модель для точечного контроля технологической среды | published 2026-08-31 |
+| P1 | [MONOLIT SL](https://n-w-e.ru/monolit_sl) | До трех каналов; технологические и отходящие газы топливосжигающих установок | Российский переносной анализатор с расчетом параметров горения и расхода | published 2026-08-31 |
 | P0 | [Honeywell BW Flex](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-flex) | До 5 газов, персональный контроль и ОЗП | Современная международная многогазовая платформа | published 2026-08-27 |
 | P0 | [Honeywell BW Solo](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/single-gas/honeywell-bw-solo-single-gas-detector) | Один из широкого перечня токсичных газов или O2 | Узнаваемая обслуживаемая одноканальная серия | published |
 | P0 | [Dräger X-am 5800](https://www.draeger.com/en-us_us/Products/X-am-5800) | До 5 газов | Следующая ступень линейки после X-am 2800 | published |
@@ -84,7 +86,7 @@
 | P1 | [Honeywell BW Ultra](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-ultra-multi-gas-detector) | Пять газов, встроенный насос | Востребованный сценарий проверки замкнутых пространств | published 2026-08-27 |
 | P1 | [Honeywell BW MicroClip X3](https://automation.honeywell.com/us/en/products/sensing-solutions/gas-and-flame-detection/portables/multi-gas/honeywell-bw-microclip-series-multi-gas-detector) | До четырех газов | Производитель позиционирует серию как массовую четырехгазовую платформу | published 2026-08-27 |
 | P1 | [ПГ ЭРИС-411](https://eriskip.com/ru/product/pg-eris-411) | Один токсичный газ или O2 | Российский персональный одноканальный прибор | published 2026-08-27 |
-| P1 | [ПГ ЭРИС-414](https://eriskip.com/ru/product/pg%2Beris-414) | Четыре канала | Российская альтернатива международным четырехгазовым моделям | queued |
+| P1 | [ПГ ЭРИС-414](https://eriskip.com/ru/product/pg%2Beris-414) | Четыре канала | Российская альтернатива международным четырехгазовым моделям | published 2026-08-31 |
 | P2 | [ГАНК-4](https://www.gank4.ru/product/gazoanalizatory/gank-4-ex-gazoanalizator-perenosnoy/) | Многокомпонентный принудительный отбор | Нужен для сложных и редких загрязняющих веществ | queued |
 | P2 | [ОКА-92МТ](https://gazoanalit.ru/catalog/perenosnye/gazoanalizator-oka-92mt/) | До 5 газов, выносные блоки по исполнению | Распространенная российская серия для колодцев и тоннелей | queued |
 | P2 | [Industrial Scientific Tango TX1](https://www.indsci.com/en/gas-detectors/single/tango-tx1) | Один токсичный газ, два однотипных сенсора | Отличается от обычных одноканальных моделей схемой DualSense | availability check |
@@ -99,7 +101,7 @@
 | P0 | [Honeywell City Technology 4CF+](https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor) | CO, электрохимический 4-Series | Базовый промышленный CO-сенсор | published |
 | P0 | [Honeywell City Technology 4HS+](https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor) | H2S, электрохимический 4-Series | Базовый H2S-сенсор | published |
 | P0 | [Honeywell City Technology 4OXV](https://automation.honeywell.com/us/en/products/sensing-solutions/sensors/gas-sensors/4-series-gas-sensor) | O2, электрохимический 4-Series | Базовый кислородный сенсор | published |
-| P0 | [Alphasense CO-AF](https://www.alphasense.com/products/view-by-target-gas/co-af) | CO, электрохимический A-Series | Расширяет Alphasense по другому форм-фактору и диапазону | queued |
+| P0 | [Alphasense CO-AF](https://www.alphasense.com/products/view-by-target-gas/co-af) | CO, электрохимический A-Series | Расширяет Alphasense по другому форм-фактору и диапазону | published 2026-08-31 |
 | P0 | [Alphasense H2S-A1](https://www.alphasense.com/products/view-by-target-gas/h2s-a1) | H2S, электрохимический A-Series | Востребованный токсичный газ | published |
 | P0 | [Membrapor CO/C-1000](https://www.membrapor.ch/en/compact-gas-sensor/) | CO, электрохимический Compact/7-Series | Альтернатива Alphasense и City Technology | queued |
 | P0 | [Membrapor H2S/C-50](https://www.membrapor.ch/sheet/Hydrogen-Sulfide-Gas-Sensor-H2S-C-50.pdf) | H2S, электрохимический Compact/7-Series | Промышленный H2S-сенсор | queued |

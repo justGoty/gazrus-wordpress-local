@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "08b5c98c-c97b-4067-81a6-a08e08ded97f",
+  "slug": "alphasense-co-af",
+  "status": "published",
+  "category": "sensors",
+  "brandId": "alphasense",
+  "model": "CO-AF",
+  "title": "Электрохимический сенсор угарного газа Alphasense CO-AF",
+  "summary": "Трехэлектродный электрохимический сенсор CO в форм-факторе A-Series для портативных и стационарных приборов промышленной безопасности. Рабочий диапазон до 5000 ppm, время отклика T90 менее 25 секунд и встроенный химический фильтр для снижения влияния мешающих газов.",
+  "commercialMode": "request_quote",
+  "gases": ["co"],
+  "ranges": [
+    {
+      "gasId": "co",
+      "min": 0,
+      "max": 5000,
+      "unit": "ppm",
+      "conditions": "Предел гарантируемого рабочего диапазона по официальному datasheet CO-AF, версия 1.1"
+    }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/alphasense-co-af/alphasense-co-af-cutout.webp",
+      "alt": "Электрохимический сенсор угарного газа Alphasense CO-AF с маркировкой модели"
+    }
+  ],
+  "highlights": [
+    { "label": "Определяемый газ", "value": "CO" },
+    { "label": "Диапазон", "value": "0–5000 ppm" },
+    { "label": "Время отклика", "value": "T90 < 25 с" },
+    { "label": "Чувствительность", "value": "55–100 нА/ppm" },
+    { "label": "Форм-фактор", "value": "A-Series" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Определяемый компонент", "value": "Оксид углерода CO" },
+    { "group": "Измерение", "label": "Принцип измерения", "value": "Амперометрический электрохимический, 3 электрода" },
+    { "group": "Измерение", "label": "Диапазон", "value": "0–5000 ppm CO" },
+    { "group": "Измерение", "label": "Чувствительность", "value": "55–100 нА/ppm при 400 ppm CO" },
+    { "group": "Измерение", "label": "Время отклика", "value": "T90 < 25 с при переходе от нуля к 400 ppm CO" },
+    { "group": "Измерение", "label": "Нулевой ток", "value": "< ±3 ppm эквивалента в нулевом воздухе" },
+    { "group": "Измерение", "label": "Шум", "value": "< 0,5 ppm эквивалента, RMS" },
+    { "group": "Измерение", "label": "Перегазовка", "value": "До 10 000 ppm для стабильного отклика на газовый импульс" },
+    { "group": "Селективность", "label": "Встроенный фильтр", "value": "Снижает влияние H2S, NO2, NO и SO2" },
+    { "group": "Электрические параметры", "label": "Рекомендуемая нагрузка", "value": "10–47 Ом" },
+    { "group": "Исполнение", "label": "Форм-фактор", "value": "Alphasense A-Series" },
+    { "group": "Исполнение", "label": "Масса", "value": "< 6 г" },
+    { "group": "Условия эксплуатации", "label": "Температура", "value": "От −30 до +50 °C" },
+    { "group": "Условия эксплуатации", "label": "Давление", "value": "80–120 кПа" },
+    { "group": "Условия эксплуатации", "label": "Относительная влажность", "value": "15–90 % RH непрерывно" },
+    { "group": "Ресурс", "label": "Ожидаемый срок службы", "value": "> 24 месяцев до 80 % исходного сигнала" },
+    { "group": "Ресурс", "label": "Срок хранения", "value": "6 месяцев при 3–20 °C в герметичном контейнере" }
+  ],
+  "applications": [
+    "Портативные газоанализаторы промышленной безопасности",
+    "Стационарные системы контроля CO в рабочих зонах и паркингах",
+    "OEM-приборы мониторинга качества воздуха и технологических процессов",
+    "Замена сенсора после проверки форм-фактора, распиновки и параметров измерительной схемы"
+  ],
+  "workingPrinciple": {
+    "summary": "Оксид углерода диффундирует к рабочему электроду электрохимической ячейки. Реакция формирует ток, пропорциональный концентрации CO; внешний измерительный тракт усиливает сигнал и рассчитывает концентрацию по калибровочной характеристике.",
+    "stages": [
+      {
+        "title": "CO проходит к рабочему электроду",
+        "description": "Газ поступает через диффузионный вход и встроенный химический фильтр, который уменьшает влияние ряда мешающих компонентов."
+      },
+      {
+        "title": "Формируется измерительный ток",
+        "description": "Электрохимическая реакция на трехэлектродной ячейке создает ток, связанный с концентрацией оксида углерода."
+      },
+      {
+        "title": "Электроника рассчитывает концентрацию",
+        "description": "Потенциостат и усилитель обрабатывают ток сенсора, после чего прибор применяет калибровку и температурную компенсацию."
+      }
+    ],
+    "note": "CO-AF и CO-AF+ являются разными исполнениями. Эта карточка относится к стандартному CO-AF без платы Integrated Smart Technology. Совместимость с конкретным прибором подтверждается по распиновке, нагрузке, калибровке и документации изготовителя."
+  },
+  "modifications": [],
+  "documents": [
+    {
+      "type": "other",
+      "title": "Официальный datasheet Alphasense CO-AF / CO-AF+, версия 1.1",
+      "url": "https://www.alphasense.com/-/media/project/oneweb/oneweb/alphasense/products/datasheets/alphasense_co-af_datasheet_0825.pdf?hash=06C3BF426CEBEBF0D6C747B6157C287B&la=en&revision=f7f2682a-945b-4b09-8b27-a092fb0d08fb"
+    }
+  ],
+  "seo": {
+    "title": "Alphasense CO-AF — сенсор CO 0–5000 ppm",
+    "description": "Электрохимический сенсор CO Alphasense CO-AF: диапазон 0–5000 ppm, T90 < 25 с, A-Series и встроенный фильтр. Подбор по параметрам и запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальная страница Alphasense CO-AF",
+      "url": "https://www.alphasense.com/products/view-by-target-gas/co-af",
+      "checkedAt": "2026-08-31T09:10:00.000Z"
+    },
+    {
+      "title": "Официальный datasheet Alphasense CO-AF / CO-AF+, версия 1.1",
+      "url": "https://www.alphasense.com/-/media/project/oneweb/oneweb/alphasense/products/datasheets/alphasense_co-af_datasheet_0825.pdf?hash=06C3BF426CEBEBF0D6C747B6157C287B&la=en&revision=f7f2682a-945b-4b09-8b27-a092fb0d08fb",
+      "checkedAt": "2026-08-31T09:10:00.000Z"
+    },
+    {
+      "title": "Официальное изображение Alphasense CO-AF",
+      "url": "https://ametekcdn.azureedge.net/mediafiles/project/oneweb/oneweb/alphasense/products/images/product%20page%20carousels/co/co-af/co-af-resized_en_1.gif?revision:d19e2bdc-8f8a-4e81-91c0-1bcdee826eec",
+      "checkedAt": "2026-08-31T09:10:00.000Z"
+    }
+  ],
+  "verifiedAt": "2026-08-31T09:10:00.000Z",
+  "updatedAt": "2026-08-31T09:10:00.000Z"
+}

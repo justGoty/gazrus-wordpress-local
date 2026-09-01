@@ -9,6 +9,7 @@ import { QuoteRequestButton } from "@/components/quote-request";
 const navigation = [
   { href: "/catalog", label: "Каталог" },
   { href: "/#selection", label: "Подбор" },
+  { href: "/calculators/gas-converter", label: "Конвертер" },
   { href: "/docs", label: "Документы" },
 ];
 

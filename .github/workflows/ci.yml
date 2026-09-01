@@ -37,6 +37,10 @@ jobs:
         working-directory: web
         run: pnpm install --frozen-lockfile
 
+      - name: Test gas converter
+        working-directory: web
+        run: pnpm test:converter
+
       - name: Lint web
         working-directory: web
         run: pnpm lint

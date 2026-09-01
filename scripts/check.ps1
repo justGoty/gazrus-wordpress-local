@@ -17,6 +17,7 @@ $requiredDocs = @(
     'docs/rebuild/SEO_SEMANTIC_CORE.md',
     'docs/rebuild/SEO_CONTENT_STANDARD.md',
     'docs/rebuild/SEO_IMPLEMENTATION.md',
+    'docs/rebuild/GAS_CONVERTER_IMPLEMENTATION.md',
     'docs/rebuild/TECH_ARCHITECTURE.md'
 )
 
@@ -96,7 +97,7 @@ try {
     }
 
     if (-not $SkipWeb) {
-        Write-Host '[4/4] Running lint and production build'
+        Write-Host '[4/4] Running converter tests, lint and production build'
         $pnpm = Get-Command pnpm -ErrorAction SilentlyContinue
         if (-not $pnpm) {
             throw 'pnpm was not found in PATH. Install pnpm 11.9.0 or use the configured Codex runtime.'
@@ -104,6 +105,8 @@ try {
 
         Push-Location (Join-Path $repoRoot 'web')
         try {
+            & $pnpm.Source 'test:converter'
+            Assert-LastExitCode 'pnpm test:converter'
             & $pnpm.Source lint
             Assert-LastExitCode 'pnpm lint'
             & $pnpm.Source build

@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpenCheck, Calculator, CircleGauge, FlaskConical } from "lucide-react";
+import { Activity, ArrowRight, BookOpenCheck, CircleGauge, FlaskConical } from "lucide-react";
 import Link from "next/link";
 import { GasConverter } from "@/components/gas-converter";
 import { QuoteRequestButton } from "@/components/quote-request";
@@ -67,10 +67,25 @@ export default function GasConverterPage() {
               </p>
             </div>
             <div className="converter-title-visual" aria-hidden="true">
-              <span className="converter-molecule converter-molecule-blue">ppm</span>
-              <span className="converter-molecule converter-molecule-teal">мг/м³</span>
-              <span className="converter-molecule converter-molecule-amber">% НКПР</span>
-              <Calculator size={54} />
+              <div className="converter-visual-heading">
+                <span><Activity size={17} /> Пересчет концентрации</span>
+                <span>20 °C · 101,325 кПа</span>
+              </div>
+              <div className="converter-visual-reading">
+                <span>CH₄</span>
+                <strong>100</strong>
+                <b>ppm</b>
+              </div>
+              <div className="converter-visual-results">
+                <div>
+                  <span>мг/м³</span>
+                  <strong>66,69</strong>
+                </div>
+                <div>
+                  <span>% об.</span>
+                  <strong>0,01</strong>
+                </div>
+              </div>
             </div>
           </div>
         </section>

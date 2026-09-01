@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "8b78303e-d657-4a1a-a933-e2b6c8bd159f",
+  "slug": "industrial-scientific-tango-tx1",
+  "status": "published",
+  "category": "portable",
+  "brandId": "industrial-scientific",
+  "model": "Tango TX1",
+  "title": "Портативный газоанализатор Industrial Scientific Tango TX1",
+  "summary": "Персональный одногазовый газоанализатор с технологией DualSense: два однотипных сенсора контролируют один выбранный газ и повышают надежность измерения. Прибор подает звуковой, световой и вибрационный сигнал тревоги.",
+  "commercialMode": "request_quote",
+  "gases": ["nh3", "co", "hcn", "h2s", "no2", "so2"],
+  "ranges": [
+    { "gasId": "nh3", "min": 0, "max": 500, "unit": "ppm", "resolution": 1 },
+    { "gasId": "co", "min": 0, "max": 1000, "unit": "ppm", "resolution": 1 },
+    { "gasId": "hcn", "min": 0, "max": 30, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "h2s", "min": 0, "max": 500, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "no2", "min": 0, "max": 150, "unit": "ppm", "resolution": 0.1 },
+    { "gasId": "so2", "min": 0, "max": 150, "unit": "ppm", "resolution": 0.1 }
+  ],
+  "media": [
+    {
+      "type": "image",
+      "url": "/images/products/industrial-scientific-tango-tx1/industrial-scientific-tango-tx1-front-v1.webp",
+      "alt": "Портативный одногазовый газоанализатор Industrial Scientific Tango TX1 в исполнении H2S"
+    }
+  ],
+  "highlights": [
+    { "label": "Канальность", "value": "1 газ" },
+    { "label": "Сенсоры", "value": "2 однотипных DualSense" },
+    { "label": "Сигнал", "value": "100 дБ + свет + вибрация" },
+    { "label": "Защита", "value": "IP66 / IP67" },
+    { "label": "Автономность", "value": "До 2 лет" }
+  ],
+  "specifications": [
+    { "group": "Измерение", "label": "Количество контролируемых газов", "value": "Один целевой газ в выбранном исполнении" },
+    { "group": "Измерение", "label": "DualSense", "value": "Два установленных сенсора одного типа контролируют один и тот же газ" },
+    { "group": "Сигнализация", "label": "Звуковой сигнал", "value": "100 дБ на расстоянии 10 см; опциональный AlarmAmp до 110 дБ" },
+    { "group": "Сигнализация", "label": "Дополнительные сигналы", "value": "Световая индикация и вибрация" },
+    { "group": "Корпус", "label": "Степень защиты", "value": "IP66 / IP67" },
+    { "group": "Корпус", "label": "Размеры", "value": "99 × 51 × 35 мм" },
+    { "group": "Корпус", "label": "Масса", "value": "126 г" },
+    { "group": "Питание", "label": "Батарея", "value": "Сменная первичная литиевая Li-SOCl2" },
+    { "group": "Питание", "label": "Срок работы", "value": "До 2 лет в типовых условиях эксплуатации" },
+    { "group": "Условия эксплуатации", "label": "Температура", "value": "От −40 до +50 °C" },
+    { "group": "Условия эксплуатации", "label": "Влажность", "value": "15–95 % RH без конденсации" },
+    { "group": "Память", "label": "Журнал данных", "value": "Около 3 месяцев при интервале 10 секунд" },
+    { "group": "Память", "label": "Журнал событий", "value": "60 тревожных событий" }
+  ],
+  "applications": [
+    "Персональный контроль CO, H2S, NH3, HCN, NO2 или SO2",
+    "Обходы и работы в производственных зонах",
+    "Допуск персонала в опасные и замкнутые пространства",
+    "Непрерывное индивидуальное ношение в течение рабочей смены",
+    "Задачи, где важна резервируемая проверка одного целевого газа"
+  ],
+  "workingPrinciple": {
+    "summary": "Два однотипных электрохимических сенсора одновременно измеряют один выбранный газ. Алгоритм DualSense сопоставляет их отклик, а прибор выводит концентрацию и включает тревогу при достижении заданных порогов.",
+    "stages": [
+      { "title": "Газ поступает к двум сенсорам", "description": "Окружающий воздух диффузионно достигает двух однотипных чувствительных элементов." },
+      { "title": "DualSense сравнивает отклики", "description": "Прибор использует показания обоих сенсоров для контроля одного целевого газа." },
+      { "title": "Концентрация отображается", "description": "Результат выводится на дисплей и сохраняется в журнале данных." },
+      { "title": "Срабатывает тревога", "description": "При превышении порогов включаются звук, свет и вибрация." }
+    ],
+    "note": "Tango TX1 не является двухгазовым прибором: оба сенсора в DualSense предназначены для одного и того же выбранного газа."
+  },
+  "modifications": [
+    { "id": "nh3", "name": "Tango TX1 NH3", "summary": "Исполнение для аммиака 0–500 ppm.", "gases": ["nh3"] },
+    { "id": "co", "name": "Tango TX1 CO", "summary": "Исполнение для CO 0–1000 ppm, включая вариант CO/H2 Low.", "gases": ["co"] },
+    { "id": "hcn", "name": "Tango TX1 HCN", "summary": "Исполнение для циановодорода 0–30 ppm.", "gases": ["hcn"] },
+    { "id": "h2s", "name": "Tango TX1 H2S", "summary": "Исполнение для сероводорода 0–500 ppm.", "gases": ["h2s"] },
+    { "id": "no2", "name": "Tango TX1 NO2", "summary": "Исполнение для диоксида азота 0–150 ppm.", "gases": ["no2"] },
+    { "id": "so2", "name": "Tango TX1 SO2", "summary": "Исполнение для диоксида серы 0–150 ppm.", "gases": ["so2"] }
+  ],
+  "documents": [
+    {
+      "type": "other",
+      "title": "Официальная спецификация Industrial Scientific Tango TX1",
+      "url": "https://www.indsci.com/hubfs/TX1_tango_specsheet_en.pdf"
+    }
+  ],
+  "seo": {
+    "title": "Industrial Scientific Tango TX1 — одногазовый газоанализатор",
+    "description": "Tango TX1: персональный газоанализатор на один газ с двумя сенсорами DualSense, IP66/67, сигналом 100 дБ и работой до 2 лет. Запрос КП."
+  },
+  "sources": [
+    {
+      "title": "Официальная страница Industrial Scientific Tango TX1",
+      "url": "https://www.indsci.com/en/gas-detectors/single/tango-tx1",
+      "checkedAt": "2026-09-01T14:00:00.000Z"
+    },
+    {
+      "title": "Официальная спецификация Industrial Scientific Tango TX1",
+      "url": "https://www.indsci.com/hubfs/TX1_tango_specsheet_en.pdf",
+      "checkedAt": "2026-09-01T14:00:00.000Z"
+    }
+  ],
+  "verifiedAt": "2026-09-01T14:00:00.000Z",
+  "updatedAt": "2026-09-01T14:00:00.000Z"
+}

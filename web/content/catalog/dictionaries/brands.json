@@ -14,5 +14,7 @@
   { "id": "honeywell", "name": "Honeywell" },
   { "id": "membrapor", "name": "Membrapor" },
   { "id": "sgx-sensortech", "name": "SGX Sensortech" },
-  { "id": "nord-west-engineering", "name": "Норд-Вест Инжиниринг" }
+  { "id": "nord-west-engineering", "name": "Норд-Вест Инжиниринг" },
+  { "id": "teledyne-gfd", "name": "Teledyne Gas and Flame Detection" },
+  { "id": "riken-keiki", "name": "Riken Keiki" }
 ]

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "d7466477-8dbf-4e99-9a6e-678207899219",
   "slug": "sgx-ps1-h2s-100",
-  "status": "draft",
+  "status": "published",
   "category": "sensors",
   "brandId": "sgx-sensortech",
   "model": "PS1-H2S-100",
@@ -88,13 +88,14 @@
     {
       "title": "Официальная страница SGX Sensortech PS1-H2S-100",
       "url": "https://www.sgxsensortech.com/sensor/ps1-h2s-100",
-      "checkedAt": "2026-08-14T13:07:20.000Z"
+      "checkedAt": "2026-09-01T14:00:00.000Z"
     },
     {
       "title": "Официальный datasheet SGX PS1/PS4-H2S-100, DS-0360 Issue 1",
       "url": "https://www.sgxsensortech.com/content/uploads/2022/04/DS-0360-PS1PS4-H2S-100.pdf",
-      "checkedAt": "2026-08-14T13:07:20.000Z"
+      "checkedAt": "2026-09-01T14:00:00.000Z"
     }
   ],
-  "updatedAt": "2026-08-14T13:07:20.000Z"
+  "verifiedAt": "2026-09-01T14:00:00.000Z",
+  "updatedAt": "2026-09-01T14:00:00.000Z"
 }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "182f01d9-db5c-4558-94c3-3d1e249a4edd",
   "slug": "sgx-ps1-co-1000",
-  "status": "draft",
+  "status": "published",
   "category": "sensors",
   "brandId": "sgx-sensortech",
   "model": "PS1-CO-1000",
@@ -88,13 +88,14 @@
     {
       "title": "Официальная страница SGX Sensortech PS1-CO-1000",
       "url": "https://www.sgxsensortech.com/sensor/ps1-co-1000",
-      "checkedAt": "2026-08-14T13:07:20.000Z"
+      "checkedAt": "2026-09-01T14:00:00.000Z"
     },
     {
       "title": "Официальный datasheet SGX PS1/PS4-CO-1000, DS-0368 Issue 1",
       "url": "https://www.sgxsensortech.com/content/uploads/2022/04/DS-0368-PS1PS4-CO-1000.pdf",
-      "checkedAt": "2026-08-14T13:07:20.000Z"
+      "checkedAt": "2026-09-01T14:00:00.000Z"
     }
   ],
-  "updatedAt": "2026-08-14T13:07:20.000Z"
+  "verifiedAt": "2026-09-01T14:00:00.000Z",
+  "updatedAt": "2026-09-01T14:00:00.000Z"
 }

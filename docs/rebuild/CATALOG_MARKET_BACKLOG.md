@@ -1,6 +1,6 @@
 # Рыночная очередь каталога
 
-Статус: рабочий план от 11 августа 2026 года.
+Статус: рабочий план, обновлен 1 сентября 2026 года.
 
 Документ задает очередность наполнения каталога Газоанализатор.рус. Это не рейтинг продаж: сопоставимой открытой статистики по моделям на рынке нет. Приоритет основан на присутствии продукции в каталогах крупных поставщиков, актуальности официальной линейки, узнаваемости бренда, полноте документации и способности модели закрыть востребованный сценарий.
 
@@ -45,8 +45,8 @@
 | P1 | [MSA ULTIMA X5000](https://us.msasafety.com/x5000?default=1&locale=en) | Горючие, токсичные газы и O2 | Актуальная универсальная платформа MSA | published |
 | P1 | [Honeywell Sensepoint XCD](https://www.honeywellanalytics.com/en/products/Sensepoint-XCD) | Горючие, токсичные газы и O2 | Узнаваемая платформа с дисплеем и Modbus | published |
 | P1 | [Crowcon Xgard Bright](https://www.crowcon.com/us-en/products/xgard-bright/) | Горючие, токсичные газы и O2 | Современная альтернатива с MPS, Modbus и HART | published 2026-08-27 |
-| P1 | [Teledyne OLCT 100](https://www.teledynegasandflamedetection.com/en-us/olct-100-olc-100-toxic-and-combustible-gas-detector) | Горючие, токсичные газы и O2 | Широкая модульная серия для обычных и Ex-зон | availability check |
-| P2 | [Riken Keiki SD-3](https://global.rikenkeiki.co.jp/products/sd-3) | Нефтегаз, суда и промышленные площадки | Международная конфигурируемая сенсорная платформа | availability check |
+| P1 | [Teledyne OLCT 100](https://www.teledynegasandflamedetection.com/en-us/olct-100-olc-100-toxic-and-combustible-gas-detector) | Горючие, токсичные газы и O2 | Широкая модульная серия для обычных и Ex-зон | published 2026-09-01 |
+| P2 | [Riken Keiki SD-3](https://global.rikenkeiki.co.jp/products/sd-3) | Нефтегаз, суда и промышленные площадки | Международная конфигурируемая сенсорная платформа | published 2026-09-01 |
 | P2 | [Sensitron SMART3G-D3](https://www.sensitron.it/en/smart-3g-d3/) | Горючие и токсичные газы, CO2, ЛОС, хладагенты | Расширяет каталог по холодильной отрасли и VOC | availability check |
 | P2 | [Emerson Rosemount 928](https://www.emerson.com/en/measurement-instrumentation/products/rosemount-928-wireless-gas-monitor) | Удаленные беспроводные точки контроля | Нишевая WirelessHART-модель для дорогой кабельной инфраструктуры | availability check |
 | P2 | [GfG EC28](https://www.gfgsafety.com/us-en/products/fixed-gas-detection-systems-transmitter/ec28) | Специальные токсичные газы | Полезен для NH3, Cl2, HCN, HF, PH3 и других редких задач | availability check |
@@ -89,8 +89,8 @@
 | P1 | [ПГ ЭРИС-414](https://eriskip.com/ru/product/pg%2Beris-414) | Четыре канала | Российская альтернатива международным четырехгазовым моделям | published 2026-08-31 |
 | P2 | [ГАНК-4](https://www.gank4.ru/product/gazoanalizatory/gank-4-ex-gazoanalizator-perenosnoy/) | Многокомпонентный принудительный отбор | Нужен для сложных и редких загрязняющих веществ | queued |
 | P2 | [ОКА-92МТ](https://gazoanalit.ru/catalog/perenosnye/gazoanalizator-oka-92mt/) | До 5 газов, выносные блоки по исполнению | Распространенная российская серия для колодцев и тоннелей | queued |
-| P2 | [Industrial Scientific Tango TX1](https://www.indsci.com/en/gas-detectors/single/tango-tx1) | Один токсичный газ, два однотипных сенсора | Отличается от обычных одноканальных моделей схемой DualSense | availability check |
-| P2 | [Crowcon Gasman](https://www.crowcon.com/products/gasman) | Один газ, включая редкие исполнения | Расширение одноканального ассортимента | availability check |
+| P2 | [Industrial Scientific Tango TX1](https://www.indsci.com/en/gas-detectors/single/tango-tx1) | Один токсичный газ, два однотипных сенсора | Отличается от обычных одноканальных моделей схемой DualSense | published 2026-09-01 |
+| P2 | [Crowcon Gasman](https://www.crowcon.com/products/gasman) | Один газ, включая редкие исполнения | Расширение одноканального ассортимента | published 2026-09-01 |
 | P2 | [Teledyne PS200](https://www.teledynegasandflamedetection.com/en-us/ps200-portable-4-gas-monitor) | До четырех газов, насос опционально | Дополнительная международная четырехгазовая платформа | availability check |
 
 ## Сенсоры для газоанализаторов
@@ -106,8 +106,8 @@
 | P0 | [Membrapor CO/C-1000](https://www.membrapor.ch/en/compact-gas-sensor/) | CO, электрохимический Compact/7-Series | Альтернатива Alphasense и City Technology | queued |
 | P0 | [Membrapor H2S/C-50](https://www.membrapor.ch/sheet/Hydrogen-Sulfide-Gas-Sensor-H2S-C-50.pdf) | H2S, электрохимический Compact/7-Series | Промышленный H2S-сенсор | queued |
 | P0 | [Membrapor O2/M-100](https://www.membrapor.ch/en/oxygen-sensors/) | O2, бессвинцовый электрохимический | Кислородный сенсор; диапазон уточнять по ревизии | published |
-| P0 | [SGX PS1-CO-1000](https://sgxsensortech.com/sensor/ps1-co-1000) | CO, твердополимерный электрохимический | Компактная современная технология | queued |
-| P0 | [SGX PS1-H2S-100](https://www.sgxsensortech.com/sensorSelector/) | H2S, твердополимерный электрохимический | Компактная H2S-позиция | queued |
+| P0 | [SGX PS1-CO-1000](https://sgxsensortech.com/sensor/ps1-co-1000) | CO, твердополимерный электрохимический | Компактная современная технология | published 2026-09-01 |
+| P0 | [SGX PS1-H2S-100](https://www.sgxsensortech.com/sensor/ps1-h2s-100) | H2S, твердополимерный электрохимический | Компактная H2S-позиция | published 2026-09-01 |
 | P0 | [SGX-4OX-ROHS-FS](https://sgxsensortech.com/sensor/sgx-4ox-rohs-fs) | O2, бессвинцовый электрохимический | Альтернативный кислородный 4-Series | draft: требуется фото с точной маркировкой |
 | P0 | [Winsen ME2-CO](https://www.winsen-sensor.com/d/files/me2-co/electrochemical-gas-sensor-me2-co.pdf) | CO, электрохимический | Бюджетный OEM-сегмент | queued |
 | P0 | [Winsen ME3-H2S](https://www.winsen-sensor.com/product/me3-h2s.html) | H2S, электрохимический | Бюджетный H2S OEM-сегмент | queued |

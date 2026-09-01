@@ -2391,6 +2391,45 @@ img {
   text-decoration: none;
 }
 
+.product-source-list {
+  border-top: 1px solid var(--line);
+}
+
+.product-source-list a {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 160ms ease, padding 160ms ease;
+}
+
+.product-source-list a:hover,
+.product-source-list a:focus-visible {
+  padding-left: 8px;
+  color: var(--blue);
+}
+
+.product-source-list span,
+.product-source-list strong,
+.product-source-list small {
+  display: block;
+}
+
+.product-source-list small {
+  margin-top: 4px;
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.product-source-list svg {
+  flex: 0 0 auto;
+  color: var(--blue);
+}
+
 .product-verification-note {
   display: flex;
   align-items: flex-start;

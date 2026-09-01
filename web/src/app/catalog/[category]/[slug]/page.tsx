@@ -83,9 +83,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
         "@id": `${absoluteUrl(canonical)}#product`,
         name: product.title,
         model: product.model,
+        mainEntityOfPage: absoluteUrl(canonical),
         category: categoryName,
         brand: { "@type": "Brand", name: brandName },
+        manufacturer: { "@type": "Organization", name: brandName },
         description: product.summary,
+        dateModified: product.updatedAt,
         image: product.media
           .filter((item) => item.type === "image")
           .map((item) => absoluteUrl(item.url)),
@@ -94,6 +97,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
           name: item.label,
           value: item.value,
         })),
+        subjectOf: product.sources.flatMap((source) =>
+          source.url
+            ? [{ "@type": "CreativeWork", name: source.title, url: source.url }]
+            : [],
+        ),
         url: absoluteUrl(canonical),
       },
       {

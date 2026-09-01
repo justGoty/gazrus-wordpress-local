@@ -1,1 +1,35 @@
-[]
+{
+  "schemaVersion": 1,
+  "redirects": [
+    {
+      "source": "/calculator",
+      "destination": "/calculators/gas-converter",
+      "permanent": true
+    },
+    {
+      "source": "/category/stacionarniy-gazoanalizatori",
+      "destination": "/catalog/stationary",
+      "permanent": true
+    },
+    {
+      "source": "/category/portable-gazanalyzers",
+      "destination": "/catalog/portable",
+      "permanent": true
+    },
+    {
+      "source": "/category/sensors-for-gazans",
+      "destination": "/catalog/sensors",
+      "permanent": true
+    },
+    {
+      "source": "/category/stacionarniy-gazoanalizatori/product/gazan-sta-kd1",
+      "destination": "/catalog/stationary/sta-kd1",
+      "permanent": true
+    },
+    {
+      "source": "/category/stacionarniy-gazoanalizatori/product/gazan-sta-kd3",
+      "destination": "/catalog/stationary/sta-kd3",
+      "permanent": true
+    }
+  ]
+}

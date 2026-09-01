@@ -18,6 +18,7 @@ $requiredDocs = @(
     'docs/rebuild/SEO_CONTENT_STANDARD.md',
     'docs/rebuild/SEO_IMPLEMENTATION.md',
     'docs/rebuild/GAS_CONVERTER_IMPLEMENTATION.md',
+    'docs/rebuild/SEO_WEBMASTER_REMEDIATION.md',
     'docs/rebuild/TECH_ARCHITECTURE.md'
 )
 
@@ -93,6 +94,23 @@ try {
     foreach ($path in @('web/package.json', 'web/pnpm-lock.yaml', 'web/content/catalog', 'web/content/seo', 'web/public/robots.txt', 'web/src/app')) {
         if (-not (Test-Path -LiteralPath (Join-Path $repoRoot $path))) {
             throw "Required path is missing: $path"
+        }
+    }
+
+    $productSeoRows = @(Get-ChildItem -LiteralPath (Join-Path $repoRoot 'web/content/catalog/products') -Filter '*.json' | ForEach-Object {
+        $product = Get-Content -LiteralPath $_.FullName -Raw -Encoding utf8 | ConvertFrom-Json
+        [pscustomobject]@{
+            File = $_.Name
+            Title = $product.seo.title.Trim().ToLowerInvariant()
+            Description = $product.seo.description.Trim().ToLowerInvariant()
+        }
+    })
+
+    foreach ($field in @('Title', 'Description')) {
+        $duplicates = @($productSeoRows | Group-Object -Property $field | Where-Object { $_.Count -gt 1 })
+        if ($duplicates.Count -gt 0) {
+            $details = $duplicates | ForEach-Object { "$field duplicate: $($_.Group.File -join ', ')" }
+            throw "Duplicate product SEO fields:`n$($details -join "`n")"
         }
     }
 

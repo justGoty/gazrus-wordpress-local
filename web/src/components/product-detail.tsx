@@ -1,4 +1,4 @@
-import { Activity, ArrowLeft, Check, Cpu, Download, Mail, RadioTower, ShieldCheck, Wind } from "lucide-react";
+import { Activity, ArrowLeft, Check, Cpu, Download, ExternalLink, Mail, RadioTower, ShieldCheck, Wind } from "lucide-react";
 import Link from "next/link";
 import { ProductChemistry } from "@/components/product-chemistry";
 import { ProductGallery } from "@/components/product-gallery";
@@ -31,6 +31,7 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
   const hasMetrologyDocuments = product.documents.some(
     (document) => document.type === "certificate" || document.type === "verification",
   );
+  const publicSources = product.sources.filter((source) => source.url);
 
   return (
     <div className="product-page">
@@ -209,6 +210,27 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
               <a href={document.url} target="_blank" rel="noreferrer" key={`${document.type}-${document.title}`}>
                 <Download aria-hidden="true" size={18} />
                 {document.title}
+              </a>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {publicSources.length > 0 ? (
+        <section className="product-content-section product-source-section">
+          <div className="product-section-heading">
+            <p className="section-kicker">Проверка данных</p>
+            <h2>Источники технических сведений</h2>
+            <p>Характеристики карточки сверены с материалами производителя и опубликованной документацией.</p>
+          </div>
+          <div className="product-source-list">
+            {publicSources.map((source) => (
+              <a href={source.url} target="_blank" rel="noreferrer" key={`${source.title}-${source.checkedAt}`}>
+                <span>
+                  <strong>{source.title}</strong>
+                  <small>Проверено {new Intl.DateTimeFormat("ru-RU").format(new Date(source.checkedAt))}</small>
+                </span>
+                <ExternalLink aria-hidden="true" size={17} />
               </a>
             ))}
           </div>

@@ -8,3 +8,28 @@ Allow: /
 Disallow: /api/
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&utm_referrer&gclid&yclid&ysclid&fbclid&from
 Sitemap: https://xn--80aaaalzch0asjh0a0a.xn--p1acf/sitemap.xml
+
+# AI search and user-directed retrieval crawlers
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/

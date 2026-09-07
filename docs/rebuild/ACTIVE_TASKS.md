@@ -18,4 +18,4 @@
 
 | Исполнитель | Задача | Файлы и области | Базовый хеш | Статус |
 |---|---|---|---|---|
-| Codex + Banach + Dalton | Пакет 18, целостность каталога, аудит готовности к рекламе | web/src/lib/catalog, catalog dictionaries и четыре новые модели, проверки CI, docs/rebuild | f67798c | active |
+| Codex + Banach + Dalton + Jason | Пакет 18, целостность каталога, Метрика и аудит рекламы | catalog, analytics/layout/quote-request, CI, docs | f67798c | completed |

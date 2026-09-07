@@ -125,6 +125,10 @@ try {
         try {
             & $pnpm.Source 'test:converter'
             Assert-LastExitCode 'pnpm test:converter'
+            & $pnpm.Source 'test:catalog'
+            Assert-LastExitCode 'pnpm test:catalog'
+            & $pnpm.Source 'test:analytics'
+            Assert-LastExitCode 'pnpm test:analytics'
             & $pnpm.Source lint
             Assert-LastExitCode 'pnpm lint'
             & $pnpm.Source build

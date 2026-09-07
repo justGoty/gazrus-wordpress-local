@@ -3,6 +3,7 @@
 import { ArrowLeft, CheckCircle2, Mail, PhoneCall, Send, X } from "lucide-react";
 import type { PropsWithChildren } from "react";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { trackGoal } from "@/lib/analytics";
 
 type QuoteRequest = {
   subject: string;
@@ -119,10 +120,11 @@ export function QuoteRequestProvider({ children }: PropsWithChildren) {
         }),
       });
 
-      const result = (await response.json()) as { message?: string };
-      if (!response.ok) throw new Error(result.message || "Не удалось отправить письмо");
+      const result = (await response.json()) as { ok?: boolean; message?: string } | null;
+      if (!response.ok || result?.ok !== true) throw new Error(result?.message || "Не удалось отправить письмо");
       setSuccessKind("email");
       setStep("success");
+      trackGoal("lead_email_success");
     } catch (submitError) {
       setError(submitError instanceof Error ? submitError.message : "Не удалось отправить письмо. Попробуйте еще раз.");
     } finally {
@@ -155,10 +157,11 @@ export function QuoteRequestProvider({ children }: PropsWithChildren) {
         }),
       });
 
-      const result = (await response.json()) as { message?: string };
-      if (!response.ok) throw new Error(result.message || "Не удалось отправить заявку");
+      const result = (await response.json()) as { ok?: boolean; message?: string } | null;
+      if (!response.ok || result?.ok !== true) throw new Error(result?.message || "Не удалось отправить заявку");
       setSuccessKind("callback");
       setStep("success");
+      trackGoal("lead_callback_success");
     } catch (submitError) {
       setError(submitError instanceof Error ? submitError.message : "Не удалось отправить заявку. Попробуйте еще раз.");
     } finally {
@@ -210,29 +213,29 @@ export function QuoteRequestProvider({ children }: PropsWithChildren) {
                 <p className="section-kicker">Письмо специалисту</p>
                 <h2 id="quote-dialog-title">Расскажите, что нужно подобрать</h2>
                 <p className="quote-modal-lead">Ответим на указанный e-mail и при необходимости уточним параметры оборудования.</p>
-                <form className="lead-form" onSubmit={submitEmail}>
+                <form className="lead-form ym-hide-content" onSubmit={submitEmail}>
                   <label>
                     <span>Имя</span>
-                    <input name="name" type="text" autoComplete="name" maxLength={80} placeholder="Как к вам обращаться" />
+                    <input className="ym-disable-keys" name="name" type="text" autoComplete="name" maxLength={80} placeholder="Как к вам обращаться" />
                   </label>
                   <label>
                     <span>E-mail для ответа *</span>
-                    <input name="email" type="email" inputMode="email" autoComplete="email" maxLength={160} required placeholder="name@company.ru" />
+                    <input className="ym-disable-keys" name="email" type="email" inputMode="email" autoComplete="email" maxLength={160} required placeholder="name@company.ru" />
                   </label>
                   <label>
                     <span>Тема *</span>
-                    <input name="subject" type="text" maxLength={160} minLength={3} required defaultValue={request.subject} />
+                    <input className="ym-disable-keys" name="subject" type="text" maxLength={160} minLength={3} required defaultValue={request.subject} />
                   </label>
                   <label>
                     <span>Что вас интересует *</span>
-                    <textarea name="message" maxLength={3000} minLength={10} rows={5} required placeholder="Опишите задачу, газ, диапазон или нужную модель" />
+                    <textarea className="ym-disable-keys" name="message" maxLength={3000} minLength={10} rows={5} required placeholder="Опишите задачу, газ, диапазон или нужную модель" />
                   </label>
                   <label className="lead-honeypot" aria-hidden="true">
                     <span>Сайт</span>
-                    <input name="website" type="text" tabIndex={-1} autoComplete="off" />
+                    <input className="ym-disable-keys" name="website" type="text" tabIndex={-1} autoComplete="off" />
                   </label>
                   <label className="lead-consent">
-                    <input name="consent" type="checkbox" required />
+                    <input className="ym-disable-keys" name="consent" type="checkbox" required />
                     <span>Согласен на обработку контактных данных для ответа на обращение</span>
                   </label>
                   {error ? <p className="lead-error" role="alert">{error}</p> : null}
@@ -252,25 +255,25 @@ export function QuoteRequestProvider({ children }: PropsWithChildren) {
                 <p className="section-kicker">Обратный звонок</p>
                 <h2 id="quote-dialog-title">Оставьте номер телефона</h2>
                 <p className="quote-modal-lead">Уточним задачу и подготовим информацию по оборудованию.</p>
-                <form className="lead-form" onSubmit={submitCallback}>
+                <form className="lead-form ym-hide-content" onSubmit={submitCallback}>
                   <label>
                     <span>Имя</span>
-                    <input name="name" type="text" autoComplete="name" maxLength={80} placeholder="Как к вам обращаться" />
+                    <input className="ym-disable-keys" name="name" type="text" autoComplete="name" maxLength={80} placeholder="Как к вам обращаться" />
                   </label>
                   <label>
                     <span>Телефон *</span>
-                    <input name="phone" type="tel" inputMode="tel" autoComplete="tel" maxLength={32} required placeholder="+7 (___) ___-__-__" />
+                    <input className="ym-disable-keys" name="phone" type="tel" inputMode="tel" autoComplete="tel" maxLength={32} required placeholder="+7 (___) ___-__-__" />
                   </label>
                   <label>
                     <span>Комментарий</span>
-                    <textarea name="comment" maxLength={500} rows={3} placeholder="Прибор, газ или удобное время звонка" />
+                    <textarea className="ym-disable-keys" name="comment" maxLength={500} rows={3} placeholder="Прибор, газ или удобное время звонка" />
                   </label>
                   <label className="lead-honeypot" aria-hidden="true">
                     <span>Сайт</span>
-                    <input name="website" type="text" tabIndex={-1} autoComplete="off" />
+                    <input className="ym-disable-keys" name="website" type="text" tabIndex={-1} autoComplete="off" />
                   </label>
                   <label className="lead-consent">
-                    <input name="consent" type="checkbox" required />
+                    <input className="ym-disable-keys" name="consent" type="checkbox" required />
                     <span>Согласен на обработку контактных данных для обратной связи</span>
                   </label>
                   {error ? <p className="lead-error" role="alert">{error}</p> : null}
@@ -286,8 +289,8 @@ export function QuoteRequestProvider({ children }: PropsWithChildren) {
               <div className="lead-success">
                 <CheckCircle2 aria-hidden="true" size={42} />
                 <p className="section-kicker">{successKind === "email" ? "Письмо отправлено" : "Заявка отправлена"}</p>
-                <h2 id="quote-dialog-title">{successKind === "email" ? "Спасибо, обращение уже у специалиста" : "Спасибо, мы получили ваш номер"}</h2>
-                <p>{successKind === "email" ? "Ответим на указанный e-mail после изучения задачи." : "Специалист свяжется с вами для уточнения задачи."}</p>
+                <h2 id="quote-dialog-title">Спасибо за обращение</h2>
+                <p>{successKind === "email" ? "Обращение принято к отправке. Ответим на указанный e-mail." : "Заявка принята к отправке. Свяжемся с вами по указанному телефону."} Если вопрос срочный, позвоните нам.</p>
                 <button className="button button-primary" type="button" onClick={close}>Закрыть</button>
               </div>
             ) : null}

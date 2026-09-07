@@ -16,5 +16,7 @@
   { "id": "sgx-sensortech", "name": "SGX Sensortech" },
   { "id": "nord-west-engineering", "name": "Норд-Вест Инжиниринг" },
   { "id": "teledyne-gfd", "name": "Teledyne Gas and Flame Detection" },
-  { "id": "riken-keiki", "name": "Riken Keiki" }
+  { "id": "riken-keiki", "name": "Riken Keiki" },
+  { "id": "sensitron", "name": "Sensitron" },
+  { "id": "nevadanano", "name": "NevadaNano" }
 ]

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Golos_Text, Manrope } from "next/font/google";
+import { Suspense } from "react";
+import { Analytics } from "@/components/analytics";
 import { QuoteRequestProvider } from "@/components/quote-request";
 import { seoSite } from "@/lib/seo/content";
 import "./globals.css";
@@ -46,6 +48,9 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${headingFont.variable} ${textFont.variable}`}>
         <QuoteRequestProvider>{children}</QuoteRequestProvider>
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );

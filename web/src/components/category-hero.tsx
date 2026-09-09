@@ -4,6 +4,8 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { type KeyboardEvent, useRef, useState } from "react";
 import { categories } from "@/data/categories";
+import { QuoteRequestButton } from "@/components/quote-request";
+import { seller } from "@/data/seller";
 
 type CategoryHeroProps = {
   pageHeading: string;
@@ -65,16 +67,17 @@ export function CategoryHero({ pageHeading }: CategoryHeroProps) {
                 aria-labelledby={`hero-tab-${category.id}`}
                 id={`hero-panel-${category.id}`}
                 role="tabpanel"
+                inert={index !== activeIndex}
                 key={category.id}
               >
                 <h2>{category.title}</h2>
                 <p className="hero-description">{category.description}</p>
-                <p className="hero-focus">{category.focus}</p>
+                <p className="hero-focus">{seller.responseNotice}</p>
                 <div className="hero-actions">
-                  <a className="button button-primary" href="#selection">
-                    Начать подбор
+                  <QuoteRequestButton className="button button-primary" subject={`Запрос КП: ${category.cardTitle}`} source="Главная — первый экран" details={`Категория: ${category.cardTitle}`}>
+                    Получить предложение
                     <ArrowRight aria-hidden="true" size={18} />
-                  </a>
+                  </QuoteRequestButton>
                   <Link className="button button-ghost" href={`/catalog/${category.id}`}>
                     Смотреть каталог
                   </Link>

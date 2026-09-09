@@ -7,6 +7,7 @@ import { QuoteRequestButton } from "@/components/quote-request";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { categories } from "@/data/categories";
+import { seller } from "@/data/seller";
 import { absoluteUrl, getSeoPageById, seoSite } from "@/lib/seo/content";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
@@ -20,6 +21,8 @@ const homeStructuredData = {
       "@type": "Organization",
       "@id": `${seoSite.origin}/#organization`,
       name: seoSite.siteName,
+      legalName: seller.legalName,
+      taxID: seller.taxId,
       url: absoluteUrl("/"),
       logo: absoluteUrl("/icon-512.png"),
       description: homeSeo.description,
@@ -64,16 +67,16 @@ export default function Home() {
         <section className="trust-strip" aria-label="Принципы работы">
           <div className="trust-inner">
             <div className="trust-item">
-              <strong>Технический подбор</strong>
-              <span>По газу, диапазону и условиям эксплуатации</span>
+              <strong>Ответ в течение суток</strong>
+              <span>По известной модели или вашей задаче</span>
             </div>
             <div className="trust-item">
-              <strong>Документы рядом с товаром</strong>
-              <span>Паспорта, руководства и подтвержденные сертификаты</span>
+              <strong>Поставка от двух недель</strong>
+              <span>Конкретный срок уточним по прибору и комплектации</span>
             </div>
             <div className="trust-item">
-              <strong>Коммерческое предложение</strong>
-              <span>Комплектация и стоимость после проверки запроса</span>
+              <strong>Подбор под условия объекта</strong>
+              <span>Газ, диапазон, исполнение и необходимые документы</span>
             </div>
           </div>
         </section>
@@ -86,7 +89,7 @@ export default function Home() {
                 <h2>Газоанализаторы и сенсоры по типу оборудования</h2>
               </div>
               <p>
-                Выберите стационарный или портативный газоанализатор либо сенсор. Для каждой категории предусмотрены технический подбор и запрос коммерческого предложения.
+                Знаете модель? Найдите ее в каталоге. Нужна помощь с выбором? Расскажите, какой газ и в каких условиях нужно контролировать.
               </p>
             </header>
 
@@ -122,7 +125,7 @@ export default function Home() {
                 <h2>От выбора прибора до документов</h2>
               </div>
               <p>
-                Сервисные разделы поддерживают каталог и помогают сформировать комплект поставки без смешивания с товарными категориями.
+                Поможем уточнить исполнение и комплект поставки. Стоимость, срок и состав заказа согласуем в коммерческом предложении.
               </p>
             </header>
 
@@ -134,12 +137,12 @@ export default function Home() {
               </div>
               <div className="service-item">
                 <FileCheck2 aria-hidden="true" size={24} />
-                <strong>Поверка и документы</strong>
-                <span>Только подтвержденные сведения рядом с конкретной моделью.</span>
+                <strong>Документы на прибор</strong>
+                <span>Руководства и метрологические документы для выбранной модели.</span>
               </div>
               <div className="service-item">
                 <Wrench aria-hidden="true" size={24} />
-                <strong>Сенсоры и обслуживание</strong>
+                <strong>Сенсоры для замены</strong>
                 <span>Подбор по совместимости, диапазону и принципу измерения.</span>
               </div>
             </div>
@@ -151,7 +154,7 @@ export default function Home() {
             <div>
               <h2>Нужна комплектация под конкретную задачу?</h2>
               <p>
-                Отправьте исходные параметры. Ответим с уточнениями по моделям, документам и составу коммерческого предложения.
+                Напишите модель или опишите задачу. Ответим на запрос в течение суток и уточним условия поставки.
               </p>
             </div>
             <QuoteRequestButton className="button button-primary" subject="Запрос КП на газоанализатор" source="Главная — коммерческий блок">

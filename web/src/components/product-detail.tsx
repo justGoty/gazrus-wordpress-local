@@ -1,9 +1,10 @@
-import { Activity, ArrowLeft, Check, Cpu, Download, ExternalLink, Mail, RadioTower, ShieldCheck, Wind } from "lucide-react";
+import { Activity, ArrowLeft, Check, Clock3, Cpu, Download, ExternalLink, Mail, Phone, RadioTower, ShieldCheck, Wind } from "lucide-react";
 import Link from "next/link";
 import { ProductChemistry } from "@/components/product-chemistry";
 import { ProductGallery } from "@/components/product-gallery";
 import { QuoteRequestButton } from "@/components/quote-request";
 import { categoryById } from "@/data/categories";
+import { seller } from "@/data/seller";
 import { formatBrandId } from "@/lib/catalog/display";
 import type { Brand, Gas, Product } from "@/lib/catalog/schema";
 
@@ -32,6 +33,11 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
     (document) => document.type === "certificate" || document.type === "verification",
   );
   const publicSources = product.sources.filter((source) => source.url);
+  const quoteRequest = {
+    subject: `Запрос КП: ${product.model}`,
+    details: `Товар: ${product.title}\nМодель: ${product.model}\nПроизводитель: ${brandName}`,
+    initialMessage: `Прошу сообщить стоимость и срок поставки ${product.model}.`,
+  };
 
   return (
     <div className="product-page">
@@ -44,12 +50,14 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
       </div>
 
       <section className="product-hero">
-        <ProductGallery media={product.media} />
-
-        <div className="product-detail-copy">
+        <div className="product-intro">
           <p className="section-kicker">{category.cardTitle}</p>
           <p className="product-model">{brandName} · {product.model}</p>
           <h1>{product.title}</h1>
+        </div>
+        <ProductGallery media={product.media} />
+
+        <div className="product-detail-copy">
           <p className="product-lead">{product.summary}</p>
 
           <div className="product-detail-commercial">
@@ -57,15 +65,19 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
               <span>Стоимость и срок поставки</span>
               <strong>По запросу</strong>
             </div>
-            <QuoteRequestButton
-              className="button button-primary"
-              subject={`Запрос КП: ${product.title}`}
-              details={`Товар: ${product.title}\nМодель: ${product.model}\nПроизводитель: ${brandName}`}
-              source="Страница товара"
-            >
-              <Mail aria-hidden="true" size={18} />
-              Запросить КП
-            </QuoteRequestButton>
+            <div className="product-commercial-actions">
+              <QuoteRequestButton className="button button-primary" {...quoteRequest} source="Страница товара">
+                <Mail aria-hidden="true" size={18} />
+                Узнать цену и срок
+              </QuoteRequestButton>
+              <QuoteRequestButton className="text-action" {...quoteRequest} contactMethod="callback" source="Страница товара — обратный звонок">
+                <Phone aria-hidden="true" size={16} /> Обсудить по телефону
+              </QuoteRequestButton>
+            </div>
+          </div>
+          <div className="product-supply-notes">
+            <p><Clock3 aria-hidden="true" size={17} /> {seller.responseNotice}</p>
+            <p>{seller.deliveryNotice} <Link href="/contacts#order">Условия заказа</Link></p>
           </div>
 
           {product.highlights.length > 0 || product.gases.length > 0 ? (
@@ -90,6 +102,13 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
           ) : null}
         </div>
       </section>
+
+      <nav className="product-mobile-actions" aria-label="Связаться по товару">
+        <a className="button button-outline" href="tel:+74957486258"><Phone aria-hidden="true" size={18} /> Позвонить</a>
+        <QuoteRequestButton className="button button-primary" {...quoteRequest} source="Мобильная панель товара">
+          <Mail aria-hidden="true" size={18} /> Узнать цену
+        </QuoteRequestButton>
+      </nav>
 
       {product.applications.length > 0 ? (
         <section className="product-content-section">

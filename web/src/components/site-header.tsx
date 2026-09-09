@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, Search, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Brand } from "@/components/brand";
@@ -11,6 +11,7 @@ const navigation = [
   { href: "/#selection", label: "Подбор" },
   { href: "/calculators/gas-converter", label: "Конвертер" },
   { href: "/docs", label: "Документы" },
+  { href: "/contacts", label: "Контакты" },
 ];
 
 export function SiteHeader() {
@@ -32,10 +33,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="header-actions">
-          <Link className="icon-button header-search" href="/catalog" title="Поиск по каталогу">
-            <Search aria-hidden="true" size={19} />
-            <span className="sr-only">Поиск по каталогу</span>
-          </Link>
+          <a className="header-phone" href="tel:+74957486258" title="Позвонить: +7 (495) 748-62-58" aria-label="Позвонить: +7 (495) 748-62-58">
+            <Phone aria-hidden="true" size={18} />
+            <span>+7 (495) 748-62-58</span>
+          </a>
           <QuoteRequestButton className="button button-primary header-quote" subject="Запрос КП на газоанализатор" source="Шапка сайта">
             Запросить КП
           </QuoteRequestButton>
@@ -57,13 +58,14 @@ export function SiteHeader() {
         className="mobile-nav"
         aria-label="Мобильная навигация"
         data-open={open}
+        inert={!open}
       >
         {navigation.map((item) => (
           <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
             {item.label}
           </Link>
         ))}
-        <QuoteRequestButton className="mobile-nav-quote" subject="Запрос КП на газоанализатор" source="Мобильное меню">
+        <QuoteRequestButton className="mobile-nav-quote" subject="Запрос КП на газоанализатор" source="Мобильное меню" onOpen={() => setOpen(false)}>
           Запросить КП
         </QuoteRequestButton>
       </nav>

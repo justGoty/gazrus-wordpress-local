@@ -18,5 +18,5 @@
 
 | Исполнитель | Задача | Файлы и области | Базовый хеш | Статус |
 |---|---|---|---|---|
-| Codex + агент контактов | Конверсия: связь, КП, мобильный товар, контакты и условия | header/footer, quote-request, product-detail, home/hero, globals.css, contacts route/SEO, browser tests, docs | fd745a7 | active |
+| Codex + Euclid | Конверсия: связь, КП, мобильный товар, контакты и условия | header/footer, quote-request, product-detail, home/hero, globals.css, contacts route/SEO, browser tests, docs | fd745a7 | completed: c33561f, production verified 09.09.2026 |
 | Codex + Banach + Dalton + Jason | Пакет 18, целостность каталога, Метрика и аудит рекламы | catalog, analytics/layout/quote-request, CI, docs | f67798c | completed |

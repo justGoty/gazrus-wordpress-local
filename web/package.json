@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint src",
     "test:converter": "node --test src/lib/calculators/gas-converter.test.mjs",
-    "test:catalog": "node --test src/lib/catalog/integrity.test.mjs",
+    "test:catalog": "node --test src/lib/catalog/integrity.test.mjs src/lib/catalog/redirects.test.mjs",
     "test:analytics": "node --experimental-strip-types --test src/lib/analytics.test.mjs",
     "validate:catalog": "node --experimental-strip-types scripts/validate-catalog.mjs"
   },

@@ -30,6 +30,21 @@
       "source": "/category/stacionarniy-gazoanalizatori/product/gazan-sta-kd3",
       "destination": "/catalog/stationary/sta-kd3",
       "permanent": true
+    },
+    {
+      "source": "/catalog/portativnye-gazoanalizatory",
+      "destination": "/catalog/portable",
+      "permanent": true
+    },
+    {
+      "source": "/catalog/portativnye-gazoanalizatory/page/:page([1-9]\\d*)",
+      "destination": "/catalog/portable",
+      "permanent": true
+    },
+    {
+      "source": "/catalog/sensory-i-datchiki",
+      "destination": "/catalog/sensors",
+      "permanent": true
     }
   ]
 }

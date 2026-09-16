@@ -143,6 +143,8 @@ export default function ContactsPage() {
             <div className={styles.delivery}>
               <h3>Поставка по России</h3>
               <p>{seller.deliveryNotice} Условия поставки укажем в КП.</p>
+              <p><strong>Оплата.</strong> {seller.paymentNotice}</p>
+              <p><strong>Гарантия.</strong> {seller.warrantyNotice}</p>
             </div>
           </div>
         </section>

@@ -1,4 +1,4 @@
-import { Activity, ArrowLeft, Check, Clock3, Cpu, Download, ExternalLink, Mail, Phone, RadioTower, ShieldCheck, Wind } from "lucide-react";
+import { Activity, ArrowLeft, Check, Clock3, Cpu, Download, ExternalLink, FileText, Mail, Phone, RadioTower, Wind } from "lucide-react";
 import Link from "next/link";
 import { ProductChemistry } from "@/components/product-chemistry";
 import { ProductGallery } from "@/components/product-gallery";
@@ -29,14 +29,14 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
     specificationGroups.set(group, [...(specificationGroups.get(group) ?? []), specification]);
   }
 
-  const hasMetrologyDocuments = product.documents.some(
-    (document) => document.type === "certificate" || document.type === "verification",
-  );
   const publicSources = product.sources.filter((source) => source.url);
   const quoteRequest = {
     subject: `Запрос КП: ${product.model}`,
     details: `Товар: ${product.title}\nМодель: ${product.model}\nПроизводитель: ${brandName}`,
     initialMessage: `Прошу сообщить стоимость и срок поставки ${product.model}.`,
+    messageHint: product.category === "sensors"
+      ? "Если известно, укажите модель прибора, маркировку сенсора, газ, диапазон и количество."
+      : "Если известно, укажите газ, диапазон, количество, условия работы и нужную комплектацию.",
   };
 
   return (
@@ -169,10 +169,11 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
                 <h3>Диапазоны измерений</h3>
                 <dl className="product-specification-list">
                   {product.ranges.map((range) => (
-                    <div key={`${range.gasId}-${range.min}-${range.max}-${range.unit}`}>
+                    <div key={`${range.gasId}-${range.min}-${range.max}-${range.unit}-${range.conditions ?? ""}`}>
                       <dt>{gasById.get(range.gasId)?.formula ?? range.gasId}</dt>
                       <dd>
                         {range.min}–{range.max} {range.unit}
+                        {range.conditions ? <small className="product-range-condition">{range.conditions}</small> : null}
                       </dd>
                     </div>
                   ))}
@@ -233,7 +234,26 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
             ))}
           </div>
         </section>
-      ) : null}
+      ) : (
+        <section className="product-content-section product-document-section">
+          <div className="product-section-heading">
+            <p className="section-kicker">Документация</p>
+            <h2>Документы по запросу</h2>
+            <p>Уточним доступные технические материалы и документы для нужного исполнения.</p>
+          </div>
+          <div>
+            <QuoteRequestButton
+              className="button button-outline"
+              subject={`Документация: ${product.model}`}
+              details={quoteRequest.details}
+              initialMessage={`Прошу сообщить, какие документы доступны для ${product.model}.`}
+              source="Запрос документации товара"
+            >
+              <FileText aria-hidden="true" size={18} /> Запросить документы
+            </QuoteRequestButton>
+          </div>
+        </section>
+      )}
 
       {publicSources.length > 0 ? (
         <section className="product-content-section product-source-section">
@@ -258,15 +278,13 @@ export function ProductDetail({ product, gases, brands }: ProductDetailProps) {
 
       {product.documents.length > 0 ? (
         <section className="product-verification-note">
-          <ShieldCheck aria-hidden="true" size={24} />
+          <FileText aria-hidden="true" size={24} />
           <div>
             <strong>
-              {hasMetrologyDocuments ? "Документация и метрология подтверждены" : "Документация производителя доступна"}
+              Техническая документация доступна
             </strong>
             <p>
-              {hasMetrologyDocuments
-                ? "На странице собраны эксплуатационные и метрологические документы. Исполнение, диапазон и комплект поставки фиксируются в коммерческом предложении."
-                : "Технические материалы по модели доступны для изучения. Перед заказом мы уточняем конфигурацию, совместимость и комплект поставки."}
+              Изучите опубликованные материалы по модели. Нужные документы, исполнение и комплект поставки уточним при подготовке коммерческого предложения.
             </p>
           </div>
         </section>

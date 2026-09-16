@@ -413,6 +413,12 @@ img {
   font-weight: 700;
 }
 
+.lead-field-hint {
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .lead-form input[type="text"],
 .lead-form input[type="email"],
 .lead-form input[type="tel"],
@@ -2462,6 +2468,15 @@ img {
 
 .product-specification-list dd {
   font-weight: 700;
+}
+
+.product-range-condition {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .product-modification-list {

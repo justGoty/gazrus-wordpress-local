@@ -13,6 +13,7 @@ type QuoteRequest = {
   source?: string;
   contactMethod?: ContactMethod;
   initialMessage?: string;
+  messageHint?: string;
 };
 
 type QuoteRequestButtonProps = PropsWithChildren<QuoteRequest> & {
@@ -197,7 +198,8 @@ function QuoteRequestDialog({ request, onClose }: { request: QuoteRequest; onClo
             </label>
             <label>
               <span>Ваш запрос *</span>
-              <textarea className="ym-disable-keys" name="message" maxLength={3000} minLength={10} rows={3} required defaultValue={request.initialMessage} placeholder="Модель, количество или задача, для которой нужен прибор" />
+              <textarea className="ym-disable-keys" name="message" maxLength={3000} minLength={10} rows={3} required defaultValue={request.initialMessage} placeholder="Модель, количество или задача, для которой нужен прибор" aria-describedby={request.messageHint ? "quote-message-hint" : undefined} />
+              {request.messageHint ? <small className="lead-field-hint" id="quote-message-hint">{request.messageHint}</small> : null}
             </label>
             <FormConsent />
             {error ? <p className="lead-error" role="alert">{error}</p> : null}
@@ -253,13 +255,13 @@ function FormConsent() {
   );
 }
 
-export function QuoteRequestButton({ children, className, subject, details, source, title, contactMethod, initialMessage, onOpen }: QuoteRequestButtonProps) {
+export function QuoteRequestButton({ children, className, subject, details, source, title, contactMethod, initialMessage, messageHint, onOpen }: QuoteRequestButtonProps) {
   const context = useContext(QuoteRequestContext);
   if (!context) throw new Error("QuoteRequestButton must be rendered inside QuoteRequestProvider");
 
   return (
     <button className={className} type="button" title={title} onClick={() => {
-      context.openQuoteRequest({ subject, details, source, contactMethod, initialMessage });
+      context.openQuoteRequest({ subject, details, source, contactMethod, initialMessage, messageHint });
       onOpen?.();
     }}>
       {children}

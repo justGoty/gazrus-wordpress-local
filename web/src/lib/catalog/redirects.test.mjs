@@ -39,3 +39,16 @@ test("legacy aliases do not introduce blanket product redirects", () => {
   assert(redirects.some((rule) => rule.source === "/catalog/portativnye-gazoanalizatory" && rule.destination === "/catalog/portable"));
   assert(!redirects.some((rule) => rule.source.startsWith("/product/") || rule.source.includes(":path*")));
 });
+
+test("populated category destinations are indexable and included in the sitemap", () => {
+  const { pages } = JSON.parse(readFileSync(new URL("../seo/pages.json", directory), "utf8"));
+  for (const category of ["stationary", "portable", "sensors"]) {
+    const page = pages.find((item) => item.id === `catalog-${category}`);
+    assert.equal(page.implementation, "implemented");
+    assert.equal(page.seoStatus, "ready");
+    assert.equal(page.indexing, "index");
+    assert.equal(page.sitemap, true);
+    assert.equal(page.canonical, `/catalog/${category}`);
+    assert(products.some((product) => product.status === "published" && product.category === category));
+  }
+});

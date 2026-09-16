@@ -21,6 +21,8 @@ Verified in the account on 2026-09-16: all three exact-match event goals are sav
 
 ## Browser Acceptance Without Real Submissions
 
+Production check on 2026-09-16: after separate owner approval, one explicitly marked email test and one callback test were submitted using public company contacts. Both forms displayed success; the official debugger logged PageView and each corresponding Reach goal for counter 112712443. At the first account check, conversion reports still showed no data. Mailbox delivery and report ingestion are not yet accepted; do not replay tests without approval or manufacture goals manually.
+
 1. On localhost/dev, navigate, open the dialog and click telephone links: no mc.yandex requests or ym initialization from this integration.
 2. In an isolated production-build browser harness, map the canonical origin to the local application. Intercept the Metrika tag before navigation and replace it with a local ym spy; block all other Yandex requests. Do not publish mock code or add a production bypass to the host gate.
 3. Check one init with defer: true and webvisor: true, one initial hit, then one hit for each pathname/query change. Check back/forward, A -> B -> A and repeated renders of the same URL. There must be no duplicate first hit.

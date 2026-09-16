@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { CatalogBrowser } from "@/components/catalog-browser";
@@ -7,7 +8,7 @@ import { SiteHeader } from "@/components/site-header";
 import { categories, categoryById, type CategoryId } from "@/data/categories";
 import { loadBrands, loadGases, loadProducts } from "@/lib/catalog/load-catalog";
 import { CategoryIdSchema } from "@/lib/catalog/schema";
-import { absoluteUrl, getSeoPageById } from "@/lib/seo/content";
+import { absoluteUrl, getSeoPageById, isSeoPageIndexable } from "@/lib/seo/content";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 
 type CategoryPageProps = {
@@ -33,7 +34,7 @@ export async function generateMetadata({ params, searchParams }: CategoryPagePro
   const hasProducts = products.some((product) => product.category === parsedCategory.data);
   const hasParameters = Object.keys(await searchParams).length > 0;
   const seoPage = getSeoPageById(seoPageId(parsedCategory.data));
-  const index = seoPage.seoStatus === "ready" && hasProducts && !hasParameters;
+  const index = isSeoPageIndexable(seoPage) && hasProducts && !hasParameters;
   return buildPageMetadata(seoPage.id, { index });
 }
 
@@ -99,6 +100,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               initialCategory={categoryId}
             />
           </Suspense>
+        </section>
+        <section className="catalog-selection-guide" aria-labelledby="category-selection-title">
+          <h2 id="category-selection-title">{category.selectionTitle}</h2>
+          {category.selectionText.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <Link href="/docs">Документы на приборы и сенсоры</Link>
         </section>
       </main>
 

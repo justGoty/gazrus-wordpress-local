@@ -53,8 +53,8 @@
       "canonical": "/catalog/stationary",
       "pageType": "category",
       "implementation": "implemented",
-      "seoStatus": "draft",
-      "indexing": "conditional",
+      "seoStatus": "ready",
+      "indexing": "index",
       "follow": true,
       "sitemap": true,
       "changeFrequency": "weekly",
@@ -67,9 +67,9 @@
       "schemaTypes": ["CollectionPage", "ItemList", "BreadcrumbList"],
       "requiredSections": ["Назначение категории", "Товары", "Критерии выбора", "Интеграция и интерфейсы", "Документы", "Запрос КП"],
       "socialImage": "/images/hero-stationary-v3.webp",
-      "updatedAt": "2026-08-04T00:00:00.000Z",
+      "updatedAt": "2026-09-16T00:00:00.000Z",
       "indexConditions": ["Есть устойчивый набор опубликованных товаров", "Подготовлен уникальный экспертный текст", "Проверены внутренние ссылки и metadata"],
-      "notes": ["До выполнения условий страница доступна пользователю, но не индексируется и не входит в sitemap."]
+      "notes": ["Категория наполнена товарами и пояснениями по выбору. Чистый URL индексируется; фильтры закрыты от индексации с canonical на категорию."]
     },
     {
       "id": "docs",
@@ -99,8 +99,8 @@
       "canonical": "/catalog/portable",
       "pageType": "category",
       "implementation": "implemented",
-      "seoStatus": "draft",
-      "indexing": "conditional",
+      "seoStatus": "ready",
+      "indexing": "index",
       "follow": true,
       "sitemap": true,
       "changeFrequency": "weekly",
@@ -113,9 +113,9 @@
       "schemaTypes": ["CollectionPage", "ItemList", "BreadcrumbList"],
       "requiredSections": ["Назначение категории", "Товары", "Критерии выбора", "Сценарии применения", "Документы", "Запрос КП"],
       "socialImage": "/images/hero-portable-v2.webp",
-      "updatedAt": "2026-08-04T00:00:00.000Z",
+      "updatedAt": "2026-09-16T00:00:00.000Z",
       "indexConditions": ["Есть устойчивый набор опубликованных товаров", "Подготовлен уникальный экспертный текст", "Проверены внутренние ссылки и metadata"],
-      "notes": ["До выполнения условий страница доступна пользователю, но не индексируется и не входит в sitemap."]
+      "notes": ["Категория наполнена товарами и пояснениями по выбору. Чистый URL индексируется; фильтры закрыты от индексации с canonical на категорию."]
     },
     {
       "id": "catalog-sensors",
@@ -123,8 +123,8 @@
       "canonical": "/catalog/sensors",
       "pageType": "category",
       "implementation": "implemented",
-      "seoStatus": "draft",
-      "indexing": "conditional",
+      "seoStatus": "ready",
+      "indexing": "index",
       "follow": true,
       "sitemap": true,
       "changeFrequency": "weekly",
@@ -137,9 +137,9 @@
       "schemaTypes": ["CollectionPage", "ItemList", "BreadcrumbList"],
       "requiredSections": ["Назначение категории", "Товары", "Подбор по совместимости", "Технологии сенсоров", "Калибровка и ресурс", "Запрос КП"],
       "socialImage": "/images/hero-sensors-v3.webp",
-      "updatedAt": "2026-08-04T00:00:00.000Z",
+      "updatedAt": "2026-09-16T00:00:00.000Z",
       "indexConditions": ["Есть устойчивый набор опубликованных товаров", "Подготовлен уникальный экспертный текст", "Проверены внутренние ссылки и metadata"],
-      "notes": ["До выполнения условий страница доступна пользователю, но не индексируется и не входит в sitemap."]
+      "notes": ["Категория наполнена товарами и пояснениями по выбору. Чистый URL индексируется; фильтры закрыты от индексации с canonical на категорию."]
     },
     {
       "id": "gases-hub",

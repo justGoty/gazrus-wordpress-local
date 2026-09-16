@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   description: seoSite.defaultDescription,
   verification: {
-    yandex: "d1813774cff4888e",
+    yandex: ["d1813774cff4888e", "28c9d200250ca386"],
   },
   icons: {
     icon: [

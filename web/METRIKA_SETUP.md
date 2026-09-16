@@ -1,4 +1,6 @@
-# Yandex Metrika 112352811
+# Yandex Metrika 112712443
+
+On 2026-09-16 the owner approved a new counter in the advertising account. Counter 112712443 replaces 112352811 in the existing integration; do not install both or add the generated HTML snippet alongside the SPA integration. Historical data remains in the former counter and does not migrate automatically. Creating a counter, publishing its ID and verifying goal receipt are separate acceptance steps.
 
 ## Implementation
 
@@ -13,7 +15,9 @@
 
 ## Counter Settings
 
-Create JavaScript event goals named exactly lead_email_success, lead_callback_success and phone_click in counter 112352811. Use only the first two as lead conversions. Enable Webvisor and leave recording of all input fields disabled as an additional precaution. Do not install a second copy of this counter through a tag manager or another snippet.
+Create JavaScript event goals named exactly lead_email_success, lead_callback_success and phone_click in counter 112712443. Use only the first two as lead conversions. Enable Webvisor and leave recording of all input fields disabled as an additional precaution. Do not install a second copy of this counter through a tag manager or another snippet.
+
+Verified in the account on 2026-09-16: all three exact-match event goals are saved. IDs: email 626280176, callback 626285968, phone click 626294487. Webvisor's record-all-fields option was disabled and saved. Goal creation does not prove receipt from production or mailbox delivery; those checks remain separate.
 
 ## Browser Acceptance Without Real Submissions
 

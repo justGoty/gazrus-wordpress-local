@@ -1,4 +1,4 @@
-export const METRIKA_COUNTER_ID = 112352811;
+export const METRIKA_COUNTER_ID = 112712443;
 const CANONICAL_ORIGIN = "https://xn--80aaaalzch0asjh0a0a.xn--p1acf";
 const TAG_URL = "https://mc.yandex.ru/metrika/tag.js";
 

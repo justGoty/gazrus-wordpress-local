@@ -23,6 +23,8 @@ Verified in the account on 2026-09-16: all three exact-match event goals are sav
 
 Production check on 2026-09-16: after separate owner approval, one explicitly marked email test and one callback test were submitted using public company contacts. Both forms displayed success; the official debugger logged PageView and each corresponding Reach goal for counter 112712443. The owner confirmed receipt of both test emails. At the first account check, conversion reports still showed no data; report ingestion remains a separate pending check. Do not replay tests without approval or manufacture goals manually.
 
+Later report check on 2026-09-16: the Conversions report for September 10-16, without a segment, shows one achievement and one goal visit for lead_email_success. Callback and phone click still show no data. Yandex displays a technical-maintenance warning that reports may not load. Email ingestion is now observed; callback reporting remains unverified. One test goal is not advertising performance or proof of a completed sale. No additional test forms were sent during the readiness audit.
+
 1. On localhost/dev, navigate, open the dialog and click telephone links: no mc.yandex requests or ym initialization from this integration.
 2. In an isolated production-build browser harness, map the canonical origin to the local application. Intercept the Metrika tag before navigation and replace it with a local ym spy; block all other Yandex requests. Do not publish mock code or add a production bypass to the host gate.
 3. Check one init with defer: true and webvisor: true, one initial hit, then one hit for each pathname/query change. Check back/forward, A -> B -> A and repeated renders of the same URL. There must be no duplicate first hit.
